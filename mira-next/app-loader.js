@@ -1,0 +1,1 @@
+var s=document.createElement('script');s.src='app-one.js?v=one-20260626-1';document.body.appendChild(s);
