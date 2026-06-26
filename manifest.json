@@ -1,1 +1,1 @@
-{"name":"Mellow Navigator","short_name":"Mellow","start_url":"./","display":"standalone","background_color":"#ffffff","theme_color":"#eaf6ff"}
+{"name":"Mellow Navigator AAC","short_name":"Mellow","start_url":"./","scope":"./","display":"standalone","background_color":"#f8fbff","theme_color":"#eaf6ff","description":"Accessible AAC communication cards for Menglu.","icons":[{"src":"mellow-icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
