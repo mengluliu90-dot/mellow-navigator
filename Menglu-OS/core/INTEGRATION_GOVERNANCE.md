@@ -37,6 +37,34 @@ In these cases, Menglu OS should not absorb the full processing workflow. Instea
 
 This prevents Menglu OS from becoming overloaded with narrow technical procedures while still allowing useful verified outputs to support advocacy, communication, and evidence work.
 
+## State modifier integration rule
+
+A repeated health, capacity, sensory, recovery, or environmental pattern should usually be integrated as a state modifier rather than a new operating system, prompt, or standalone workflow.
+
+State modifiers change what is realistic, safe, timely, or recoverable across existing Menglu OS components.
+
+Examples include:
+
+- menstrual or premenstrual phase
+- post-exertional malaise
+- POTS or orthostatic flare
+- sensory overload or shutdown risk
+- illness, allergy, pain, or sleep-related capacity reduction
+- recent appointment, travel, administrative demand, or emotional stressor
+
+State modifiers may affect:
+
+- Executive Function Engine workload estimates
+- Decision Engine action thresholds
+- Communication Engine wording
+- Memory & Evidence Engine evidence classification
+- Output Engine reports and letters
+- existing automations or dashboards
+
+Do not create a new module for a state modifier unless there is a clear technical reason, such as a separate data-processing pipeline.
+
+When recording a state modifier, preserve uncertainty. Describe the functional pattern and its practical effect. Do not convert it into an unsupported diagnosis or cause.
+
 ## Required change review
 
 For every significant proposed change, provide:
