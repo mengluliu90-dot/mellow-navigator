@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>🗂️ Case Manager</title><link rel="apple-touch-icon" href="../mellow-icon.svg"><style>body{font-family:Arial,sans-serif;margin:0 auto;max-width:760px;padding:14px 14px 90px;background:linear-gradient(180deg,#fbf7ff,#fff8fc);color:#111827}.card{background:#fff;border:1px solid #d9d8ee;border-radius:18px;padding:14px;margin:10px 0}.soft{background:linear-gradient(135deg,#fbf7ff,#eef7ff)}h1{font-size:25px}.icon{font-size:44px}textarea{width:100%;min-height:255px;font-family:Arial,sans-serif;font-size:15px;line-height:1.45;border-radius:14px;border:1px solid #bbb;padding:12px}button{width:100%;font-size:16px;font-weight:700;padding:12px;border-radius:14px;border:2px solid #6d28d9;background:#fbf7ff;color:#6d28d9;margin:8px 0}.bottom{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:#fff;padding:6px;border-top:1px solid #ddd;max-width:760px;margin:auto}.bottom a{font-size:12px;padding:9px;text-align:center;text-decoration:none;color:#6d28d9;border:1px solid #ddd;border-radius:12px}</style></head><body><div class="icon">🗂️</div><h1>Case Manager</h1><div class="card soft"><b>Use when:</b> one ongoing case needs a clear status, risk check, and next action.</div><div class="card"><b>Where to type:</b><p>Open ChatGPT and paste this. Replace the case name.</p><button onclick="navigator.clipboard&&navigator.clipboard.writeText(document.querySelector('textarea').value)">Copy prompt</button><textarea>Case Manager mode
+
+Case name:
+Current update or concern:
+
+Please load relevant saved context for this case and produce:
+
+1. Confirmed facts.
+2. Current objective.
+3. Current status.
+4. Who is waiting for whom.
+5. Outstanding actions.
+6. Risks or gaps.
+7. What can wait.
+8. The single recommended next action.
+9. One short written message or script if a reply is needed.
+
+Use this structure:
+- ACTION LOGGED
+- REVIEW REQUIRED
+- NEXT STEP
+- WAIT / NOT URGENT
+- DECISION NEEDED
+
+Do not create extra tasks unless they are necessary.</textarea></div><nav class="bottom"><a href="workflows.html">Workflows</a><a href="start.html">Start</a><a href="../">Mellow</a></nav></body></html>
