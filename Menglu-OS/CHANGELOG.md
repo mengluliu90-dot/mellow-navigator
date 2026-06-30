@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.11.0 - ACTIVE Family Communication Protocol
+
+### Added
+
+- ACTIVE family communication protocol inside `Family_Operations_Agent.md`.
+- Chinese-language emergency communication script for sudden situations when Menglu types `Active`.
+- Guidance for family to reduce pressure, avoid repeated questions, allow written or non-verbal responses, and focus on rest before non-urgent discussion.
+- Emergency safety wording covering severe chest pain, loss of consciousness, breathing difficulty, serious injury, or other immediate danger.
+
+### Changed
+
+- Emergency family communication is now treated as part of the Communication Engine / Family Operations Agent rather than a separate prompt, module, dashboard, or automation.
+- Future wording changes should update the existing ACTIVE protocol section instead of creating duplicate emergency communication files.
+
+### Operating effect
+
+When Menglu types `Active`, the assistant should switch directly into Chinese family communication support, explain that Menglu may be unable to speak or organise language, and guide family to reduce pressure while checking only for genuine emergency danger.
+
+No new automation is required because this is an event-triggered communication protocol.
+
 ## v0.10.0 - Architecture Review Gate Strengthening
 
 ### Added
