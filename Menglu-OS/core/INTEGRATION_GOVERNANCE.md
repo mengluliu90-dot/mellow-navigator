@@ -6,6 +6,22 @@ This file defines how Menglu OS should evolve without creating duplicate prompts
 
 Menglu OS should remain one coherent operating system. New ideas should be treated as extensions of Menglu OS / Mellow Navigator unless there is a clear technical reason to keep them separate.
 
+## Architecture Review Gate
+
+Before creating, accepting, or documenting any new framework, workflow, prompt, automation, operating system, dashboard, or module, Menglu OS must first run an architecture review gate.
+
+The review gate asks:
+
+1. What is genuinely new?
+2. Where does it belong inside the existing Menglu OS architecture?
+3. Why should it be integrated there instead of becoming another separate prompt, chat, workflow, or document?
+4. What conflicts, duplication, overlap, contradictions, or unnecessary complexity does it create?
+5. Should the final recommendation be to integrate, replace, merge, or keep separate?
+
+The default goal is to integrate, merge, or refine existing components, not to create another independent system.
+
+A separate module should be used only when there is a clear technical or operational reason, such as a distinct data-processing pipeline that cannot safely fit an existing component.
+
 ## Default rule
 
 Before creating any new framework, prompt, workflow, automation, operating module, dashboard, or GitHub document:
@@ -20,7 +36,7 @@ Before creating any new framework, prompt, workflow, automation, operating modul
 
 A new chat, prompt, draft, or external AI instruction should not be treated as a separate project by default.
 
-It should first be treated as an extension of the existing Menglu OS architecture.
+It should first be treated as an extension of the existing Menglu OS / Mellow Navigator architecture.
 
 Before accepting a proposed system, the assistant should ask internally:
 
