@@ -16,11 +16,19 @@ Use this repository for system design, prompts, templates, and non-sensitive ope
 
 ## Structure
 
-- `core/`: master rules and decision logic.
+- `core/`: master rules, decision logic, memory model, and integration governance.
 - `agents/`: specialist agent instructions.
 - `templates/`: reusable written communication templates.
-- `knowledge/`: non-sensitive knowledge structure.
-- `docs/`: implementation notes.
+- `knowledge/`: non-sensitive knowledge structure and functional domain indexes.
+- `docs/`: implementation notes, automation specifications, and handover material.
+
+## Key governance files
+
+- `core/CORE_RULES.md`: main operating rules.
+- `core/INTEGRATION_GOVERNANCE.md`: rules for integrating new capabilities without duplicating prompts, automations, or documentation.
+- `core/MEMORY_MODEL.md`: rules for memory triage, evidence classification, and public repository boundaries.
+- `knowledge/FUNCTIONAL_DOMAIN_LIBRARY.md`: reusable functional domains for evidence organisation and advocacy drafting.
+- `docs/BACKGROUND_AUTOMATION_SPEC.md`: silent-running automation and consolidation rules.
 
 ## Current status
 
