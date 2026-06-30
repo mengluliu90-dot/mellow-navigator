@@ -129,6 +129,24 @@ Examples:
 
 Keep Level 3 evidence outside this public repository unless it is converted into a non-sensitive template or index reference.
 
+## Travel evidence reuse rule
+
+When travel is being planned, reuse existing stable information before asking for it again.
+
+Relevant reusable items may include:
+
+- communication preferences
+- accessibility requirements
+- support-person roles and limits
+- medication and allergy information, if available in the private working context
+- emergency contact structure, if available in the private working context
+- medical or communication passports, if available in the private working context
+- previous travel barriers or recovery patterns, if already documented
+
+Do not recreate duplicate travel profiles unless the destination, trip type, or risk profile makes a new document necessary.
+
+For public repository documentation, store only the reuse rule and document categories. Do not store private medical details, identifiers, contact details, travel dates, booking references, or live trip information.
+
 ## Real-world evidence rule
 
 When preparing advocacy materials, prefer real-world examples over hypothetical statements where available.
