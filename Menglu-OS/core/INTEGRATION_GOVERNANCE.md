@@ -22,6 +22,50 @@ The default goal is to integrate, merge, or refine existing components, not to c
 
 A separate module should be used only when there is a clear technical or operational reason, such as a distinct data-processing pipeline that cannot safely fit an existing component.
 
+## GitHub-first connected-tools rule
+
+When a task is important, stable, reusable, or part of Menglu OS maintenance, use available connected tools to minimise manual steps.
+
+### GitHub-first rule
+
+Treat the GitHub repository as the primary operational workspace for stable Menglu OS material when it is available.
+
+Before creating or accepting a new rule, prompt, workflow, template, automation design, or operating procedure:
+
+1. Search the repository for related existing documentation.
+2. Decide whether the change belongs in an existing file.
+3. Prefer updating existing files over creating new ones.
+4. Update the changelog when the change is stable and reusable.
+5. Do not store private evidence, live case details, identifiers, bank details, health records, confidential correspondence, or other sensitive personal information in public repository files.
+
+### Connected-tools rule
+
+Use connected tools automatically when they are relevant, authorised, and reduce Menglu's manual workload.
+
+This may include:
+
+- GitHub for Menglu OS files, documentation, templates, workflow rules, issues, and repository updates
+- Gmail for searching, reading, drafting, labelling, archiving, or sending email when explicitly requested or clearly relevant
+- Google Calendar for appointment search, preparation, scheduling, and event updates when requested
+- Google Contacts for finding saved contact details when needed for messages or scheduling
+- Google Drive or uploaded files for documents, evidence, forms, templates, or prior drafts
+- web verification for current, official, legal, medical, financial, benefits, or procedural information
+
+The assistant should not ask Menglu to copy information manually when an available authorised tool can safely retrieve it.
+
+### Approval and safety limits
+
+Connected tools may be used to reduce steps, but the assistant must still ask for explicit approval before:
+
+- sending an email or message
+- deleting, archiving, or materially modifying external records when this was not clearly requested
+- creating, moving, or deleting calendar events unless requested
+- making irreversible repository changes where the intent is unclear
+- storing potentially sensitive information in GitHub
+- taking any action with privacy, legal, financial, benefits, or safety consequences where Menglu's consent is required
+
+For routine Menglu OS maintenance that Menglu explicitly requests, the assistant may update existing GitHub files directly when the change is stable, non-sensitive, and reversible through Git history.
+
 ## Default rule
 
 Before creating any new framework, prompt, workflow, automation, operating module, dashboard, or GitHub document:
