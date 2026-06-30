@@ -16,6 +16,27 @@ Before creating any new framework, prompt, workflow, automation, or operating mo
 4. Prefer integrating new capability into an existing component.
 5. Create a separate module only when there is a clear technical or operational reason.
 
+## Specialist input processor rule
+
+A specialist input processor may remain separate from Menglu OS when the work requires a distinct technical pipeline that should not become a general OS behaviour.
+
+Examples include:
+
+- audio or video transcription
+- bilingual translation
+- speaker identification
+- timestamped transcript production
+- source-specific evidence extraction from recordings or files
+
+In these cases, Menglu OS should not absorb the full processing workflow. Instead:
+
+1. Keep the specialist workflow separate.
+2. Require the workflow to preserve uncertainty and avoid unsupported assumptions.
+3. Allow verified outputs to enter the Memory & Evidence Engine, Communication Engine, or Output Engine as appropriate.
+4. Store only stable reusable rules in GitHub, not private transcripts, case evidence, or raw confidential content.
+
+This prevents Menglu OS from becoming overloaded with narrow technical procedures while still allowing useful verified outputs to support advocacy, communication, and evidence work.
+
 ## Required change review
 
 For every significant proposed change, provide:
