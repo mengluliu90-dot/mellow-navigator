@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.4.0 - Pharmacy Support Template Integration
+
+### Added
+
+- Pharmacy Support Request template for community pharmacy communication.
+- Health Agent pharmacy support workflow covering support flags, communication preferences, authorised collectors, PMR printouts, reminder charts, large print labels, medication safety notes, and low-stimulation interaction requests.
+
+### Changed
+
+- Pharmacy support is integrated into the existing Health Agent instead of becoming a separate workflow or module.
+- Pharmacy documents should be treated as reusable communication templates and non-sensitive evidence structures.
+
+### Operating effect
+
+Menglu OS should reuse the pharmacy support template when preparing pharmacy communication.
+
+No separate Pharmacy Agent is required.
+
+Do not store private patient identifiers, full medical details, phone numbers, addresses, or live pharmacy records in this public repository.
+
 ## v0.3.0 - Accessible Travel Integration
 
 ### Added
