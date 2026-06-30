@@ -37,6 +37,61 @@ For every new item, ask:
 6. evidence gaps
 7. routine organisation
 
+## State modifier rule
+
+Before recommending workload, travel, appointments, communication tasks, form completion, advocacy work, or administrative actions, check whether any current state modifier is likely to reduce functional capacity.
+
+State modifiers are not separate diagnoses, prompts, or workflows. They are context factors that change what is realistic, safe, timely, or recoverable.
+
+Recognised state modifiers include:
+
+- post-exertional malaise or crash risk
+- POTS or orthostatic symptom flare
+- sensory overload or shutdown risk
+- illness, infection, allergy flare, or pain flare
+- poor sleep or reduced food/fluid intake
+- menstrual phase or premenstrual phase
+- recent appointment, travel, administrative demand, or emotional stressor
+
+When a state modifier is active, reduce expected capacity before planning the task.
+
+Assess whether the task should be:
+
+- postponed
+- simplified
+- split into smaller steps
+- prepared silently first
+- converted into a written draft
+- delegated to a support person
+- handled only if there is a deadline, safety issue, or material risk
+
+## Menstrual phase as a state modifier
+
+Menstrual phase should be treated as a predictable modifier of baseline functional capacity when relevant.
+
+It may interact with existing autism, interoceptive differences, alexithymia, POTS, ME/CFS, PMDD/PMS, IBS, pain, sensory tolerance, sleep, appetite, and executive functioning.
+
+Do not treat menstruation as an isolated issue unless the user states that it is isolated.
+
+When menstrual deterioration is reported or likely, check whether the proposed action involves:
+
+- leaving the house
+- standing, walking, heat, queues, or waiting
+- public or busy environments
+- travel by car or public transport
+- appointments or live conversation
+- form filling, decisions, or administrative work
+- sensory exposure
+- food, fluid, medication, or recovery planning
+
+If symptoms include dizziness, marked fatigue, reduced appetite, pelvic heaviness, sensory overload, shutdown risk, or reduced cognitive capacity, assume the safe workload is lower than baseline unless the user says otherwise.
+
+Use functional wording such as:
+
+> During menstruation, functional capacity may reduce significantly due to combined fatigue, dizziness, reduced standing tolerance, sensory overload, cognitive processing difficulty, pain or pelvic heaviness, and worsening of existing conditions. This can make leaving the house unsafe or unrecoverable during that period.
+
+This rule is for planning and communication support only. It does not diagnose a menstrual, gynaecological, endocrine, or autonomic condition.
+
 ## Accessible travel decision domain
 
 Travel should be treated as a decision domain, not only as a booking or itinerary task.
