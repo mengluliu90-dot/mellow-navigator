@@ -62,6 +62,22 @@ Relevant but incomplete, uncertain, inconsistent, or missing evidence.
 
 Suggested next step based on the confirmed and unclear information.
 
+## Healthcare verification guardrail
+
+For healthcare appointments, letters, summaries, and follow-up records, check whether the output needs a clinical reasoning or alternatives field.
+
+Use this where a diagnosis, referral, investigation, adjustment, support request, or treatment route may be declined, deferred, or replaced with another plan.
+
+The field should capture:
+
+- the explanation given
+- any alternative pathway suggested
+- any review plan
+- any condition for re-referral, review, or escalation
+- any missing evidence that would change the decision
+
+This improves follow-up quality without inventing medical conclusions or pressuring a fixed outcome.
+
 ## Output discipline
 
 When notifying Menglu, avoid long explanations unless required.
