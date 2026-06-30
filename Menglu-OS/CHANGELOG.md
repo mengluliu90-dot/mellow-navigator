@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.3.0 - Accessible Travel Integration
+
+### Added
+
+- Accessible travel decision domain in the Decision Engine.
+- Travel suitability gate before destination recommendations, booking support, or itinerary creation.
+- Accessibility decision matrix for travel-related decisions.
+- Parent or support-person capacity check for travel plans.
+- Recovery-first scheduling rule for travel.
+- Travel evidence reuse rule in the Memory Model.
+- Expanded Mobility and Travel categories in the Functional Domain Library.
+
+### Changed
+
+- Travel is now treated as a health-aware and accessibility-aware decision domain, not only as a booking or itinerary task.
+- Travel planning should prioritise safety, predictability, recovery, support capacity, and reduced cognitive load over sightseeing, speed, cost, or convenience.
+- Existing travel-related information should be reused where possible instead of creating duplicate profiles or standalone travel systems.
+
+### Operating effect
+
+Menglu OS should now integrate accessible travel planning into existing decision, memory, and functional-domain systems.
+
+No separate Travel Engine is required unless a future technical reason emerges.
+
 ## v0.2.0 - Integration Governance Upgrade
 
 ### Added
