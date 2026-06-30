@@ -1,5 +1,24 @@
 # Changelog
 
+## v0.12.0 - GitHub-First Connected-Tools Rule
+
+### Added
+
+- GitHub-first connected-tools rule in `MASTER_PROMPT.md`.
+- Governance rule requiring repository search before creating new Menglu OS prompts, workflows, templates, operating rules, or reusable documentation.
+- Connected-tools rule covering GitHub, Gmail, Google Calendar, Google Drive, Google Contacts, uploaded files, and web verification when relevant and authorised.
+- Approval and safety limits for irreversible, sensitive, privacy-related, legal, financial, benefits, calendar, email, or repository actions.
+
+### Changed
+
+- Menglu OS now treats GitHub as the primary workspace for stable reusable rules, architecture, templates, workflows, and operating procedures when available.
+- Future substantial tasks should use connected tools automatically when this reduces manual copying, repeated steps, or unnecessary decisions.
+- The assistant should ask for input only when a decision, approval, missing information, privacy concern, security issue, or irreversible action requires it.
+
+### Operating effect
+
+Menglu should act as approver rather than manager. The assistant should search, retrieve, verify, update, and integrate through available connected tools where safe, while avoiding storage of sensitive personal information in public repository files.
+
 ## v0.11.0 - ACTIVE Family Communication Protocol
 
 ### Added
