@@ -98,6 +98,48 @@ When a repeated task is identified:
 2. Prefer improving or consolidating existing automations.
 3. Avoid duplicate reminders, duplicate monitoring, and duplicate reports.
 4. Design automations to notify only when action is required, where possible.
+5. Feed automation findings into Menglu OS Shared State and the Open Loop Register rather than creating separate task lists.
+6. Use change detection: report only New, Changed, Escalated, Resolved, or Action Needed items.
+7. Include owner, confidence, notification tier, and notification reason where relevant.
+
+## Tiered alert protocol
+
+All monitoring automations should use the same alert tiers before notifying Menglu.
+
+| Tier | Meaning | Behaviour |
+| --- | --- | --- |
+| Tier 1 | Immediate action, safety risk, urgent deadline, appointment today/tomorrow, urgent health/benefit/financial risk, or useful draft requiring review | Notify directly unless there is a clear reason not to |
+| Tier 2 | Non-urgent action, routine follow-up, useful evidence, or preparation that can wait | Hold for scheduled review or consolidated summary |
+| Tier 3 | Monitoring only, duplicate, historical-only, waiting on others, unchanged item, or suppressed by recovery state | Do not notify unless status changes or risk appears |
+
+The Decision Engine should apply recovery state before surfacing Tier 2 or Tier 3 items. Tier 1 may bypass recovery suppression only where risk, deadline, appointment timing, or safety requires attention.
+
+Every notification should explain why it appeared. Use concise labels such as:
+
+- deadline or risk
+- Menglu is the owner
+- status changed
+- draft prepared
+- waiting item is overdue
+- recovery state allows action
+- recovery state suppresses non-urgent action
+
+## Open Loop Register change rules
+
+The Open Loop Register should reduce repeated review by tracking state changes.
+
+Use these change labels:
+
+- New
+- Changed
+- Escalated
+- Resolved
+- Action Needed
+- Suppressed
+- Duplicate
+- Historical Only
+
+Resolved matters should move to Completed/Closed or Historical Evidence Only. Closed matters should not be reopened unless new evidence or new risk appears.
 
 ## GitHub rule
 
