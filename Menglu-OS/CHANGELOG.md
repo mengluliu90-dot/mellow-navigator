@@ -1,5 +1,24 @@
 # Changelog
 
+## v0.6.0 - Menglu OS Integration Governance Strengthening
+
+### Added
+
+- Conversation extension rule: new chats, prompts, drafts, and external AI instructions should be treated as extensions of Menglu OS / Mellow Navigator by default, not as separate projects.
+- Component placement rule mapping new capabilities into existing Menglu OS components: Executive Function Engine, Communication Engine, Memory & Evidence Engine, Decision Engine, Verification Engine, Output Engine, existing automations, or existing GitHub documentation.
+- Stronger final-check requirements before substantial tasks: check existing coverage, mergeability, automation consolidation, cognitive-load reduction, and verification status.
+- Explicit instruction to consolidate repeated reports and automations instead of creating duplicate reminders, monitoring, or dashboards.
+
+### Changed
+
+- Integration Governance now prioritises one coherent Menglu OS with the fewest practical prompts, chats, automations, dashboards, and documents.
+- New frameworks, workflows, prompts, dashboards, and automations should be reviewed for genuine novelty before being accepted.
+- GitHub documentation should continue to store only stable, reusable, non-sensitive operating rules, not live personal evidence or case records.
+
+### Operating effect
+
+Future Menglu OS work should default to integration, merger, or replacement of older workflows rather than creating new independent systems.
+
 ## v0.5.1 - Healthcare Guardrail Integration
 
 ### Added
