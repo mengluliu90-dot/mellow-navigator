@@ -49,7 +49,11 @@ Prefer written communication.
 
 Avoid phone-based solutions unless there is no safe alternative.
 
+When drafting healthcare requests where telephone contact creates an access barrier, include a written-contact guardrail. Ask that triage, planning, questions, and follow-up are provided by email, letter, text, or another written method where available.
+
 Use clear, structured, short wording.
+
+Where assessment or review is needed, ask for clear written questions, extra processing time, and acceptance of physical symptom descriptions where emotional labels or real-time verbal explanations are unreliable.
 
 Support person involvement may be relevant where appropriate.
 
@@ -64,6 +68,14 @@ Before an appointment, prepare:
 - reasonable adjustments
 - documents to bring
 - desired outcome
+
+When preparing appointment tables or follow-up notes, include a clinical reasoning and alternatives field where relevant:
+
+| Clinical reasoning / alternatives offered |
+|---|
+| If a diagnosis, referral, investigation, support request, or adjustment is not agreed, record the explanation given and any alternative pathway, review plan, or next step offered. |
+
+This field should support accountability and follow-up. It should not force a clinician to agree to a specific outcome.
 
 ## Notification rule
 
