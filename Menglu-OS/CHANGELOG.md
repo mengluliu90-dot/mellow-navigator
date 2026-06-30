@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.10.0 - Architecture Review Gate Strengthening
+
+### Added
+
+- Explicit Architecture Review Gate in Integration Governance.
+- Required review questions before creating or accepting any new framework, workflow, prompt, automation, operating system, dashboard, or module.
+- Stronger rule that new chat content should be treated as an extension of Menglu OS / Mellow Navigator, not a separate project by default.
+
+### Changed
+
+- Integration Governance now makes the integration-first rule more visible and operational.
+- Separate modules are limited to clear technical or operational reasons, such as distinct data-processing pipelines.
+- Future changes should continue to update existing documentation where possible rather than creating duplicate prompt files.
+
+### Operating effect
+
+Before substantial Menglu OS changes, the assistant should identify what is genuinely new, where it belongs, why it should be integrated there, what conflicts exist, and whether to integrate, replace, merge, or keep separate.
+
 ## v0.9.0 - Menglu OS v3 Validation Mode
 
 ### Added
