@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.8.0 - Tiered Alert Automation Integration
+
+### Added
+
+- Tiered Alert Protocol for monitoring automations.
+- Shared notification rules covering Tier 1, Tier 2, and Tier 3 alerts.
+- Notification reason, confidence level, owner, and change-status fields for automation outputs.
+- Open Loop Register change labels: New, Changed, Escalated, Resolved, Action Needed, Suppressed, Duplicate, and Historical Only.
+
+### Changed
+
+- Email Follow-up Review, Open Loop Register, Recovery Guard, Appointment Shield, and Evidence Watch now use the same shared alert logic.
+- Automations should report into Menglu OS Shared State and the Open Loop Register rather than creating separate task lists.
+- Recovery state should suppress non-urgent Tier 2 and Tier 3 items while allowing Tier 1 items when risk, deadline, appointment timing, or safety requires attention.
+- Monitoring should prioritise changes instead of repeating unchanged information.
+
+### Operating effect
+
+Future automation outputs should explain why Menglu is being notified, whether Menglu is the owner, whether the item is new or changed, and whether it is urgent enough to surface now.
+
+The default automation outcome is fewer alerts, less duplication, clearer ownership, and one smallest safe next action.
+
 ## v0.7.0 - Form Completion Integration
 
 ### Added
