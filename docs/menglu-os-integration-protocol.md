@@ -48,6 +48,48 @@ Use these components first before creating new ones:
 - PA object bridge
 - Recovery mode
 
+## Form completion integration rule
+
+Form-filling, questionnaire, application, referral, review, assessment, and official-paperwork work should be treated as an Executive Function Engine workflow, not as a separate operating system or standalone prompt.
+
+When a form is provided, the workflow should:
+
+1. Read the whole form before completing fields.
+2. Identify the form type, purpose, organisation, deadline if present, required evidence, mandatory fields, optional fields, consent sections, declarations, and upload requirements.
+3. Build a field inventory with suggested response, source, confidence, and review status where useful.
+4. Reuse verified information from uploaded documents, stored records, previous form responses, and user-confirmed details.
+5. Separate confirmed facts, unconfirmed information, assumptions, and missing information before finalising answers.
+6. Mark uncertain fields as missing or requiring review rather than guessing.
+7. Check for contradictions, stale information, duplicated wording, and inconsistent names, dates, contact details, support descriptions, or evidence references.
+8. Draft answers in clear language matched to the form's purpose and audience.
+9. Recommend relevant supporting evidence where proportionate.
+10. Complete a final quality check covering mandatory fields, checkboxes, attachments, declarations, contradictions, duplicate entries, and user-review sections.
+11. Provide an audit trail where useful, using labels such as Verified, Suggested, User Confirmed, Missing, or Requires Review.
+
+Component links:
+
+- Executive Function Engine: staged completion, task routing, workload reduction, and finalisation checks.
+- Memory and Evidence Engine: verified data reuse, evidence matching, previous-form consistency, and audit trail.
+- Verification Engine: uncertainty labelling, contradiction detection, source checking, and no-guessing rule.
+- Communication Engine: accessibility wording, communication needs, and reasonable-adjustment wording.
+- Output Engine: completed form text, summaries, professional wording, evidence lists, and review notes.
+- Existing automations: only use or improve an automation if the form creates an ongoing repeated follow-up need.
+
+This rule replaces separate form-filling prompt behaviour where the same function can be handled by Menglu OS.
+
+## Healthcare and official form convention rule
+
+When completing healthcare passports, profiles, care forms, assessment forms, or official identity sections:
+
+- Use the identifier requested by the form and jurisdiction where known.
+- Do not substitute an unrelated identifier.
+- Distinguish ethnicity, nationality, citizenship, and administrative identity numbers.
+- Record only reusable operating rules in GitHub, not private identifiers or live personal case details.
+- Describe fluctuating support needs by function, safety, reliability, repeatability, time taken, support required, and recovery required.
+- Do not treat prepared written communication, masking, or supported performance as proof of independent reliable functioning.
+- Include communication adjustment wording where appropriate, including written information, one question at a time, extra processing time, sensory adjustments, and support-person involvement.
+- Preserve uncertainty where information may have changed.
+
 ## Automation rule
 
 When a repeated task is identified:
