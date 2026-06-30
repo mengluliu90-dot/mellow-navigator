@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.13.0 - Device Shortcuts Interface Layer
+
+### Added
+
+- Device Shortcuts interface layer in `Menglu-OS/docs/LIVE_INTERFACE_MAP.md`.
+- Mapping from shortcut groups to existing Menglu OS components, including Communication Aids, Health and Social Care, PIP and UC, Finance and Benefits, Home, Need Help and crisis access, navigation/context support, and reusable personal summaries.
+- Operating rule that shortcuts should reuse existing Menglu OS wording where possible instead of creating a separate script lineage.
+
+### Changed
+
+- Live Interface Map now treats iPhone Shortcuts and Home Screen widgets as front-end access points for Menglu OS rather than a separate system.
+- Future shortcut work should prioritise clearer naming, fewer duplicate scripts, one useful action per shortcut, and reuse of stable shared wording.
+
+### Operating effect
+
+Device shortcuts should reduce access friction and cognitive load while remaining connected to the same Menglu OS architecture. New shortcut groups should be created only when they remove a real access barrier and cannot fit an existing group.
+
 ## v0.12.0 - GitHub-First Connected-Tools Rule
 
 ### Added
