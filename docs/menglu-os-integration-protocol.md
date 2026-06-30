@@ -14,6 +14,12 @@ Before creating anything new, check whether it can be integrated into the existi
 
 Do not create a new standalone system if the function is already covered by an existing component, automation, GitHub document, or workflow.
 
+## Governing principle
+
+The system should minimise decisions, not maximise automation.
+
+A proposed improvement should be rejected or deferred if it only creates more process, more dashboards, more prompts, or more maintenance without reducing Menglu's decision burden.
+
 ## Integration check
 
 For every significant new idea, identify:
@@ -101,6 +107,8 @@ When a repeated task is identified:
 5. Feed automation findings into Menglu OS Shared State and the Open Loop Register rather than creating separate task lists.
 6. Use change detection: report only New, Changed, Escalated, Resolved, or Action Needed items.
 7. Include owner, confidence, notification tier, and notification reason where relevant.
+8. Apply Silent Running before producing output.
+9. Use Binary Decision Format when a notification is necessary.
 
 ## Tiered alert protocol
 
@@ -124,6 +132,33 @@ Every notification should explain why it appeared. Use concise labels such as:
 - recovery state allows action
 - recovery state suppresses non-urgent action
 
+## Silent Running rule
+
+The default output is no notification.
+
+A monitor should stay silent unless there is:
+
+- Tier 1 risk or deadline
+- useful Tier 2 scheduled-review item
+- action required from Menglu
+- status change requiring attention
+- recovery-status change affecting the plan
+- useful draft prepared for review
+
+Do not send routine summaries to confirm that nothing changed.
+
+## Binary Decision Format
+
+When the system notifies Menglu, use the shortest useful format:
+
+Bottom line: one sentence.
+
+Safest action: one concrete step.
+
+Approve / Reject: one clear review choice.
+
+Do not include long explanations unless Menglu asks for more detail.
+
 ## Open Loop Register change rules
 
 The Open Loop Register should reduce repeated review by tracking state changes.
@@ -140,6 +175,48 @@ Use these change labels:
 - Historical Only
 
 Resolved matters should move to Completed/Closed or Historical Evidence Only. Closed matters should not be reopened unless new evidence or new risk appears.
+
+## Decision Ledger rule
+
+The Decision Ledger tracks whether system recommendations were useful.
+
+It is different from the Open Loop Register:
+
+- Open Loop Register tracks active matters.
+- Decision Ledger tracks recommendation quality and outcomes.
+
+Use the Decision Ledger only for important recommendations, not every minor interaction.
+
+Suggested fields:
+
+- Date
+- Case label
+- Recommendation
+- Approved, rejected, or deferred
+- Reason
+- Evidence used
+- Outcome
+- Useful: yes, no, or unclear
+- Follow-up needed: yes or no
+
+## Validation Mode rule
+
+Menglu OS v3.0 is a stable baseline.
+
+In Validation Mode, do not redesign the system by default.
+
+Only refine a specific part when repeated real-world use shows a failure pattern, such as missed deadlines, duplicate alerts, incorrect ownership, over-suppression, under-suppression, or unclear next actions.
+
+Monthly system self-review should evaluate the system, not Menglu.
+
+The self-review should check:
+
+- unnecessary notifications
+- missed important items
+- duplicate alerts
+- recovery suppression errors
+- stale open loops
+- recommendations that created more work than they saved
 
 ## GitHub rule
 
