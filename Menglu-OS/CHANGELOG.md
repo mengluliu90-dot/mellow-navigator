@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.7.0 - Form Completion Integration
+
+### Added
+
+- Form completion integration rule for forms, questionnaires, applications, referrals, reviews, assessments, and official paperwork.
+- Field inventory workflow covering form type, purpose, organisation, deadline if present, required evidence, mandatory fields, optional fields, consent sections, declarations, and upload requirements.
+- Audit-trail labels for form work: Verified, Suggested, User Confirmed, Missing, and Requires Review.
+- Healthcare and official form convention rule covering requested identifiers, ethnicity versus nationality, uncertainty preservation, and accessibility wording.
+
+### Changed
+
+- Form-filling work should be treated as an Executive Function Engine workflow rather than a separate prompt or standalone operating system.
+- Form responses should reuse verified stored information and uploaded evidence instead of recreating baseline details.
+- Form work should link to the Memory and Evidence Engine, Verification Engine, Communication Engine, Output Engine, and existing automations only where needed.
+
+### Operating effect
+
+Future form work should first analyse the full document, identify fields and evidence requirements, separate confirmed information from missing or uncertain information, draft answers clearly, complete a quality check, and provide an audit trail where useful.
+
+No new automation or standalone form-filling module is required unless a future technical reason emerges.
+
 ## v0.6.0 - Menglu OS Integration Governance Strengthening
 
 ### Added
@@ -77,87 +98,3 @@ Do not store private cycle dates, symptom diaries, medical identifiers, or detai
 ### Operating effect
 
 Menglu OS should reuse the pharmacy support template when preparing pharmacy communication.
-
-No separate Pharmacy Agent is required.
-
-Do not store private patient identifiers, full medical details, phone numbers, addresses, or live pharmacy records in this public repository.
-
-## v0.3.0 - Accessible Travel Integration
-
-### Added
-
-- Accessible travel decision domain in the Decision Engine.
-- Travel suitability gate before destination recommendations, booking support, or itinerary creation.
-- Accessibility decision matrix for travel-related decisions.
-- Parent or support-person capacity check for travel plans.
-- Recovery-first scheduling rule for travel.
-- Travel evidence reuse rule in the Memory Model.
-- Expanded Mobility and Travel categories in the Functional Domain Library.
-
-### Changed
-
-- Travel is now treated as a health-aware and accessibility-aware decision domain, not only as a booking or itinerary task.
-- Travel planning should prioritise safety, predictability, recovery, support capacity, and reduced cognitive load over sightseeing, speed, cost, or convenience.
-- Existing travel-related information should be reused where possible instead of creating duplicate profiles or standalone travel systems.
-
-### Operating effect
-
-Menglu OS should now integrate accessible travel planning into existing decision, memory, and functional-domain systems.
-
-No separate Travel Engine is required unless a future technical reason emerges.
-
-## v0.2.0 - Integration Governance Upgrade
-
-### Added
-
-- Integration Governance document.
-- Functional Domain Library.
-- Automatic memory triage rules.
-- Evidence classification model: permanent facts, long-term functional evidence, and case-specific evidence.
-- Real-world evidence rule for advocacy drafting.
-- Automation consolidation rule.
-
-### Changed
-
-- Core Rules now require integration before creating new prompts, workflows, automations, or modules.
-- Memory Model now distinguishes stable long-term information from temporary, case-specific, or duplicate information.
-- Background Automation Specification now requires checking for existing automations before creating new repeated tasks.
-- README now links to the main governance files.
-
-### Operating effect
-
-Menglu OS should remain one coherent system with the fewest practical prompts, chats, automations, and documents.
-
-New ideas should be integrated, merged, or used to replace older workflows unless there is a clear reason to keep them separate.
-
-## v0.1.0 - Initial Menglu OS Blueprint
-
-### Added
-
-- Core operating framework.
-- Master Prompt.
-- Core Rules.
-- Decision Engine.
-- Reasoning Engine.
-- Notification Policy.
-- Memory Model.
-- Agent instructions.
-- Basic communication templates.
-- Knowledge templates.
-- Project roadmap.
-- Chat handover summary.
-- Future Agent Mode setup notes.
-
-### Operating rule
-
-Menglu OS defaults to backstage work.
-
-The assistant should notify only when a decision, approval, action, deadline, risk, appointment change, or required reply needs attention.
-
-### Privacy boundary
-
-This repository is public.
-
-It must store only non-sensitive operating rules, templates, and system design files.
-
-Private records, live case evidence, and personal identifiers must stay outside this repository.
