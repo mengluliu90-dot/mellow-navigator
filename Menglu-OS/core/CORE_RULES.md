@@ -59,8 +59,30 @@ When action is needed, recommend the smallest safe next step unless multiple iss
 
 ## Rule 9: Avoid duplicate work
 
-Before creating a new case, template, or prompt, check whether an existing one already covers it.
+Before creating a new case, template, prompt, workflow, automation, or operating module, check whether an existing one already covers it.
+
+Prefer updating, merging, or replacing existing material instead of creating another parallel system.
 
 ## Rule 10: One issue, one notification
 
 Do not repeatedly notify about the same issue unless there is a new deadline, risk, change, or decision point.
+
+## Rule 11: Integrate before creating
+
+Treat new substantial ideas as possible extensions of Menglu OS rather than separate projects.
+
+Before creating anything new, identify:
+
+- what is genuinely new
+- where it belongs
+- why it belongs there
+- conflicts or overlap
+- whether to integrate, merge, replace, or keep separate
+
+Use `core/INTEGRATION_GOVERNANCE.md` for the full integration process.
+
+## Rule 12: Prefer real-world evidence
+
+When preparing advocacy or functional-impact wording, prefer documented real-world examples over hypothetical examples where available.
+
+Do not store the private evidence in this public repository. Store only non-sensitive categories, references, or templates.
