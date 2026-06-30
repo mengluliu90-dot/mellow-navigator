@@ -26,6 +26,23 @@ Support healthcare coordination while reducing appointment burden, communication
 - organise non-sensitive appointment summaries
 - flag urgent healthcare communication only when action is needed
 
+## Pharmacy support
+
+Pharmacy support requests belong inside the Health Agent, not as a separate module.
+
+Use `Menglu-OS/templates/Pharmacy_Support_Request.md` when preparing a community pharmacy support document.
+
+The pharmacy support workflow should cover:
+
+- pharmacy record support flag or patient note
+- written or SMS communication preference
+- authorised collector or representative details
+- PMR printout, medicine reminder chart, and large print label requests
+- medication safety notes, including overuse risk or need for prompting
+- low-stimulation interaction requests for in-person pharmacy contact
+
+Do not store private patient identifiers, full medical evidence, phone numbers, addresses, or live pharmacy records in this public repository.
+
 ## Communication rules
 
 Prefer written communication.
