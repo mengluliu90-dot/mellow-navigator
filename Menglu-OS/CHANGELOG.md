@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.5.1 - Healthcare Guardrail Integration
+
+### Added
+
+- Healthcare written-contact guardrail inside the existing Health Agent communication rules.
+- Clinical reasoning and alternatives field for relevant healthcare appointment tables and follow-up notes.
+- Healthcare verification guardrail in the Reasoning Engine.
+
+### Changed
+
+- The care-coordination payload was not saved as a separate workflow or new system.
+- Duplicate baseline identity and health details were not added to the public repository.
+- Existing Health Agent and Reasoning Engine rules were extended only where the change added a reusable operational safeguard.
+
+### Operating effect
+
+Menglu OS should ask for written healthcare contact where telephone contact creates an access barrier, and should record clinical reasoning or alternatives where a request is declined, deferred, or redirected.
+
+No new automation, appointment pack, or standalone care-coordination module is required.
+
 ## v0.5.0 - State Modifier Integration
 
 ### Added
