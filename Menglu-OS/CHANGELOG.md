@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.9.0 - Menglu OS v3 Validation Mode
+
+### Added
+
+- Menglu OS v3.0 Validation Mode documentation.
+- Governing principle: the system should minimise decisions, not maximise automation.
+- Silent Running Rule for exception-only monitoring.
+- Binary Decision Format for necessary notifications.
+- Decision Ledger rule to track whether important recommendations were useful.
+- Monthly System Self-Review protocol for evaluating system performance.
+
+### Changed
+
+- Integration Protocol now treats v3.0 as a stable baseline rather than an architecture still being redesigned.
+- Future changes should be targeted refinements based on repeated real-world friction.
+- Open Loop Register remains the coordination point, while Decision Ledger tracks recommendation quality and outcomes.
+
+### Operating effect
+
+Menglu OS v3.0 should allow Menglu to act as approver rather than manager. The system should stay silent unless action, risk, deadline, meaningful change, recovery-state change, or a useful draft requires review.
+
 ## v0.8.0 - Tiered Alert Automation Integration
 
 ### Added
@@ -61,62 +82,3 @@ No new automation or standalone form-filling module is required unless a future 
 ### Operating effect
 
 Future Menglu OS work should default to integration, merger, or replacement of older workflows rather than creating new independent systems.
-
-## v0.5.1 - Healthcare Guardrail Integration
-
-### Added
-
-- Healthcare written-contact guardrail inside the existing Health Agent communication rules.
-- Clinical reasoning and alternatives field for relevant healthcare appointment tables and follow-up notes.
-- Healthcare verification guardrail in the Reasoning Engine.
-
-### Changed
-
-- The care-coordination payload was not saved as a separate workflow or new system.
-- Duplicate baseline identity and health details were not added to the public repository.
-- Existing Health Agent and Reasoning Engine rules were extended only where the change added a reusable operational safeguard.
-
-### Operating effect
-
-Menglu OS should ask for written healthcare contact where telephone contact creates an access barrier, and should record clinical reasoning or alternatives where a request is declined, deferred, or redirected.
-
-No new automation, appointment pack, or standalone care-coordination module is required.
-
-## v0.5.0 - State Modifier Integration
-
-### Added
-
-- State modifier rule in the Decision Engine.
-- Menstrual phase as a recognised functional state modifier.
-- Functional state modifiers section in the Functional Domain Library.
-- State modifier integration rule in Integration Governance.
-
-### Changed
-
-- Menstrual or premenstrual deterioration should be treated as a capacity modifier across existing Menglu OS components, not as a separate Menstrual OS, standalone prompt, or new workflow.
-- Capacity planning should account for predictable reductions in safe workload, travel tolerance, communication capacity, sensory tolerance, appetite, hydration, dizziness, and recovery during relevant cyclical health phases.
-- Functional wording should describe practical impact and uncertainty rather than unsupported diagnosis or cause.
-
-### Operating effect
-
-Menglu OS should integrate menstrual phase and similar recurring capacity changes into the existing Decision Engine, Executive Function Engine, Communication Engine, Memory & Evidence Engine, Output Engine, and existing dashboards or automations where relevant.
-
-No separate menstrual workflow or automation is required unless a future technical reason emerges.
-
-Do not store private cycle dates, symptom diaries, medical identifiers, or detailed personal health records in this public repository.
-
-## v0.4.0 - Pharmacy Support Template Integration
-
-### Added
-
-- Pharmacy Support Request template for community pharmacy communication.
-- Health Agent pharmacy support workflow covering support flags, communication preferences, authorised collectors, PMR printouts, reminder charts, large print labels, medication safety notes, and low-stimulation interaction requests.
-
-### Changed
-
-- Pharmacy support is integrated into the existing Health Agent instead of becoming a separate workflow or module.
-- Pharmacy documents should be treated as reusable communication templates and non-sensitive evidence structures.
-
-### Operating effect
-
-Menglu OS should reuse the pharmacy support template when preparing pharmacy communication.
