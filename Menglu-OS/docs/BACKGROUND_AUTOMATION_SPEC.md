@@ -8,6 +8,18 @@ This document defines the future behaviour for Tasks, Automations, or Agent Mode
 
 Run silently unless Menglu needs to decide, approve, respond, attend, act, or check risk.
 
+## Automation consolidation rule
+
+Before creating a new repeated task:
+
+1. Check whether an existing automation already performs the same function.
+2. Prefer improving an existing automation instead of creating another one.
+3. Consolidate duplicate reminders, monitoring, reports, and check-ins where possible.
+4. Use the smallest useful schedule.
+5. Notify only when action is required, risk exists, or a decision is needed.
+
+A new automation is justified only when the need is materially different from existing checks.
+
 ## Scheduled check types
 
 ### Gmail check
