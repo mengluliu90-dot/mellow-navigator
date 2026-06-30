@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.5.0 - State Modifier Integration
+
+### Added
+
+- State modifier rule in the Decision Engine.
+- Menstrual phase as a recognised functional state modifier.
+- Functional state modifiers section in the Functional Domain Library.
+- State modifier integration rule in Integration Governance.
+
+### Changed
+
+- Menstrual or premenstrual deterioration should be treated as a capacity modifier across existing Menglu OS components, not as a separate Menstrual OS, standalone prompt, or new workflow.
+- Capacity planning should account for predictable reductions in safe workload, travel tolerance, communication capacity, sensory tolerance, appetite, hydration, dizziness, and recovery during relevant cyclical health phases.
+- Functional wording should describe practical impact and uncertainty rather than unsupported diagnosis or cause.
+
+### Operating effect
+
+Menglu OS should integrate menstrual phase and similar recurring capacity changes into the existing Decision Engine, Executive Function Engine, Communication Engine, Memory & Evidence Engine, Output Engine, and existing dashboards or automations where relevant.
+
+No separate menstrual workflow or automation is required unless a future technical reason emerges.
+
+Do not store private cycle dates, symptom diaries, medical identifiers, or detailed personal health records in this public repository.
+
 ## v0.4.0 - Pharmacy Support Template Integration
 
 ### Added
