@@ -113,6 +113,34 @@ Use these categories as an index only. Do not store live booking details, privat
 - Allergic rhinitis and environmental triggers
 - Appointment recovery cost
 - Flare-up impact
+- Menstrual phase or premenstrual phase as a functional state modifier
+- Appetite, hydration, dizziness, sensory tolerance, cognitive capacity, and recovery changes during cyclical health changes
+
+### Functional state modifiers
+
+Use this category when the issue is not a separate task domain, but a factor that changes reliable functioning across several domains.
+
+Examples include:
+
+- menstrual or premenstrual phase
+- post-exertional malaise
+- POTS flare or orthostatic symptom increase
+- sensory overload or shutdown risk
+- pain flare
+- poor sleep
+- illness or allergy flare
+- recent high-demand appointment, travel, or administrative task
+
+State modifier evidence should describe the practical effect, for example:
+
+- whether leaving the house becomes unsafe or unrecoverable
+- whether communication capacity reduces
+- whether decisions or forms become unreliable
+- whether appetite, hydration, or medication routines need support
+- whether sensory tolerance narrows
+- whether recovery time increases
+
+Do not store private symptom diaries, cycle dates, medical identifiers, or detailed personal records in this public repository.
 
 ## Evidence quality checklist
 
