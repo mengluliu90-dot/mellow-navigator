@@ -64,6 +64,26 @@ Functional evidence should describe what happens in real life, what support is r
 - Appointment travel burden
 - Post-travel recovery
 
+For accessible travel planning, also index:
+
+- destination suitability
+- travel method comparison
+- accommodation accessibility
+- step-free access and lift access
+- queueing and waiting demands
+- walking and standing demands
+- sensory load during travel
+- communication demand during travel
+- food, hydration, medication, and allergy planning
+- luggage handling and physical strain
+- travel assistance requirements
+- quiet spaces and reduced-stimulation routes
+- support-person capacity
+- recovery before and after travel
+- backup plans and cancellation planning
+
+Use these categories as an index only. Do not store live booking details, private travel records, personal identifiers, or detailed medical evidence in this public repository.
+
 ### Social engagement and psychological access
 
 - Engaging with other people
