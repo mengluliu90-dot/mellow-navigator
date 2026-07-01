@@ -23,6 +23,80 @@ This note records how the live pages and device entry points fit together as one
 - `/pa/eos.html` — EOS dashboard.
 - iPhone Shortcuts app and Home Screen widgets — low-friction access to reusable Menglu OS scripts and support actions.
 
+## Central orchestration rule
+
+Menglu OS should behave as one coordinated system, not as separate automations competing for attention.
+
+The central orchestration layer is a rule inside the existing architecture. It is not a new dashboard, new agent, or separate operating system.
+
+### Routing order
+
+When new information enters Menglu OS, process it in this order:
+
+1. Classify the event once.
+2. Check whether it matches an existing case, open loop, draft, appointment, recovery state, or evidence item.
+3. Reuse the existing component when possible.
+4. Update Current Context before changing OS Evidence.
+5. Trigger only the smallest relevant output: no action, risk note, Case Summary, Prep Pack, Safest Draft, or one decision request.
+
+### Shared state
+
+All interfaces should treat these as shared state rather than separate records:
+
+| Shared state | Used by |
+|---|---|
+| `uos_state` | EOS, Mellow, PA, Recovery Guard, Sync Packet |
+| `uos_cases` | PA, Mira, Outcome Tracker, Open Loops, Mellow dashboard |
+| `uos_tasks` | Attention view, Open Loops, automation handovers |
+| `uos_drafts` | PA, Safest Draft, Mellow Sync Packet |
+| `uos_timeline` | Mira, Debrief Loop, case history |
+| `current_mode_text` | EOS, Mellow cards, appointment/support handovers |
+
+If the same fact appears in more than one interface, one copy should be treated as the source item and the other copies should be views, summaries, or exports.
+
+## Deduplication rule
+
+Before adding a new shortcut, page, prompt, automation, label, case, or evidence note, check whether it is repeating an existing Menglu OS function.
+
+### Merge instead of duplicate
+
+| Repeated item | Default action |
+|---|---|
+| Duplicate shortcut wording | Point it to existing Mellow, PA, EOS, or Profile Passport wording. |
+| Duplicate open loop | Merge into the existing case or waiting item. |
+| Duplicate appointment preparation | Update the existing Appointment Shield / Prep Pack flow. |
+| Duplicate recovery warning | Update `uos_state` or EOS instead of making another reminder. |
+| Duplicate evidence summary | Keep stable material in Mira / OS Evidence and temporary material in Current Context. |
+| Duplicate case summary | Replace with one current Case Summary linked to the active case. |
+| Duplicate automation output | Convert to one Outcome Tracker update or one Safest Draft. |
+
+### Delete or archive criteria
+
+A duplicate can be deleted or archived when all of these are true:
+
+1. It does not contain unique reusable wording.
+2. It does not contain a unique active deadline, risk, decision, or waiting item.
+3. It has already been merged into the correct existing component.
+4. Keeping it would increase confusion, repeated notifications, or repeated decisions.
+
+If uncertain, mark it as `Historical evidence only` or `Reference` rather than deleting it.
+
+## Event flow
+
+Use one event flow across interfaces:
+
+```text
+Incoming item
+  -> Document Triage
+  -> Existing case or new case decision
+  -> Three-Layer Pipeline
+  -> Recovery burden check
+  -> Output choice
+  -> Outcome Tracker / Debrief Loop
+```
+
+The same item should not independently create a shortcut, an open loop, a timeline entry, a draft, and a reminder unless each has a distinct role.
+
 ## Mira Evidence Engine boundary
 
 Mira should act as the evidence layer inside Menglu OS, not as an unsupported live background monitor.
