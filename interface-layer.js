@@ -21,6 +21,49 @@
     localStorage[key]=JSON.stringify(a.slice(0,50));
   }
   function safeSlice(arr,n){return Array.isArray(arr)?arr.slice(0,n):[]}
+  function textOf(x){return [x.name,x.title,x.summary,x.detail,x.status,x.phase,x.waiting_for,x.lead,x.next,x.risk,x.priority,x.domain].filter(Boolean).join(' ').toLowerCase()}
+  function priorityOf(item){
+    const text=textOf(item);
+    if(item.priority==='RED'||item.status==='Needs Review'||/urgent|deadline|required|high risk|risk|safety|fraud|identity|security|bank|benefit|pip|uc|dwp|dfc|legal|safeguard|housing safety|medical risk/i.test(text)) return 'P1';
+    if(/active|in progress|needs action|next step|reply|follow|review|draft/i.test(text)) return 'P2';
+    if(item.status==='Waiting'||/waiting|pending|blocked|await|open loop|confirm/i.test(text)) return 'P3';
+    return 'P4';
+  }
+  function priorityMeaning(p){
+    return {
+      P1:'High risk, deadline, required reply, safety, benefits, banking, health, housing safety, or irreversible decision.',
+      P2:'Active case with useful next step but no immediate confirmed deadline.',
+      P3:'Waiting on another person or organisation.',
+      P4:'Reference, monitoring, completed, or historical evidence.'
+    }[p]||'Unclassified';
+  }
+  function buildPriorityIndex(items){
+    const rows=items.map((item,i)=>{
+      const p=priorityOf(item);
+      return {
+        priority:p,
+        meaning:priorityMeaning(p),
+        source:item.source||item.domain||item.kind||'local_state',
+        title:item.name||item.title||item.summary||('Item '+(i+1)),
+        status:item.status||item.phase||'Unknown',
+        next:item.next||item.waiting_for||item.detail||'',
+        recovery:item.recovery_impact||item.recovery||'Unknown',
+        confidence:item.confidence||'Unknown'
+      };
+    });
+    const order={P1:1,P2:2,P3:3,P4:4};
+    rows.sort((a,b)=>(order[a.priority]||9)-(order[b.priority]||9));
+    return {
+      generated_from:'uos_cases + uos_tasks + mn_open_loops + mn_decision_log',
+      counts:{
+        P1:rows.filter(r=>r.priority==='P1').length,
+        P2:rows.filter(r=>r.priority==='P2').length,
+        P3:rows.filter(r=>r.priority==='P3').length,
+        P4:rows.filter(r=>r.priority==='P4').length
+      },
+      rows:safeSlice(rows,40)
+    };
+  }
   function buildControlRoomPacket(){
     const uosObjects=safeJSON('uos_objects',[]);
     const uosCases=safeJSON('uos_cases',{});
@@ -35,6 +78,7 @@
     const waiting=uosTasks.filter(t=>t.status==='Waiting'||/wait|open loop|follow|confirm|reply/i.test((t.title||'')+' '+(t.detail||'')));
     const action=uosTasks.filter(t=>t.status==='Needs Review'||t.priority==='RED'||/urgent|deadline|risk|required/i.test((t.title||'')+' '+(t.detail||'')));
     const activeCases=Object.values(uosCases).map(c=>({
+      source:'uos_cases',
       name:c.name||'Case',
       status:c.status||'',
       phase:c.phase||'',
@@ -48,11 +92,47 @@
       recovery_impact:c.recovery_impact||'',
       confidence:c.confidence||''
     }));
+    const indexedItems=[
+      ...activeCases,
+      ...uosTasks.map(t=>({...t,source:'uos_tasks'})),
+      ...localLoops.map(t=>({...t,source:'mn_open_loops'})),
+      ...decisionLog.map(t=>({...t,source:'mn_decision_log'}))
+    ];
+    const currentPriorityIndex=buildPriorityIndex(indexedItems);
     return {
-      packet_type:'Mellow Control Room Sync Packet',
+      packet_type:'Mellow Control Room Sync Packet v2',
       generated_at:new Date().toISOString(),
       privacy_note:'User-initiated local export. Review before sharing. Do not paste confidential evidence, private identifiers, bank details, or unnecessary medical records unless needed for the task.',
-      workflow:'Triage -> Three-Layer Processing -> Prep Pack -> Safest Draft -> Debrief Loop -> Outcome Tracker',
+      workflow:'Alias -> Triage -> Pre-flight Check -> Capability Check -> Context -> Draft -> Outcome -> Feedback Loop',
+      command_aliases:{
+        '[RUN_MONITORING]':'Generate a SYNC_REPORT from available authorised sources and local packet data.',
+        '[UC]':'Universal Credit, LCWRA, DfC, appointee, journal or benefits administration workflow.',
+        '[PIP]':'PIP review, award, evidence, assessment, forms or benefit communications workflow.',
+        '[BANK]':'Banking, AIB, fraud, identity, payments, chargeback or security workflow.',
+        '[HEALTH]':'GP, NHS, Trust, hospital, pharmacy, dental or healthcare adjustment workflow.',
+        '[HOUSING]':'Lotus Homes, Clixifix, repairs, defects, safety, water ingress or home utilities workflow.',
+        '[SOCIAL]':'Social care, Mary-Sue O\'Hare, PCC, care coordination or support planning workflow.',
+        '[EMAIL]':'Classify email, assess importance, draft reply if appropriate, and wait for approval before sending.'
+      },
+      preflight_capability_check:{
+        required_before_draft:[
+          'Check whether enough evidence exists.',
+          'Check whether live information or a connected tool is needed.',
+          'Check whether the task requires physical action, identity verification, phone contact, signature, payment, appointment acceptance/cancellation, or sending a message.',
+          'Check whether the action is irreversible or privacy-sensitive.',
+          'If evidence is missing, use WAITING_FOR_EVIDENCE instead of guessing.',
+          'If manual action is required, mark MANUAL_INTERVENTION_REQUIRED and provide the smallest safe handover.'
+        ],
+        ai_can_do:['classify','summarise','compare','prioritise','draft','prepare reviewable outputs','update non-sensitive GitHub documentation when explicitly requested'],
+        ai_must_not_claim:['sent email unless actually sent through authorised tool','booked/cancelled appointment unless actually done through authorised tool','completed physical repair','verified identity','made payment','received a reply that is not in evidence']
+      },
+      graceful_degradation_template:{
+        status:'WAITING_FOR_EVIDENCE',
+        missing:'Name the specific missing file, message, date, screenshot, email, appointment notice, or evidence type.',
+        reason:'Explain why the task cannot be completed safely without it.',
+        next_evidence_needed:'Ask for the smallest specific evidence item only.'
+      },
+      latest_state_policy:'Generate LATEST_STATE only for Case Summary, Update Packet, Sync Packet, workflow closure, or explicit request. Do not add it to every response.',
       current_context:{
         visible_state:statusText(),
         current_mode_text:localStorage.getItem('current_mode_text')||'',
@@ -75,6 +155,7 @@
           output:uosObjects[0].output
         }:null
       },
+      current_priority_index:currentPriorityIndex,
       attention_needed:{
         action_required_items:safeSlice(action,30),
         waiting_items:safeSlice(waiting,30),
@@ -90,6 +171,10 @@
         next_review:'Set only if a real deadline or review point exists',
         confidence:c.confidence||'Unknown'
       })),
+      feedback_loop_seed:{
+        update_after_processing:['priority','active case status','next action or waiting state','evidence status','recovery burden','next review only if real deadline or appointment exists'],
+        evidence_status_labels:['Verified','User Confirmed','Suggested','Missing','Requires Review','Historical Evidence Only','Waiting on Others','Completed/Closed']
+      },
       recent_timeline:safeSlice(uosTimeline,30),
       recent_local_timeline:safeSlice(localTimeline,30),
       recent_objects:safeSlice(uosObjects,10).map(o=>({
@@ -110,11 +195,11 @@
         date:d.date,
         layers:d.layers
       })),
-      recommended_processing_instruction:'Apply Menglu OS. First triage items as Action Required, Waiting, Reference, High Risk, or Archive. Then separate OS Evidence from Current Context, identify contradictions/gaps, estimate recovery burden, update Outcome Tracker, and produce only the required Context Packet, Case Summary, Prep Pack, Safest Draft, or no-action result.'
+      recommended_processing_instruction:'Apply Menglu OS v0.24+. Use Command Alias if present. Run Pre-flight and Capability Check before drafting. First triage items as Action Required, Waiting, Reference, High Risk, or Archive. Generate Current Priority Index. Separate OS Evidence from Current Context. Identify contradictions/gaps. Estimate recovery burden. Use WAITING_FOR_EVIDENCE if needed. Produce only the required SYNC_REPORT, Context Packet, Case Summary, Prep Pack, Safest Draft, MANUAL_INTERVENTION_REQUIRED, or no-action result.'
     };
   }
   function controlRoomPacketText(){
-    return 'Update: process this Mellow Control Room Sync Packet against Menglu OS. Apply the Six-Step Workflow and Three-Layer Pipeline. Return only action, risk, Case Summary, Prep Pack, Safest Draft, or no action required.\n\n```json\n'+JSON.stringify(buildControlRoomPacket(),null,2)+'\n```';
+    return 'Update: process this Mellow Control Room Sync Packet v2 against Menglu OS. Apply Command Alias routing if present, Pre-flight Check, Capability Check, Current Priority Index, Six-Step Workflow, Three-Layer Pipeline, and Feedback Loop. Return only SYNC_REPORT, action, risk, Case Summary, Prep Pack, Safest Draft, WAITING_FOR_EVIDENCE, MANUAL_INTERVENTION_REQUIRED, or no action required.\n\n```json\n'+JSON.stringify(buildControlRoomPacket(),null,2)+'\n```';
   }
   function copyText(t){try{navigator.clipboard&&navigator.clipboard.writeText(t)}catch(e){}}
   function statusCard(title,value,note,cls){
@@ -130,7 +215,7 @@
     if(!items.length)wrap.appendChild(el('p','hint',empty||'None recorded on this device.'));
     items.slice(0,6).forEach(x=>{
       const p=el('p','hint');
-      p.textContent=(x.status?x.status+' · ':'')+(x.title||x.domain||x.summary||'Saved item')+(x.next?'\nNext: '+x.next:'')+(x.timestamp?'\n'+x.timestamp:'');
+      p.textContent=(x.priority?x.priority+' · ':'')+(x.status?x.status+' · ':'')+(x.title||x.domain||x.summary||x.name||'Saved item')+(x.next?'\nNext: '+x.next:'')+(x.timestamp?'\n'+x.timestamp:'');
       wrap.appendChild(p);
     });
     parent.appendChild(wrap);
@@ -143,17 +228,16 @@
     const state=statusText();
     const packet=buildControlRoomPacket();
     g.appendChild(statusCard('Current state',state,state==='Recovery active'?'Avoid complex admin':'Use one task at a time',state==='Recovery active'?'warn':''));
+    g.appendChild(statusCard('P1',String(packet.current_priority_index.counts.P1),'High risk / deadline',packet.current_priority_index.counts.P1?'warn':''));
+    g.appendChild(statusCard('P2',String(packet.current_priority_index.counts.P2),'Active next steps'));
+    g.appendChild(statusCard('P3',String(packet.current_priority_index.counts.P3),'Waiting'));
     g.appendChild(statusCard('Attention',String(packet.attention_needed.action_required_items.length),'Action required'));
-    g.appendChild(statusCard('Waiting',String(packet.attention_needed.waiting_items.length),'Waiting/open loops'));
     g.appendChild(statusCard('Active cases',String(packet.active_cases.length),'PA case state'));
     g.appendChild(statusCard('Open loops',String(safeJSON('mn_open_loops',[]).length),'Manual quick list'));
-    g.appendChild(statusCard('Decisions',String(safeJSON('mn_decision_log',[]).length),'Local log'));
-    const active=safeJSON('mira_next_active_session',null);
-    g.appendChild(statusCard('Continue',active?(active.domain||'Saved item'):'None','Last stopped item'));
     g.appendChild(statusCard('Automations','Linked','Use Automation Hub'));
     wrap.appendChild(g);
     const nav=el('div','grid');
-    addButton(nav,'Export Sync Packet',()=>State.go('SYNC'),'btn green','Copy current state to ChatGPT');
+    addButton(nav,'Export Sync Packet v2',()=>State.go('SYNC'),'btn green','Copy current state to ChatGPT');
     addButton(nav,'Attention needed',()=>State.go('ATTENTION'),'btn red','Action / waiting / high risk');
     addButton(nav,'Next best action',()=>State.go('NEXT'),'btn green','Choose one safe action');
     addButton(nav,'Open loops',()=>State.go('LOOPS'),'btn','Waiting / active / closed');
@@ -164,6 +248,7 @@
     addButton(nav,'Home',()=>State.go('HOME'));
     wrap.appendChild(nav);
     c.appendChild(wrap);
+    listBlock(c,'Current Priority Index',packet.current_priority_index.rows,'No priority items recorded on this device.');
     listBlock(c,'Recent local timeline',safeJSON('mira_next_timeline',[]),'No local timeline items.');
   }
   function renderAttention(c){
@@ -172,20 +257,21 @@
     wrap.appendChild(el('div','section','Attention needed'));
     wrap.appendChild(el('p','hint','Shows only items that may require action, waiting review, or risk checking. If empty, use rest/no action.'));
     const g=el('div','grid');
-    addButton(g,'Copy full sync packet',()=>{const t=controlRoomPacketText();copyText(t);speak('Sync packet copied. Paste into ChatGPT when ready.');},'btn green','For ChatGPT');
-    addButton(g,'Next best action',()=>handover('Attention needed','Use the current Control Room Sync Packet. Identify one safest next action only. If nothing requires action, say no action required.'),'btn green');
+    addButton(g,'Copy full sync packet v2',()=>{const t=controlRoomPacketText();copyText(t);speak('Sync packet v2 copied. Paste into ChatGPT when ready.');},'btn green','For ChatGPT');
+    addButton(g,'Next best action',()=>handover('Attention needed','Use the current Control Room Sync Packet v2. Run Pre-flight and Capability Check. Identify one safest next action only. If nothing requires action, say no action required.'),'btn green');
     addButton(g,'Open EOS / PA',()=>{location.href='pa/eos.html'},'btn purple');
     addButton(g,'Home',()=>State.go('HOME'));
     wrap.appendChild(g);
     c.appendChild(wrap);
+    listBlock(c,'P1 / P2 priority items',packet.current_priority_index.rows.filter(x=>x.priority==='P1'||x.priority==='P2'),'No P1 or P2 items in local state.');
     listBlock(c,'Action required',packet.attention_needed.action_required_items,'No action-required items in local state.');
     listBlock(c,'Waiting / open loops',packet.attention_needed.waiting_items,'No waiting items in local PA state.');
     listBlock(c,'Manual open loops',packet.attention_needed.local_open_loops,'No manual open loops recorded.');
   }
   function renderSync(c){
     const wrap=el('section','section-card priority');
-    wrap.appendChild(el('div','section','Control Room Sync Packet'));
-    wrap.appendChild(el('p','hint','Copy this into ChatGPT to process current local state through the Six-Step Workflow. User-initiated only. No background monitoring.'));
+    wrap.appendChild(el('div','section','Control Room Sync Packet v2'));
+    wrap.appendChild(el('p','hint','Copy this into ChatGPT to process current local state through Alias routing, Pre-flight Check, Capability Check, Current Priority Index and Feedback Loop. User-initiated only. No background monitoring.'));
     const ta=document.createElement('textarea');
     ta.rows=14;
     ta.value=controlRoomPacketText();
@@ -196,7 +282,7 @@
     ta.style.border='1px solid #aaa';
     wrap.appendChild(ta);
     const g=el('div','grid');
-    addButton(g,'Copy packet',()=>{ta.select();copyText(ta.value);speak('Sync packet copied. Paste into ChatGPT.');},'btn green');
+    addButton(g,'Copy packet',()=>{ta.select();copyText(ta.value);speak('Sync packet v2 copied. Paste into ChatGPT.');},'btn green');
     addButton(g,'Open Mira Evidence',()=>{location.href='mira-next/'},'btn purple');
     addButton(g,'Back dashboard',()=>State.go('STATUS'),'btn');
     addButton(g,'Home',()=>State.go('HOME'));
@@ -224,8 +310,8 @@
     const g=el('div','mini-grid');
     const packet=buildControlRoomPacket();
     g.appendChild(statusCard('State',statusText(),statusText()==='Recovery active'?'Low demand':'Ready'));
-    g.appendChild(statusCard('Attention',String(packet.attention_needed.action_required_items.length),'Action required'));
-    g.appendChild(statusCard('Waiting',String(packet.attention_needed.waiting_items.length),'Waiting'));
+    g.appendChild(statusCard('P1',String(packet.current_priority_index.counts.P1),'High risk / deadline'));
+    g.appendChild(statusCard('P2',String(packet.current_priority_index.counts.P2),'Active'));
     g.appendChild(statusCard('Rule','One interface','Many engines'));
     wrap.appendChild(g);
     c.appendChild(wrap);
@@ -236,7 +322,6 @@
     wrap.appendChild(el('p','hint','Buttons map to existing Menglu OS engines.'));
     const g=el('div','grid');
     [['medical','Medical / Health'],['social','Social care'],['benefits','Benefits / PIP / UC'],['housing','Housing / Repairs'],['bank','Bank / Money'],['family','Family / Mum'],['reception','Reception / Front desk'],['emergency','Emergency / Accident']].forEach(([k,n])=>addButton(g,(TOPICS[k].icon||'')+' '+n,()=>State.topic(k),k==='emergency'?'btn red':'btn'));
-    addButton(g,'More cards',()=>State.go('TOPICS'),'btn','Dental, pharmacy, travel, shop, police');
     wrap.appendChild(g);
     c.appendChild(wrap);
   }
@@ -268,7 +353,7 @@
     wrap.appendChild(el('div','section','One Inbox'));
     wrap.appendChild(el('p','hint','Use this when you do not know which mode to choose. Paste the item into ChatGPT or PA Auto with this handover.'));
     const g=el('div','grid');
-    addButton(g,'Classify this',()=>handover('One Inbox','Classify this input first. Decide whether it is email, letter, form, medical, benefits, housing, banking, family, evidence, appointment, deadline, or no action. Then choose the smallest safe next step.'),'btn green','Use before deciding');
+    addButton(g,'Classify this',()=>handover('One Inbox','Classify this input first. Decide whether it is email, letter, form, medical, benefits, housing, banking, family, evidence, appointment, deadline, or no action. Then run Pre-flight and Capability Check before drafting. Choose the smallest safe next step.'),'btn green','Use before deciding');
     addButton(g,'Paste into PA Auto',()=>{location.href='pa/'},'btn purple');
     addButton(g,'Home',()=>State.go('HOME'));
     wrap.appendChild(g);
@@ -279,7 +364,7 @@
     wrap.appendChild(el('div','section','Next best action'));
     wrap.appendChild(el('p','hint','Default rule: one action only. No extra tasks unless urgent.'));
     const g=el('div','grid');
-    addButton(g,'Ask ChatGPT to choose',()=>handover('Next best action','Review current context and choose exactly one safest next action. Consider recovery state, deadlines, risk, waiting-on-others, and cognitive load. Do not give a long task list.'),'btn green');
+    addButton(g,'Ask ChatGPT to choose',()=>handover('Next best action','Review current context and choose exactly one safest next action. Consider Current Priority Index, recovery state, deadlines, risk, waiting-on-others, and cognitive load. Do not give a long task list.'),'btn green');
     addButton(g,'Open saved item',()=>State.go('LETTER'),'btn purple');
     addButton(g,'No action / rest',()=>State.go('RECOVERY'),'btn green');
     addButton(g,'Home',()=>State.go('HOME'));
@@ -341,6 +426,7 @@
     wrap.appendChild(el('div','section','Automation Hub'));
     wrap.appendChild(el('p','hint','The website does not run ChatGPT automations. It provides the front-end handover and avoids duplicate workflows.'));
     const g=el('div','grid');
+    addButton(g,'Run monitoring handover',()=>handover('Automation: RUN_MONITORING','Use [RUN_MONITORING]. Check authorised sources only. Produce SYNC_REPORT with Critical, Active, Waiting, Monitoring, Completed, Drafts Ready, and Recovery. Do not claim background monitoring.'),'btn green','Daily sync');
     addButton(g,'Email follow-up review',()=>handover('Automation: Email follow-up review','Use the twice-weekly Gmail follow-up automation output as the source for who is waiting, what action is needed, deadlines, thread age, and one reviewable next step.'),'btn green','Active automation');
     addButton(g,'Open-loop review',()=>handover('Automation: Open loops','When open-loop automation is available, merge results into the Open Loops Board. Do not create duplicate reminders. Notify only when action is needed.'),'btn');
     addButton(g,'Appointment shield',()=>handover('Automation: Appointment shield','When appointment monitoring is available, connect outputs to Mellow scripts, reasonable adjustments, travel planning, written-summary requests, and recovery planning.'),'btn');
@@ -354,10 +440,10 @@
     const wrap=el('section','section-card');
     wrap.appendChild(el('div','section','AI Context Pack'));
     wrap.appendChild(el('p','hint','Portable handover for another AI or a new chat. It contains operating rules, not private identity details.'));
-    const text='Use Menglu OS. Treat this as one coherent system. Ask one question at a time if clarification is required. Reuse verified information. Distinguish confirmed facts, unconfirmed information, assumptions and missing information. Prefer written communication, no phone, simple language, extra processing time, one issue at a time, and smallest safe next action. Consider autism, fatigue/PEM, POTS, sensory overload, shutdown risk, executive dysfunction, support needs, and recovery. Do not treat prepared writing, masking, or supported performance as independent reliable functioning. For forms, analyse the whole form first, inventory fields, identify evidence, mark missing information, draft responses, quality-check, and provide an audit trail. For automations, consolidate existing monitoring and notify only when action is needed.';
+    const text='Use Menglu OS. Treat this as one coherent system. Ask one question at a time only when clarification is required. Reuse verified information. Distinguish confirmed facts, unconfirmed information, assumptions and missing information. Prefer written communication, no phone, simple language, extra processing time, one issue at a time, and smallest safe next action. Consider autism, fatigue/PEM, POTS, sensory overload, shutdown risk, executive dysfunction, support needs, and recovery. Do not treat prepared writing, masking, or supported performance as independent reliable functioning. For forms, analyse the whole form first, inventory fields, identify evidence, mark missing information, draft responses, quality-check, and provide an audit trail. For automations, consolidate existing monitoring and notify only when action is needed. Run Pre-flight and Capability Check before drafting. Use WAITING_FOR_EVIDENCE or MANUAL_INTERVENTION_REQUIRED when needed.';
     const g=el('div','grid');
     addButton(g,'Copy context pack',()=>handover('AI context pack',text),'btn green');
-    addButton(g,'Copy sync packet',()=>{const t=controlRoomPacketText();copyText(t);speak('Sync packet copied. Paste into ChatGPT.');},'btn green','Includes local state');
+    addButton(g,'Copy sync packet v2',()=>{const t=controlRoomPacketText();copyText(t);speak('Sync packet v2 copied. Paste into ChatGPT.');},'btn green','Includes local state');
     addButton(g,'Open Mira Evidence',()=>{location.href='mira-next/'},'btn purple');
     addButton(g,'Home',()=>State.go('HOME'));
     wrap.appendChild(g);
@@ -386,6 +472,6 @@
     renderIntake(c);
     renderActionMap(c);
   };
-  window.MellowControlRoom={buildControlRoomPacket:buildControlRoomPacket,controlRoomPacketText:controlRoomPacketText};
+  window.MellowControlRoom={buildControlRoomPacket:buildControlRoomPacket,controlRoomPacketText:controlRoomPacketText,buildPriorityIndex:buildPriorityIndex};
   window.addEventListener('load',()=>setTimeout(render,0));
 })();
