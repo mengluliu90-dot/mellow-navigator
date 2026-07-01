@@ -55,6 +55,43 @@ Notify only when a decision, approval, action, deadline, appointment change, ris
 - Privacy boundary
 - How to use guide
 
+## Validation mode
+
+Menglu OS is in validation mode by default.
+
+Validation mode means the architecture should not be redesigned by default. Future changes should be targeted refinements based on real-world friction.
+
+Do not create new engines, dashboards, automations, operating systems, prompts, or parallel task lists unless there is a repeated failure pattern that cannot be solved by improving an existing component.
+
+### Validation criteria
+
+Use these criteria to judge whether Menglu OS is working:
+
+1. **Signal-to-noise ratio** — notifications should usually be worth attention.
+2. **Duplicate work** — Menglu should not need to provide the same context repeatedly.
+3. **Open Loop accuracy** — matters should be correctly marked as action for Menglu, waiting on others, monitoring only, completed/closed, historical evidence only, or requires review.
+4. **Recovery protection** — non-urgent work should be suppressed during high fatigue, PEM, sensory overload, shutdown risk, illness, pain, or recovery periods.
+5. **Decision quality** — the suggested safest action should usually be one practical next step, not a long task list.
+6. **Avoided work** — success is measured by fewer repeated Gmail checks, document searches, recreated timelines, duplicated explanations, unnecessary reminders, and non-urgent interruptions.
+
+### Monthly system self-review
+
+A monthly self-review should evaluate system performance, not Menglu's performance.
+
+The review should check:
+
+- Were any notifications unnecessary?
+- Was anything important missed?
+- Were duplicate alerts generated?
+- Did Recovery Guard suppress something that should have appeared?
+- Are any open loops stale?
+- Should any matters move to Completed/Closed or Historical Evidence Only?
+- Did any recommendation create more work than it saved?
+
+The review should recommend only small, targeted changes.
+
+It should not create new engines, dashboards, or automations unless there is a clear repeated failure pattern.
+
 ## Six-step operational workflow
 
 ### Purpose
@@ -310,6 +347,162 @@ Status vocabulary should use:
 
 Confidence should reflect certainty, not importance.
 
+## Async Orchestrator system contract
+
+### Purpose
+
+Menglu OS should move from prompt-based operation toward an event-driven hosted architecture.
+
+ChatGPT is the reasoning engine. It should classify, compare, reason, draft, and propose structured updates.
+
+The orchestrator is the runtime layer. It should detect events, queue tasks, load context, call the reasoning engine, apply safe changes where authorised, and surface only approval or action cards to Menglu.
+
+### Core architecture
+
+External inputs:
+
+- Email
+- Uploaded files
+- PDFs
+- GitHub changes
+- Mellow packets
+- Dashboard actions
+
+Flow:
+
+1. Sentinel detects an external event.
+2. Task Queue groups events by case, organisation, or issue.
+3. Context Loader retrieves existing case context from GitHub or authorised sources.
+4. Reasoning Engine processes one context-rich batch.
+5. Action Queue receives structured outputs.
+6. Environment Adaptor decides whether to auto-commit, prepare a patch, or request approval.
+7. Dashboard shows only Today's Decisions.
+
+### Repository write access fallback contract
+
+If the runtime orchestrator detects that repository write access has become available again, it should automatically apply any pending repository patch before requesting user intervention.
+
+If write access remains unavailable, pending updates should stay frozen in the external task queue as structured patches rather than causing system state fragmentation or loss of data.
+
+This is a future runtime-orchestrator requirement. ChatGPT by itself does not wake up later or retry background writes.
+
+### Four engineering contracts
+
+Future implementation should define four stable contracts:
+
+1. **Event Contract** — how incoming emails, files, PDFs, GitHub changes, Mellow packets, and dashboard actions are represented.
+2. **Case Contract** — how case metadata, state, evidence, chronology, deadline, permissions, and relationships are represented.
+3. **Reasoning Contract** — how the orchestrator calls ChatGPT and how ChatGPT returns structured findings, confidence, proposed updates, and recommended actions.
+4. **Action Contract** — how GitHub, Dashboard, Email Draft, Calendar, Timeline, and Evidence Store consumers apply or display structured outputs.
+
+All contracts should include a `contractVersion` or `schemaVersion` field. Event inputs should also include an `idempotencyKey` to avoid duplicate processing.
+
+### Six-state case model
+
+Standard states:
+
+- `OPEN`
+- `WAITING_REPLY`
+- `EVIDENCE_RECEIVED`
+- `ACTION_REQUIRED`
+- `READY_TO_SEND`
+- `ARCHIVED`
+
+State rules:
+
+- `OPEN` — new case, new issue, reopened issue, or newly detected matter.
+- `WAITING_REPLY` — an outgoing message, letter, form, or official contact has been sent or submitted. The case carries a deadline policy.
+- `EVIDENCE_RECEIVED` — a new email, document, reply, PDF, or update has arrived. The reasoning engine must decide whether the item is substantive.
+- `ACTION_REQUIRED` — the system cannot continue without specific external material or a personal decision from Menglu.
+- `READY_TO_SEND` — a draft, response, patch, or action is prepared and frozen.
+- `ARCHIVED` — the case or sub-step is closed, resolved, inactive, or retained for reference. Archived does not mean deleted.
+
+Decision tree for `EVIDENCE_RECEIVED`:
+
+- acknowledgement only → record and return to waiting or archive the current sub-step;
+- substantive but no reply needed → update chronology and evidence index;
+- user material needed → `ACTION_REQUIRED`;
+- reply needed → `READY_TO_SEND`.
+
+If new substantive evidence arrives while a draft is frozen at `READY_TO_SEND`, invalidate the old draft, generate the next version, and keep the case frozen until approval or rejection.
+
+If later new evidence or correspondence arrives for an archived case, the orchestrator may reopen the case and return it to `OPEN`.
+
+### Deadline policy
+
+Do not use one fixed deadline for all cases.
+
+Deadline priority order:
+
+1. Manual override
+2. Case-specific deadline
+3. Organisation or channel policy
+4. Global default
+
+Suggested default:
+
+- global default: 14 calendar days
+- NHS or healthcare: usually longer and case-specific
+- banks: use relevant complaint or response timeframe where known
+- DWP or benefits: case-specific
+- urgent safeguarding or accessibility barriers: shorter manual override may apply
+
+When uncertain, mark `WAITING_FOR_EVIDENCE` instead of inventing a deadline.
+
+### Dashboard delivery contract
+
+The dashboard should not show raw open loops by default.
+
+It should show only Today's Decisions.
+
+Allowed card types:
+
+#### Approval Card
+
+Used for `READY_TO_SEND`.
+
+Must include:
+
+- case name
+- status transition
+- reason for draft
+- risk if ignored
+- prepared draft or patch
+- approval action
+- rejection or revise action
+
+#### Action Card
+
+Used for `ACTION_REQUIRED`.
+
+Must include:
+
+- exact missing item
+- why it is needed
+- where to upload or paste it
+- what the system will do after receiving it
+- consequence if not provided
+
+### Safety rules
+
+- Do not auto-send external messages without explicit approval.
+- Do not auto-submit forms.
+- Do not make payments.
+- Do not sign documents.
+- Do not change appointments without approval.
+- Do not store sensitive live evidence in a public repository.
+- Do not treat ChatGPT as a continuously running monitor.
+- Do not ask Menglu to manage system structure if the orchestrator can decide placement safely.
+
+### Operating effect
+
+Menglu OS should shift toward this model:
+
+- Menglu supplies trigger, evidence, or approval.
+- The orchestrator handles detection, queuing, context loading, batching, execution routing, and dashboard rendering.
+- ChatGPT handles reasoning, classification, drafting, and structured update preparation.
+- Menglu sees only the smallest necessary decision.
+
 ## Automation independence upgrade path
 
 ### Purpose
@@ -376,13 +569,13 @@ These areas can be expanded later:
 - private evidence storage design outside GitHub
 - future Agent Mode setup pack
 - future Tasks or Automations setup pack
-- version history and changelog
 - one-button Update Packet
 - recovery state sync between Current Mode and EOS
 - active case queue view
 - prepared prompt export buttons
 - local backup and restore
-- offline service worker for static pages
+- offline service worker for static pages and assets
+- concrete `EVENT_CONTRACT.md`, `CASE_CONTRACT.md`, `REASONING_CONTRACT.md`, and `ACTION_CONTRACT.md` only if implementation begins and the concepts no longer fit this roadmap
 
 ## Current limitation
 
