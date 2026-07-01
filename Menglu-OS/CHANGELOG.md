@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.23.0 - Automation Handling Protocol Activation
+
+### Added
+
+- Active processing protocol in `Menglu-OS/docs/LIVE_INTERFACE_MAP.md`.
+- Default task-handling sequence: Triage → Context → Draft → Outcome.
+- Standard task output structure for task records, automation output, accessibility adjustment notes, risk points, and next cycle.
+- Execution constraints for when to ask clarification, when not to guess, and how to handle missing or uncertain information.
+- Cherrytrees boundary: keep Cherrytrees material as historical evidence only unless Menglu gives a new explicit instruction.
+
+### Changed
+
+- Current chat operations can treat supplied task material as ready for processing without asking what Menglu wants done when classification and next action are clear.
+- Recovery burden and family-support suitability are now part of the active processing protocol.
+- The protocol is integrated into the existing Live Interface Map rather than being stored as a duplicate standalone automation file.
+
+### Operating effect
+
+Menglu can paste task material from Mellow Navigator, dashboard views, Gmail, appointment notices, housing repair updates, or other authorised sources. The assistant should process the item through the active protocol and return the structured result with minimal extra questioning.
+
 ## v0.22.0 - Central Orchestration and Deduplication
 
 ### Added
