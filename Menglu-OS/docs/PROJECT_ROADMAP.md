@@ -55,6 +55,84 @@ Notify only when a decision, approval, action, deadline, appointment change, ris
 - Privacy boundary
 - How to use guide
 
+## Six-step operational workflow
+
+### Purpose
+
+Use one stable execution path for case-management work so incoming information moves from triage to outcome without repeatedly asking Menglu to decide which process applies.
+
+| Stage | Component | Role |
+|---|---|---|
+| 1. Intake | Document Triage | Categorise incoming information as Action Required, Waiting, Reference, High Risk, or Archive. |
+| 2. Processing | Three-Layer Pipeline | Map the event against OS Evidence and Current Context. |
+| 3. Preparation | Prep Pack | Build appointment or meeting preparation when a scheduled event needs support. |
+| 4. Execution | Safest Draft | Generate the safest action-ready response, usually for approval before sending. |
+| 5. Closure | Debrief Loop | Capture outcome, decisions, new evidence, follow-up actions, and recovery impact. |
+| 6. Oversight | Outcome Tracker | Track each active case against its objective, status, last action, outcome, and next review. |
+
+### Document Triage standard
+
+Every dropped-in item should first be categorised as:
+
+- **Action Required** — contains a deadline, request, form, appointment action, required reply, risk, or decision.
+- **Waiting** — another person or organisation must act before Menglu can progress the case.
+- **Reference** — useful information to retain for the case summary or evidence index, but no current action.
+- **High Risk** — benefits, banking, legal, safeguarding, health, housing safety, deadlines, fraud, or identity/security risk.
+- **Archive** — low-value or completed information that does not need active attention.
+
+### Prep Pack standard
+
+When an appointment, meeting, assessment, review, or formal interaction is identified, generate a Prep Pack when useful.
+
+A Prep Pack should include:
+
+- purpose of the appointment or interaction
+- relevant current context
+- minimum relevant OS Evidence
+- key functional impact points
+- reasonable adjustment wording
+- questions for the professional or organisation
+- documents or evidence to reference
+- recovery planning recommendation
+- one-page professional summary if needed
+
+### Debrief Loop standard
+
+After an appointment, message exchange, call, form submission, repair visit, or other case event, capture:
+
+- outcome
+- decisions made
+- advice or explanation given
+- new evidence
+- follow-up actions
+- owner or lead
+- timescale or deadline
+- unanswered issues
+- recovery impact
+
+Only confirmed, durable, reusable information should be promoted into OS Evidence. Temporary symptoms, one-off stress, waiting states, or uncertain comments should remain in Current Context.
+
+### Outcome Tracker standard
+
+Each active case should have an outcome-focused line so the system tracks purpose, not just activity.
+
+| Case | Objective | Status | Last action | Outcome so far | Next review | Confidence |
+|---|---|---|---|---|---|---|
+
+Outcome Tracker should be included in Context Packets when it helps clarify direction, reduce repeated decisions, or identify stagnation.
+
+### Recovery Planning standard
+
+Every proposed action should consider recovery burden.
+
+Use:
+
+- **Low** — can usually be done with minimal recovery impact.
+- **Medium** — may require pacing, written support, or rest afterwards.
+- **High** — likely to need preparation, support, reduced demands, or recovery time.
+
+Prefer recovery recommendations over rigid blackout rules. Where date-specific appointments exist, consider low-demand preparation time before the event and recovery protection afterwards, especially when the action is high-load.
+
 ## Three-layer operating pipeline
 
 ### Purpose
