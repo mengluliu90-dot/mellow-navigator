@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.19.0 - Finalized Six-Step Operational Workflow
+
+### Added
+
+- Six-step operational workflow in `Menglu-OS/docs/PROJECT_ROADMAP.md`.
+- Document Triage standard for categorising incoming items as Action Required, Waiting, Reference, High Risk, or Archive.
+- Prep Pack standard for appointments, meetings, assessments, reviews, and formal interactions.
+- Debrief Loop standard for capturing outcome, decisions, new evidence, follow-up actions, recovery impact, and unanswered issues.
+- Outcome Tracker standard for measuring each active case against objective, status, last action, outcome so far, next review, and confidence.
+- Recovery Planning standard using Low, Medium, and High burden estimates.
+
+### Changed
+
+- Roadmap now treats Menglu OS as an execution workflow, not only an evidence/context architecture.
+- Recovery support is framed as planning guidance and demand reduction rather than rigid automatic blackout rules.
+- Context Packets may include Outcome Tracker lines when this reduces repeated decisions or clarifies progress.
+
+### Operating effect
+
+Menglu OS now follows one stable path: Triage → Three-Layer Processing → Prep Pack → Safest Draft → Debrief Loop → Outcome Tracker. This should reduce hidden friction between emails, appointments, repairs, and benefits/social-care activity while preserving approval boundaries and evidence integrity.
+
 ## v0.18.0 - Mira-Next Sync Packet Export
 
 ### Added
