@@ -168,8 +168,133 @@ When a repeated task is identified:
 3. Avoid duplicate reminders, duplicate monitoring, and duplicate reports.
 4. Design automations to run quietly and notify only when action is required.
 5. Consolidate repeated reports into the smallest useful dashboard or notification.
+6. Use change detection: report only New, Changed, Escalated, Resolved, or Action Needed items.
+7. Include owner, confidence, notification tier, and notification reason where relevant.
+8. Apply Silent Running before producing output.
+9. Use Binary Decision Format when a notification is necessary.
 
 Do not create another automation when an existing one can be safely improved.
+
+## Tiered alert protocol
+
+All monitoring automations should use the same alert tiers before notifying Menglu.
+
+| Tier | Meaning | Behaviour |
+|---|---|---|
+| Tier 1 | Immediate action, safety risk, urgent deadline, appointment today/tomorrow, urgent health/benefit/financial risk, or useful draft requiring review | Notify directly unless there is a clear reason not to. |
+| Tier 2 | Non-urgent action, routine follow-up, useful evidence, or preparation that can wait | Hold for scheduled review or consolidated summary. |
+| Tier 3 | Monitoring only, duplicate, historical-only, waiting on others, unchanged item, or suppressed by recovery state | Do not notify unless status changes or risk appears. |
+
+The Decision Engine should apply recovery state before surfacing Tier 2 or Tier 3 items. Tier 1 may bypass recovery suppression only where risk, deadline, appointment timing, or safety requires attention.
+
+Every notification should explain why it appeared with concise labels such as deadline, risk, Menglu is the owner, status changed, draft prepared, waiting item overdue, recovery state allows action, or recovery state suppresses non-urgent action.
+
+## Silent Running rule for monitoring
+
+The default monitoring output is no notification.
+
+A monitor should stay silent unless there is:
+
+- Tier 1 risk or deadline;
+- useful Tier 2 scheduled-review item;
+- action required from Menglu;
+- status change requiring attention;
+- recovery-status change affecting the plan;
+- useful draft prepared for review.
+
+Do not send routine summaries to confirm that nothing changed.
+
+## Binary Decision Format
+
+When the system notifies Menglu, use the shortest useful format:
+
+- Bottom line: one sentence.
+- Safest action: one concrete step.
+- Approve / Reject: one clear review choice.
+
+Do not include long explanations unless Menglu asks for more detail.
+
+## Open Loop Register change rules
+
+The Open Loop Register should reduce repeated review by tracking state changes.
+
+Use these change labels:
+
+- New
+- Changed
+- Escalated
+- Resolved
+- Action Needed
+- Suppressed
+- Duplicate
+- Historical Only
+
+Resolved matters should move to Completed/Closed or Historical Evidence Only. Closed matters should not be reopened unless new evidence or new risk appears.
+
+## Decision Ledger rule
+
+The Decision Ledger tracks whether system recommendations were useful.
+
+It is different from the Open Loop Register:
+
+- Open Loop Register tracks active matters.
+- Decision Ledger tracks recommendation quality and outcomes.
+
+Use the Decision Ledger only for important recommendations, not every minor interaction.
+
+Suggested fields:
+
+- Date
+- Case label
+- Recommendation
+- Approved, rejected, or deferred
+- Reason
+- Evidence used
+- Outcome
+- Useful: yes, no, or unclear
+- Follow-up needed: yes or no
+
+## Form and official paperwork integration rule
+
+Form-filling, questionnaire, application, referral, review, assessment, and official-paperwork work should be treated as an Executive Function Engine workflow, not as a separate operating system or standalone prompt.
+
+When a form is provided, the workflow should:
+
+1. Read the whole form before completing fields.
+2. Identify the form type, purpose, organisation, deadline if present, required evidence, mandatory fields, optional fields, consent sections, declarations, and upload requirements.
+3. Build a field inventory with suggested response, source, confidence, and review status where useful.
+4. Reuse verified information from uploaded documents, stored records, previous form responses, and user-confirmed details.
+5. Separate confirmed facts, unconfirmed information, assumptions, and missing information before finalising answers.
+6. Mark uncertain fields as missing or requiring review rather than guessing.
+7. Check for contradictions, stale information, duplicated wording, and inconsistent names, dates, contact details, support descriptions, or evidence references.
+8. Draft answers in clear language matched to the form's purpose and audience.
+9. Recommend relevant supporting evidence where proportionate.
+10. Complete a final quality check covering mandatory fields, checkboxes, attachments, declarations, contradictions, duplicate entries, and user-review sections.
+11. Provide an audit trail where useful, using labels such as Verified, Suggested, User Confirmed, Missing, or Requires Review.
+
+Component links:
+
+- Executive Function Engine: staged completion, task routing, workload reduction, and finalisation checks.
+- Memory & Evidence Engine: verified data reuse, evidence matching, previous-form consistency, and audit trail.
+- Verification Engine: uncertainty labelling, contradiction detection, source checking, and no-guessing rule.
+- Communication Engine: accessibility wording, communication needs, and reasonable-adjustment wording.
+- Output Engine: completed form text, summaries, professional wording, evidence lists, and review notes.
+- Existing automations: only use or improve an automation if the form creates an ongoing repeated follow-up need.
+
+This rule replaces separate form-filling prompt behaviour where the same function can be handled by Menglu OS.
+
+## Healthcare and official form convention rule
+
+When completing healthcare passports, profiles, care forms, assessment forms, or official identity sections:
+
+- Use the identifier requested by the form and jurisdiction where known.
+- Do not substitute an unrelated identifier.
+- Distinguish ethnicity, nationality, citizenship, and administrative identity numbers.
+- Record only reusable operating rules in GitHub, not private identifiers or live personal case details.
+- Describe fluctuating support needs by function, safety, reliability, repeatability, time taken, support required, and recovery required.
+- Do not treat prepared written communication, masking, or supported performance as proof of independent reliable functioning.
+- Include communication adjustment wording where appropriate, including written information, one question at a time, extra processing time, sensory adjustments, and support-person involvement.
+- Preserve uncertainty where information may have changed.
 
 ## GitHub documentation rule
 
@@ -217,30 +342,3 @@ Examples include:
 - sensory overload or shutdown risk
 - illness, allergy, pain, or sleep-related capacity reduction
 - recent appointment, travel, administrative demand, or emotional stressor
-
-State modifiers may affect:
-
-- Executive Function Engine workload estimates
-- Decision Engine action thresholds
-- Communication Engine wording
-- Memory & Evidence Engine evidence classification
-- Output Engine reports and letters
-- existing automations or dashboards
-
-Do not create a new module for a state modifier unless there is a clear technical reason, such as a separate data-processing pipeline.
-
-When recording a state modifier, preserve uncertainty. Describe the functional pattern and its practical effect. Do not convert it into an unsupported diagnosis or cause.
-
-## Final check for substantial tasks
-
-Before finishing a substantial task, verify:
-
-- Is this already covered elsewhere?
-- Can this be merged into Menglu OS?
-- Can an existing automation be improved instead of creating a new one?
-- Can cognitive load be reduced?
-- Are important claims supported, verifiable, labelled, or marked uncertain?
-
-## Operating principle
-
-The default goal is one coherent Menglu OS with the fewest practical prompts, chats, automations, dashboards, and documents, while preserving safety, accuracy, accessibility, and evidence quality.
