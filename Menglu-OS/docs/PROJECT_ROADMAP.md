@@ -133,6 +133,92 @@ Use:
 
 Prefer recovery recommendations over rigid blackout rules. Where date-specific appointments exist, consider low-demand preparation time before the event and recovery protection afterwards, especially when the action is high-load.
 
+## Alignment and feedback loop standards
+
+### Purpose
+
+Keep current tasks, reusable wording, and triggers aligned across Mellow, PA, Mira, EOS, ChatGPT, and connected tools without creating another competing task list.
+
+### Current Priority Index
+
+Do not create a separate `Open_Tasks.md` unless there is a specific technical need. Use the existing `uos_cases`, `uos_tasks`, Outcome Tracker, Open Loops, and Sync Packet as the live task base.
+
+When producing a task summary, generate a Current Priority Index from existing state:
+
+| Priority | Meaning | Default handling |
+|---|---|---|
+| P1 | High risk, deadline, required reply, safety, benefits, banking, health, housing safety, or irreversible decision | Surface immediately with safest draft or one approval request. |
+| P2 | Active case with useful next step but no immediate deadline | Prepare next step and hold for review. |
+| P3 | Waiting on another person or organisation | Record waiting state and avoid duplicate reminders. |
+| P4 | Reference, monitoring, completed, or historical evidence | Archive, summarise, or keep as context only. |
+
+Priority is based on risk, deadline, reversibility, recovery burden, and whether action is possible now. It is not based on emotional urgency alone.
+
+### Replacement rule
+
+When a new task is identified:
+
+1. Compare it against existing active cases and waiting items.
+2. If it is higher priority, surface it and pause lower-priority work.
+3. If it is equal priority, merge it into the existing case summary.
+4. If it is lower priority, place it in Waiting, Monitoring, Reference, or Historical Evidence.
+5. Do not ask Menglu to choose a schedule unless two genuine P1/P2 actions conflict.
+
+### Response Template Library standard
+
+Do not draft high-frequency official messages from scratch when reusable wording exists.
+
+Use modular template fragments where possible:
+
+| Template module | Use case |
+|---|---|
+| Accessibility opening | Any official, healthcare, benefits, housing, banking, or education message. |
+| Written communication only | No phone, email or letter preferred, extra processing time. |
+| Mother-assisted drafting | When a message is written with support from mother and AI due to communication and health needs. |
+| Reasonable adjustments | Appointments, forms, assessments, complaints, services, housing, benefits. |
+| Functional impact | Autism, processing difficulty, fatigue, POTS, PEM, sensory overload, executive dysfunction, travel limits. |
+| Evidence reference | When linking documents, timelines, photos, emails, or professional evidence. |
+| Safest closing | Clear next action, written confirmation, deadline or review point, no unnecessary escalation. |
+
+Templates must remain factual, proportionate, and situation-specific. Do not add legal wording unless it is relevant and accurate for the task.
+
+### Trigger rules
+
+Triggers should create drafts and structured outputs, not perform irreversible actions without approval.
+
+| Trigger | Automatic action | Requires approval before |
+|---|---|---|
+| `[Priority: High]` or clear deadline/risk | Triage as P1, prepare safest draft, identify recovery burden | Sending, deleting, accepting, declining, paying, escalating, or disclosing sensitive information |
+| Appointment notice | Create Appointment Shield / Prep Pack summary | Confirming attendance, changing appointment, sending requests |
+| Gmail or letter requiring reply | Classify importance and draft reply | Sending reply |
+| Housing repair update | Update Home Repair Tracker and draft written follow-up if useful | Sending complaint/escalation |
+| Benefits, banking, legal, safeguarding, identity/security | Mark High Risk and produce safest next step | Any irreversible or sensitive action |
+| Recovery state low/shutdown | Suppress non-urgent tasks and surface only P1 items | Cancelling or rescheduling appointments |
+
+### Stop-and-consult rule
+
+Stop and ask one clear question when:
+
+- the action is irreversible;
+- information is missing and cannot be safely inferred from evidence;
+- the task involves legal, financial, benefits, medical, safeguarding, identity, or security risk;
+- two high-priority actions conflict;
+- the user appears to be asking to store private evidence in a public repository;
+- the output could expose identifiers, confidential records, bank details, medical records, or private correspondence.
+
+### Feedback loop
+
+After each task output, update or prepare an update for:
+
+1. Current Priority Index;
+2. active case status;
+3. next action or waiting state;
+4. evidence status: Verified, User Confirmed, Suggested, Missing, Requires Review, Historical Evidence Only;
+5. recovery burden;
+6. next review date only if a real deadline, appointment, or waiting point exists.
+
+The feedback loop should reduce future questions. It should not create extra reminders, duplicate records, or unnecessary summaries.
+
 ## Three-layer operating pipeline
 
 ### Purpose
