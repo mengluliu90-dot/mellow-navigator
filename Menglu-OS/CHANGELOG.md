@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.16.0 - Three-Layer Pipeline and Case Summary Standard
+
+### Added
+
+- Three-layer operating pipeline in `Menglu-OS/docs/PROJECT_ROADMAP.md`.
+- Layer 1: OS Evidence for stable long-term evidence categories.
+- Layer 2: Current Context for dynamic recovery state, active cases, waiting items, deadlines, correspondence, and latest events.
+- Layer 3: Safest Draft / Output for event-triggered outputs using the minimum necessary evidence.
+- Case Summary standard as the primary dynamic tool for active case work.
+- Context Packet standard with status vocabulary and confidence field.
+
+### Changed
+
+- Roadmap now separates stable evidence from temporary context so daily symptoms, short-term recovery state, or live events do not automatically become permanent OS Evidence.
+- Case summaries should be generated on demand or from an Update Packet, not maintained as duplicate evidence archives.
+
+### Operating effect
+
+Menglu OS now has a cleaner pipeline: OS Evidence → Current Context → Safest Draft. This should reduce duplication, preserve evidence quality, and make active case handling easier to trigger from one prepared update packet.
+
 ## v0.15.0 - Automation Independence Upgrade Path
 
 ### Added
