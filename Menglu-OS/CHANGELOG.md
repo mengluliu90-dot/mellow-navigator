@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.17.0 - Mira Evidence Engine Boundary
+
+### Added
+
+- Mira Evidence Engine boundary in `Menglu-OS/docs/LIVE_INTERFACE_MAP.md`.
+- Clear distinction between Mira as the stable evidence layer and live sources such as Gmail, Calendar, uploaded documents, and current conversation.
+- Source boundary table defining authoritative sources for stable evidence, current operational state, live information, and system architecture.
+
+### Changed
+
+- Mira is now described as an Evidence Engine rather than merely an evidence viewer.
+- Mira should support duplicate detection, contradiction checks, missing evidence identification, case history navigation, and minimum-relevant-evidence selection for Case Summaries and Safest Drafts.
+- Mira must not claim to monitor Gmail, Calendar, Clixifix, banking, DWP, NHS, or other live systems in the background by itself.
+
+### Operating effect
+
+Mira supplies stable evidence into the Three-Layer Pipeline while live information remains source-specific and event-triggered. This reduces stale-state risk and prevents temporary updates from becoming permanent OS Evidence too quickly.
+
 ## v0.16.0 - Three-Layer Pipeline and Case Summary Standard
 
 ### Added
