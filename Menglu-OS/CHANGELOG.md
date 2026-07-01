@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.18.0 - Mira-Next Sync Packet Export
+
+### Added
+
+- `mira-next/os-bridge.js` now includes a `📤 Export Sync Packet` action.
+- The export creates a user-initiated Mira-Next Sync Packet containing local browser state summaries from `uos_objects`, `uos_cases`, `uos_tasks`, `uos_drafts`, `uos_timeline`, `uos_state`, and current mode text.
+- The packet includes active cases, waiting items, action-required items, recent timeline, recent objects, prepared drafts, recovery state, and a ChatGPT processing instruction.
+
+### Changed
+
+- Mira-Next now supports the Export/Ingest workflow directly: export local state, paste into ChatGPT, apply the Three-Layer Pipeline, then produce a Context Packet, Case Summary, or Safest Draft.
+- Export remains user-initiated and local-first. It does not create background monitoring or automatic external data access.
+
+### Operating effect
+
+Menglu can now use Mira as a lower-friction drop-off point: press Export, copy one packet, and paste it into ChatGPT for audit, contradiction checking, evidence/context separation, and action-ready drafting.
+
 ## v0.17.0 - Mira Evidence Engine Boundary
 
 ### Added
