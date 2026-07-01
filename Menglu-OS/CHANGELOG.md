@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.20.0 - Mellow Control Room Sync Bridge
+
+### Added
+
+- `interface-layer.js` now includes a Mellow Control Room Sync Packet.
+- Added Control Room views for `SYNC` and `ATTENTION` states.
+- Dashboard now includes an Attention count, Waiting count, Active Cases count, and Export Sync Packet button.
+- The Mellow Sync Packet exports local summaries from PA/Mira state, including `uos_objects`, `uos_cases`, `uos_tasks`, `uos_drafts`, `uos_timeline`, `uos_state`, `current_mode_text`, manual open loops, local decisions, and recent local timeline entries.
+- Added an Outcome Tracker seed inside the packet so ChatGPT can initialise or update objectives, status, outcomes, and review points.
+
+### Changed
+
+- Mellow now behaves more like a front-end Control Room rather than only a static category index.
+- AI Context Pack now includes a Copy Sync Packet option.
+- Evidence Graph now links directly to Mira Evidence.
+- The Start Here panel now prioritises exporting current state before asking Menglu to choose a workflow.
+
+### Operating effect
+
+Menglu can open Mellow, press Export Sync Packet, and paste one structured packet into ChatGPT. ChatGPT can then apply Document Triage, the Three-Layer Pipeline, Prep Pack logic, Safest Draft generation, Debrief Loop, and Outcome Tracker without Menglu manually explaining the state.
+
 ## v0.19.0 - Finalized Six-Step Operational Workflow
 
 ### Added
