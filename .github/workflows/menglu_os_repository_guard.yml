@@ -1,0 +1,170 @@
+name: "Menglu OS - Repository Guard"
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches: [main]
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
+jobs:
+  repository_quality:
+    name: Repository quality checks
+    if: github.event_name != 'issues'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate JSON files
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Checking JSON files"
+          mapfile -t files < <(find . -path './.git' -prune -o -name '*.json' -type f -print)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No JSON files found."
+            exit 0
+          fi
+          for file in "${files[@]}"; do
+            echo "Validating $file"
+            jq empty "$file"
+          done
+
+      - name: Validate YAML workflow files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import pathlib, sys
+          try:
+              import yaml
+          except Exception:
+              print('PyYAML unavailable; skipping YAML parse check')
+              sys.exit(0)
+          paths = list(pathlib.Path('.github/workflows').glob('*.yml')) + list(pathlib.Path('.github/workflows').glob('*.yaml'))
+          for path in paths:
+              print(f'Validating {path}')
+              with path.open('r', encoding='utf-8') as f:
+                  yaml.safe_load(f)
+          PY
+
+      - name: Check key entry points exist
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            "index.html"
+            "interface-layer.js"
+            "mira-next/index.html"
+            "mira-next/os-bridge.js"
+            "pa/index.html"
+            "Menglu-OS/docs/PROJECT_ROADMAP.md"
+            "Menglu-OS/docs/LIVE_INTERFACE_MAP.md"
+            "Menglu-OS/CHANGELOG.md"
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+
+      - name: Architecture duplication scan
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "Scanning for likely duplicate architecture files"
+          grep -RIl --exclude-dir=.git --exclude='CHANGELOG.md' --exclude='PROJECT_ROADMAP.md' \
+            -E 'new operating system|separate operating system|new framework|duplicate dashboard|background monitor|autonomous monitor' . || true
+          echo "If this list contains intentional wording, review it manually. This check is advisory."
+
+  issue_triage:
+    name: Issue triage and safest draft
+    if: github.event_name == 'issues'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label issue and comment with Menglu OS triage
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const text = `${issue.title}\n\n${issue.body || ''}`.toLowerCase();
+
+            const subsystemRules = [
+              ['subsystem:mellow', ['mellow', 'interface-layer', 'control room', 'aac', 'communication card']],
+              ['subsystem:mira', ['mira', 'evidence', 'sync packet', 'os-bridge']],
+              ['subsystem:pa', ['pa/', 'pa ', 'intake', 'structured object', 'draft layer']],
+              ['subsystem:eos', ['eos', 'current mode', 'recovery', 'capacity']],
+              ['subsystem:docs', ['roadmap', 'changelog', 'documentation', 'workflow', 'architecture']],
+              ['subsystem:github-actions', ['workflow', 'github action', 'ci', 'yaml', 'yml']]
+            ];
+
+            const triageRules = [
+              ['triage:high-risk', ['security', 'private', 'identifier', 'bank', 'medical record', 'secret', 'token', 'api key', 'broken live', 'data loss']],
+              ['triage:action-required', ['bug', 'error', 'broken', 'not working', 'fails', 'needs fix', 'cannot']],
+              ['triage:waiting', ['waiting', 'blocked', 'pending', 'depends on']],
+              ['triage:reference', ['note', 'idea', 'reference', 'documentation', 'proposal']],
+              ['triage:archive', ['done', 'closed', 'resolved']]
+            ];
+
+            const labels = [];
+            for (const [label, words] of subsystemRules) {
+              if (words.some(w => text.includes(w))) labels.push(label);
+            }
+            for (const [label, words] of triageRules) {
+              if (words.some(w => text.includes(w))) labels.push(label);
+            }
+            if (!labels.some(l => l.startsWith('subsystem:'))) labels.push('subsystem:unknown');
+            if (!labels.some(l => l.startsWith('triage:'))) labels.push('triage:reference');
+
+            for (const name of labels) {
+              try {
+                await github.rest.issues.createLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  name,
+                  color: name.includes('high-risk') ? 'b91c1c' : name.includes('action-required') ? 'f59e0b' : '315f9f'
+                });
+              } catch (e) {
+                if (e.status !== 422) throw e;
+              }
+            }
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              labels
+            });
+
+            const risk = labels.includes('triage:high-risk') ? 'High' : labels.includes('triage:action-required') ? 'Medium' : 'Low';
+            const subsystem = labels.filter(l => l.startsWith('subsystem:')).join(', ');
+            const triage = labels.filter(l => l.startsWith('triage:')).join(', ');
+            const comment = [
+              '## Menglu OS automated triage',
+              '',
+              `**Subsystem:** ${subsystem}`,
+              `**Triage:** ${triage}`,
+              `**Risk level:** ${risk}`,
+              '',
+              '**Smallest effective next action:**',
+              risk === 'High'
+                ? 'Review manually before making changes. Do not store private evidence, identifiers, secrets, medical records, or bank details in this public repository.'
+                : 'Review the affected subsystem and prepare the smallest safe change. Prefer updating existing files rather than creating duplicate modules.',
+              '',
+              '**Safest draft:**',
+              'Please review this issue against the Menglu OS roadmap and Live Interface Map. If a change is needed, keep it local-first, non-sensitive, and integrated with the existing Mellow / Mira / PA / EOS structure.'
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body: comment
+            });
