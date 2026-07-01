@@ -55,6 +55,97 @@ Notify only when a decision, approval, action, deadline, appointment change, ris
 - Privacy boundary
 - How to use guide
 
+## Three-layer operating pipeline
+
+### Purpose
+
+Keep stable evidence, current context, and output generation separate so that temporary updates do not contaminate long-term evidence and long-term evidence is not repeatedly copied into every live task.
+
+### Layer 1: OS Evidence
+
+Stable repository for long-term, reusable, non-sensitive evidence categories such as:
+
+- confirmed health and disability facts
+- functional impact patterns
+- communication and accessibility requirements
+- reasonable adjustment needs
+- reusable impact wording
+- stable case history markers
+
+OS Evidence is updated only when there is a confirmed, durable change. Daily symptoms, temporary recovery state, appointment stress, or short-term events should not be treated as permanent OS Evidence unless later confirmed as a stable pattern or formal record.
+
+### Layer 2: Current Context
+
+Dynamic operational layer for:
+
+- today's recovery or capacity state
+- active cases
+- waiting items
+- deadlines
+- current correspondence
+- open decisions
+- latest events
+- case status changes
+
+Current Context can change frequently and should be used to decide what is safe, timely, realistic, or unnecessary today.
+
+### Layer 3: Safest Draft / Output
+
+Event-triggered output layer.
+
+Safest Drafts should draw only the minimum necessary evidence from OS Evidence and combine it with the current context.
+
+Outputs should usually be one of:
+
+- no action required
+- risk identified
+- one safest next step
+- a case summary
+- a prepared draft for approval
+- a binary decision request when Menglu genuinely needs to decide
+
+### Case Summary standard
+
+Case Summary is the primary dynamic tool for active case work.
+
+A Case Summary should include:
+
+- current status
+- last confirmed update
+- waiting for
+- lead organisation or contact
+- next action
+- relevant OS Evidence, minimum necessary only
+- current context affecting action or recovery
+- outstanding decisions
+- confidence level
+
+Case Summary should be generated on demand or from an Update Packet. It should not become a duplicate evidence archive.
+
+### Context Packet standard
+
+For case-management work, use this compact structure:
+
+| Metric | Status |
+|---|---|
+| Recovery State | Current evidence, or unknown if no current update exists |
+| Active Cases | Dynamic list only |
+| Outstanding Decisions | Only decisions currently identified from available information |
+
+| Case | Status | Last confirmed update | Waiting for | Lead | Next action | Confidence |
+|---|---|---|---|---|---|---|
+
+Status vocabulary should use:
+
+- Waiting
+- Action required
+- In progress
+- Monitoring
+- Closed
+- Historical evidence
+
+Confidence should reflect certainty, not importance.
+
 ## Automation independence upgrade path
 
 ### Purpose
