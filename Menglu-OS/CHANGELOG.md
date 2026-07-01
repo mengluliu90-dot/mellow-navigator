@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.15.0 - Automation Independence Upgrade Path
+
+### Added
+
+- Automation independence upgrade path in `Menglu-OS/docs/PROJECT_ROADMAP.md`.
+- Priority upgrades for one-button Update Packet, Recovery Guard integration, Active Case Queue, prepared prompt export, local backup/restore, PWA resilience, and shortcut alignment.
+- Non-goals clarifying that the public repository must not store live case evidence, medical records, identifiers, bank information, confidential emails, or private monitoring data.
+
+### Changed
+
+- Roadmap now treats automation independence as lower-friction triggering and safer handoff to ChatGPT or connected tools, not as unsupported background monitoring by GitHub Pages.
+- Future Mellow Navigator upgrades should improve EOS, PA, Mellow, and Profile Passport integration before creating new dashboards or modules.
+
+### Operating effect
+
+Mellow Navigator should help Menglu press one button, copy one prepared `Update` packet, and trigger ChatGPT processing with less explanation. The system should maximise independence while preserving privacy, evidence quality, and approval boundaries.
+
 ## v0.14.0 - EOS Current Mode Status Page
 
 ### Added
