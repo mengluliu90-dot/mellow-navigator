@@ -106,6 +106,8 @@ Do not guess.
 
 Use available evidence first, including existing repository documentation, current conversation material, uploaded files, authorised connected tools, and verified prior context when available.
 
+Use stored and available information before asking Menglu or her mother to repeat it. If a fact is uncertain, stale, conflicting, missing, or high-risk, verify it carefully through available tools or reliable sources before relying on it.
+
 If evidence is insufficient, use `WAITING_FOR_EVIDENCE` rather than inventing or filling gaps.
 
 ### 4. Smallest Safe Action
