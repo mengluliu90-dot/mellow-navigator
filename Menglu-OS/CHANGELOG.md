@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.25.0 - Sync Packet v2 Implementation
+
+### Added
+
+- `interface-layer.js` now exports `Mellow Control Room Sync Packet v2`.
+- Current Priority Index is generated directly from `uos_cases`, `uos_tasks`, `mn_open_loops`, and `mn_decision_log`.
+- Priority counts for P1, P2, P3, and P4 are shown on the Mellow dashboard.
+- Sync Packet v2 includes command aliases for `[RUN_MONITORING]`, `[UC]`, `[PIP]`, `[BANK]`, `[HEALTH]`, `[HOUSING]`, `[SOCIAL]`, and `[EMAIL]`.
+- Sync Packet v2 includes Pre-flight Check, Capability Check, Graceful Degradation, Feedback Loop, and latest-state policy fields.
+- Automation Hub now includes a `[RUN_MONITORING]` handover button.
+
+### Changed
+
+- Export buttons now label the packet as Sync Packet v2.
+- Attention view now surfaces P1/P2 priority items before ordinary action/waiting lists.
+- One Inbox and AI Context Pack now instruct ChatGPT to run Pre-flight and Capability Check before drafting.
+- Dashboard now prioritises one front page for current state, P1/P2 risk, active cases, and export.
+
+### Operating effect
+
+Menglu can now open Mellow, press Export Sync Packet v2, and paste one structured packet into ChatGPT. The packet carries enough routing, priority, safety, and feedback-loop information for ChatGPT to continue work with less explanation and fewer repeated decisions while preserving approval boundaries.
+
 ## v0.24.0 - Alignment Triggers and Feedback Loop
 
 ### Added
@@ -287,3 +309,5 @@ Before substantial Menglu OS changes, the assistant should identify what is genu
 ## v0.9.0 - Menglu OS v3 Validation Mode
 
 ### Added
+
+- Menglu OS v3 validation baseline.
