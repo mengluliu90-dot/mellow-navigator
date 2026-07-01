@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.24.0 - Alignment Triggers and Feedback Loop
+
+### Added
+
+- Alignment and feedback loop standards in `Menglu-OS/docs/PROJECT_ROADMAP.md`.
+- Current Priority Index standard generated from `uos_cases`, `uos_tasks`, Outcome Tracker, Open Loops, and Sync Packet instead of a duplicate `Open_Tasks.md`.
+- Priority levels P1 to P4 with handling rules based on risk, deadline, reversibility, recovery burden, and whether action is possible now.
+- Replacement rule for comparing new tasks against existing active cases and waiting items.
+- Response Template Library standard with reusable modules for accessibility, written communication, mother-assisted drafting, reasonable adjustments, functional impact, evidence reference, and safest closing.
+- Trigger rules for high-priority items, appointments, Gmail/letters, housing repairs, benefits/banking/legal/safeguarding/security, and low recovery state.
+- Stop-and-consult rule for irreversible, uncertain, high-risk, conflicting, or privacy-sensitive actions.
+- Feedback loop requiring updates or prepared updates to priority, active case status, next action/waiting state, evidence status, recovery burden, and next review where relevant.
+
+### Changed
+
+- Menglu OS should now treat automatic operation as aligned generation of structured outputs and drafts, not automatic execution of irreversible actions.
+- Lower-priority work should be paused, merged, monitored, or archived when a higher-priority item appears.
+- Reusable official wording should be composed from template modules rather than recreated from scratch.
+
+### Operating effect
+
+The system can process task material with less intervention by generating a Current Priority Index, using standard template modules, applying trigger rules, and closing each task with a feedback update. This reduces repeated scheduling questions while preserving approval boundaries and privacy limits.
+
 ## v0.23.0 - Automation Handling Protocol Activation
 
 ### Added
