@@ -1,5 +1,23 @@
 # Changelog
 
+## v0.28.0 - Optimisation Phase Cleanup
+
+### Changed
+
+- `Menglu-OS/core/CORE_RULES.md` is now a quick operational index instead of a duplicate full rule source.
+- `CORE_RULES.md` now points to `Menglu-OS/core/MASTER_PROMPT.md` as the authoritative behaviour source and `Menglu-OS/core/INTEGRATION_GOVERNANCE.md` as the authoritative integration/governance source.
+- `Menglu-OS/docs/BACKGROUND_AUTOMATION_SPEC.md` is now consolidated around the five-task automation layer: Silent Gmail Handler, Open Loop Register, Appointment Shield, Evidence Watch, and Case Orchestrator.
+- Background automation guidance now explicitly says not to create extra monitoring tasks unless the need cannot be safely absorbed by the five-task layer.
+- Added a notification-budget rule for automation: fewer notifications by default, with bypass only for deadline, risk, appointment, contradiction, or time-sensitive approval.
+
+### Removed
+
+- Remaining migrated root legacy validation placeholder `docs/menglu-os-v3-validation-mode.md` was deleted after its active rules had already been consolidated into `Menglu-OS/docs/PROJECT_ROADMAP.md`.
+
+### Operating effect
+
+Menglu OS has moved from expansion toward optimisation. Stable rules now have fewer duplicate sources, the automation layer has a clearer five-task boundary, and future changes should remove work, remove duplication, simplify architecture, or increase safe automation before they are added.
+
 ## v0.26.0 - Master Operating Principles
 
 ### Added
