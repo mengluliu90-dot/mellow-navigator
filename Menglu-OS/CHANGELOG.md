@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.22.0 - Central Orchestration and Deduplication
+
+### Added
+
+- Central orchestration rule in `Menglu-OS/docs/LIVE_INTERFACE_MAP.md`.
+- Shared-state map for `uos_state`, `uos_cases`, `uos_tasks`, `uos_drafts`, `uos_timeline`, and `current_mode_text`.
+- Deduplication rule for shortcuts, open loops, appointment preparation, recovery warnings, evidence summaries, case summaries, and automation outputs.
+- Delete/archive criteria for repeated material after it has been merged into the correct existing component.
+- Single event flow: Incoming item → Document Triage → Existing case or new case decision → Three-Layer Pipeline → Recovery burden check → Output choice → Outcome Tracker / Debrief Loop.
+
+### Changed
+
+- Menglu OS now treats central orchestration as an internal rule inside the existing architecture, not a new dashboard, agent, or operating system.
+- Future duplicate material should be merged, referenced, archived, or deleted according to role and risk.
+- Temporary or uncertain duplicates should be marked as `Historical evidence only` or `Reference` rather than deleted immediately.
+
+### Operating effect
+
+Existing automations and interfaces should now work through one shared routing and deduplication model. This reduces repeated prompts, repeated open loops, repeated evidence summaries, and duplicated shortcut wording while keeping private evidence outside the public repository.
+
 ## v0.21.0 - Repository Guard Workflow
 
 ### Added
