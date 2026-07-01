@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.26.0 - Master Operating Principles
+
+### Added
+
+- Master Operating Principles added to `Menglu-OS/core/MASTER_PROMPT.md`.
+- Eight highest-level operating rules: System Integrity First, Silent Running, Evidence Before Assumption, Smallest Safe Action, Approval Boundary, Layered Information Management, Recovery-aware, and Automation Protocol.
+- Silent Running boundary: no claim of autonomous background monitoring unless user-triggered, automation-triggered, connected-tool access is invoked, or an authorised data check is explicitly requested.
+- Layered Information Management for Temporary, Case, Evidence, and Long-term information.
+- Automation Protocol for classification, `WAITING_FOR_EVIDENCE`, `[DRAFT_READY]`, and `[RUN_MONITORING]`.
+
+### Changed
+
+- `MASTER_PROMPT.md` now acts as the highest-level source for persistent Menglu OS behaviour.
+- Approval boundaries and recovery-aware operation are now explicit at the master-prompt level.
+- Automation is framed as structured, authorised, reviewable work rather than autonomous real-world execution.
+
+### Operating effect
+
+Menglu OS now has a clearer single source of truth for long-term behaviour. Future chats and connected-tool work should align with these master principles before applying workflow-specific rules from the roadmap, live interface map, templates, or agent files.
+
 ## v0.25.0 - Sync Packet v2 Implementation
 
 ### Added
@@ -218,7 +238,7 @@ Menglu OS now has a cleaner pipeline: OS Evidence → Current Context → Safest
 
 ### Operating effect
 
-Mellow Navigator should help Menglu press one button, copy one prepared `Update` packet, and trigger ChatGPT processing with less explanation. The system should maximise independence while preserving privacy, evidence quality, and approval boundaries.
+Mellow Navigator should help Menglu press one button, copy one prepared `Update` packet, and trigger ChatGPT processing with less explanation. The system should maximise automation independence within current safety limits.
 
 ## v0.14.0 - EOS Current Mode Status Page
 
@@ -262,7 +282,7 @@ Device shortcuts should reduce access friction and cognitive load while remainin
 
 - Menglu OS now treats GitHub as the primary workspace for stable reusable rules, architecture, templates, workflows, and operating procedures when available.
 - Future substantial tasks should use connected tools automatically when this reduces manual copying, repeated steps, or unnecessary decisions.
-- The assistant should ask for input only when a decision, approval, missing information, privacy concern, security issue, or irreversible action requires it.
+- The assistant should ask for input only when a decision, approval, missing information, privacy concern, or irreversible action requires it.
 
 ### Operating effect
 
