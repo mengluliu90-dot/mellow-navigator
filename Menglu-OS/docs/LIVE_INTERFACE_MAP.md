@@ -23,6 +23,44 @@ This note records how the live pages and device entry points fit together as one
 - `/pa/eos.html` — EOS dashboard.
 - iPhone Shortcuts app and Home Screen widgets — low-friction access to reusable Menglu OS scripts and support actions.
 
+## Active processing protocol
+
+Current chat operations should use the Menglu OS automation handling sequence when task material is provided.
+
+Default sequence:
+
+```text
+Triage -> Context -> Draft -> Outcome
+```
+
+### Execution constraints
+
+- Do not ask what Menglu wants done when the task can be safely classified and processed from the supplied material.
+- Ask only when information is missing, uncertain, privacy-sensitive, irreversible, or necessary for safety or accuracy.
+- Do not guess missing facts.
+- Use available evidence, current conversation material, authorised connected tools, uploaded files, and GitHub documentation when relevant.
+- Keep Cherrytrees material as historical evidence only unless Menglu gives a new explicit instruction to use that route again.
+- Include recovery cost or burden when the task may create communication, administrative, travel, sensory, or decision-making load.
+- Prefer family involvement only when a task is high load, high risk, time-sensitive, or likely to exceed Menglu's safe processing capacity.
+
+### Standard output structure
+
+For task material, default to this structure unless another format is clearly more useful:
+
+```text
+[任务记录]
+• 所属看板:
+• 状态更新:
+
+[自动化输出]
+• 内容:
+• 无障碍调整说明:
+
+[自我修正建议]
+• 风险点:
+• 下一周期:
+```
+
 ## Central orchestration rule
 
 Menglu OS should behave as one coordinated system, not as separate automations competing for attention.
