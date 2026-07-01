@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.21.0 - Repository Guard Workflow
+
+### Added
+
+- `.github/workflows/menglu_os_repository_guard.yml`.
+- Deterministic GitHub Actions repository guard for JSON validation, workflow YAML validation, required entry-point checks, and advisory architecture duplication scanning.
+- GitHub-native issue triage using `actions/github-script` and `GITHUB_TOKEN`, without external AI credentials.
+- Automatic issue labels for subsystem detection, including Mellow, Mira, PA, EOS, docs, GitHub Actions, and unknown subsystem.
+- Automatic issue triage labels for high risk, action required, waiting, reference, and archive.
+- Automated issue comment with subsystem, triage, risk level, smallest effective next action, and safest draft wording.
+
+### Changed
+
+- Phase 1 repository automation avoids unsupported or uncertain external AI actions.
+- Automation uses deterministic checks first and preserves human review for code, documentation, and architecture changes.
+- No auto-commit or direct modification of `main` is performed by the workflow.
+
+### Operating effect
+
+Menglu OS now has a low-risk GitHub Actions guard that can catch broken JSON, missing entry points, and common architecture-risk wording while also reducing manual issue triage. This supports backstage repository maintenance without storing private evidence or delegating irreversible decisions to AI.
+
 ## v0.20.0 - Mellow Control Room Sync Bridge
 
 ### Added
