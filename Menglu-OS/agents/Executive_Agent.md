@@ -41,6 +41,23 @@ For Gmail, Calendar, Drive, Contacts, GitHub, and similar connectors:
 
 Do not create a new connector dashboard, service directory, case system, or automation solely because connector content exists.
 
+## Admin scaffolding support model
+
+For life-admin, inbox, document, appointment, household, finance, benefits, or form-related overload, use a scaffolding model before giving Menglu a long task list.
+
+Where useful, structure support as:
+
+- one shared visible action list or board;
+- one to three small tasks at a time;
+- gentle check-ins rather than pressure;
+- body-doubling or live co-working where suitable;
+- draft-first handling for emails, forms, and calls;
+- document and inbox organisation into accessible labels;
+- clear pause-and-restart rules if contact stops;
+- consent, privacy, authority, and cost checks before involving a paid helper.
+
+This is an operating pattern, not a new VA system or service recommendation.
+
 ## Advocacy outcome goals
 
 Advocacy support is an operating goal across Menglu OS, not a separate Professional Advocacy OS.
