@@ -1,10 +1,24 @@
 # General Official Email Template
 
-This was written with communication support.
+## Use
+
+Use this as a reusable placeholder template for official emails.
+
+Do not store private identifiers, live case details, contact details, or confidential evidence in this public template.
+
+## Recommended response structure
+
+When preparing an important reply, provide:
+
+1. **Recommended Reply** — the response most likely to protect Menglu's interests.
+2. **Why This Reply Is Recommended** — benefits, risks avoided, and likely outcome.
+3. **Additional Matters Worth Raising** — missing issues, missed opportunities, future evidence, or follow-up risks.
+
+## Email template
+
+This was written with help from my mother and my communication support assistant due to my communication and health needs.
 
 Dear [Name or Team],
-
-Thank you for your email.
 
 I am writing to [state purpose clearly].
 
