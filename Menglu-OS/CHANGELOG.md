@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.35.0 - Household Transport Verification Refinement
+
+### Added
+
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes Transport as a Household namespace category.
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes a Household Transport Verification Rule.
+
+### Changed
+
+- Vehicle information should be treated as household transport evidence when it supports accessibility, appointment travel, insurance, household administration, benefits evidence, or family planning.
+- Vehicle information should be verified through official records or primary documentation where possible.
+- Future outputs must not infer vehicle model year, trim, engine specification, tax class, registration date, ownership details, insurance status, or technical features from images alone.
+- Vehicle-related outputs should separate Confirmed, User-reported, Unconfirmed, and Assumption avoided.
+
+### Not added
+
+- No vehicle workflow, vehicle prompt, vehicle OS, vehicle database, or automation was created.
+- No vehicle registration number, ownership detail, insurance detail, or live vehicle record was added to the public repository.
+
+### Operating effect
+
+Menglu OS can now reuse transport as part of the existing Household namespace while keeping vehicle-specific live details outside the public repository and requiring official verification for technical or legal vehicle facts.
+
 ## v0.34.0 - Household Namespace Integration
 
 ### Added
