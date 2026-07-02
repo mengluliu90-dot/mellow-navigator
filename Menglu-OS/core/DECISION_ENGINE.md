@@ -92,6 +92,40 @@ Use functional wording such as:
 
 This rule is for planning and communication support only. It does not diagnose a menstrual, gynaecological, endocrine, or autonomic condition.
 
+## Healthcare clinical reasoning and practical outcome rule
+
+For specialist healthcare appointments, do not measure success only by whether a diagnosis is confirmed.
+
+A useful outcome may include:
+
+- clinician's reasoning;
+- supported or excluded diagnoses;
+- differential diagnoses or alternative explanations;
+- practical management;
+- referrals or investigations;
+- aids, adaptations, pacing, positioning, or OT/physio/social-care needs;
+- documentation for healthcare, benefits, social care, or daily-life support;
+- follow-up plan and responsible owner.
+
+When diagnosis is uncertain, prefer neutral wording:
+
+> If this is not the suspected diagnosis, what best explains the overall pattern, and what practical management or pathway is recommended?
+
+For uncertain possibilities such as hEDS/HSD, genetics referral, or mast-cell-related issues, mark them as clinician questions unless confirmed. Do not present them as established facts.
+
+When the appointment finishes, check whether the outcome record includes:
+
+1. diagnosis or clinical impression;
+2. reasoning;
+3. evidence considered;
+4. investigations;
+5. referrals;
+6. practical outcomes;
+7. documentation needed;
+8. next review or follow-up.
+
+If not covered, mark as Needs clarification or Unanswered.
+
 ## Accessible travel decision domain
 
 Travel should be treated as a decision domain, not only as a booking or itinerary task.
