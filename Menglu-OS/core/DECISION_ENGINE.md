@@ -106,6 +106,42 @@ When a support deadlock is present, do not treat non-completion as refusal or la
 - escalation explaining that unsupported access is itself the barrier;
 - evidence that supported performance does not equal independent ability.
 
+## Neurodivergent admin support suitability check
+
+When considering a virtual assistant, support worker, admin helper, advocate, or similar service, assess the support model rather than only the advertised task list.
+
+Check whether the model provides:
+
+- shared task board or visible action list;
+- small weekly task limits rather than large open-ended workloads;
+- gentle check-ins without shame or pressure;
+- ability to pause and restart after loss of contact;
+- body-doubling or live co-working where useful;
+- email, form, appointment, inbox, calendar, and document-organisation support;
+- clear consent, privacy, costs, scope, and authority boundaries;
+- ability to work with the user's communication style rather than requiring phone or fast verbal processing;
+- exit plan if the service is not suitable.
+
+Treat paid support as a Potential support route until eligibility, cost, privacy, safeguarding, scope, and practical fit are verified.
+
+Do not treat buying support as the default solution where free statutory, healthcare, benefits, social-care, advocacy, or family-supported routes may be more appropriate.
+
+## Resource safety triage
+
+Large public resource indexes can be useful for finding tools, learning materials, software, accessibility resources, or public information, but they should not be treated as automatically safe or lawful.
+
+Before using or recommending a resource from a public index, check:
+
+1. Is the resource legal and appropriate for the intended use?
+2. Is the source reputable enough for this task?
+3. Does it create malware, scam, privacy, data, or account-security risk?
+4. Does it involve payment, subscriptions, downloads, extensions, scripts, or account access?
+5. Is there a safer official or primary-source alternative?
+6. Is the information current enough to rely on?
+7. Does the user need a low-risk summary rather than exploring the site directly?
+
+For medical, legal, benefits, finance, safeguarding, or security topics, prefer official, regulated, primary, or specialist sources over general internet indexes.
+
 ## Identity and privacy safety check
 
 Before preparing or sending official communication, evidence packets, forms, screenshots, or attachments, check whether sensitive identifiers are included.
@@ -200,6 +236,7 @@ Possible support-route categories include:
 
 - financial advocacy or appointeeship support;
 - money checks, budgeting support, or access-to-banking support;
+- neurodivergent admin support, virtual assistant support, or support-worker route;
 - short-term mobility equipment or post-hospital practical support;
 - loneliness, cost-of-living, emergency, or crisis support;
 - travel assistance card or app for public transport communication;
@@ -211,9 +248,9 @@ Before recommending a route, check:
 1. Is the service geographically relevant?
 2. Does the eligibility appear to fit?
 3. Is the need urgent or routine?
-4. Is the service advisory, practical, advocacy-based, equipment-based, or emergency support?
+4. Is the service advisory, practical, advocacy-based, equipment-based, paid, free, emergency, or statutory?
 5. Does Menglu need a support person, written communication, or prepared script to access it?
-6. Is there a privacy, consent, or authority issue?
+6. Is there a privacy, consent, authority, safeguarding, cost, or ongoing-dependence issue?
 
 Do not treat external support services as already available or agreed. Mark as Potential support route until confirmed.
 
