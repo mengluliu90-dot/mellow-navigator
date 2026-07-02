@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>🩺 Appointment Shield</title><link rel="apple-touch-icon" href="../mellow-icon.svg"><style>body{font-family:Arial,sans-serif;margin:0 auto;max-width:760px;padding:14px 14px 90px;background:linear-gradient(180deg,#f8fbff,#fff8fc);color:#111827}.card{background:#fff;border:1px solid #d9d8ee;border-radius:18px;padding:14px;margin:10px 0}.soft{background:linear-gradient(135deg,#eef7ff,#fff3f8)}h1{font-size:25px}.icon{font-size:44px}textarea{width:100%;min-height:260px;font-family:Arial,sans-serif;font-size:15px;line-height:1.45;border-radius:14px;border:1px solid #bbb;padding:12px}button,a.btn{display:block;width:100%;box-sizing:border-box;text-align:center;text-decoration:none;font-size:16px;font-weight:700;padding:12px;border-radius:14px;border:2px solid #315f9f;background:#f4f9ff;color:#315f9f;margin:8px 0}.bottom{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:#fff;padding:6px;border-top:1px solid #ddd;max-width:760px;margin:auto}.bottom a{font-size:12px;padding:9px;text-align:center;text-decoration:none;color:#315f9f;border:1px solid #ddd;border-radius:12px}</style></head><body><div class="icon">🩺</div><h1>Appointment Shield</h1><div class="card soft"><b>Use when:</b> you have a GP, hospital, dental, social care, benefits, housing, or official appointment.</div><div class="card"><b>Where to type:</b><p>Open ChatGPT, paste the prompt below, then fill in the appointment details.</p><button onclick="navigator.clipboard&&navigator.clipboard.writeText(document.querySelector('textarea').value)">Copy prompt</button><textarea>Appointment Shield v3.0
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>🩺 Appointment Shield</title><link rel="apple-touch-icon" href="../mellow-icon.svg"><style>body{font-family:Arial,sans-serif;margin:0 auto;max-width:760px;padding:14px 14px 90px;background:linear-gradient(180deg,#f8fbff,#fff8fc);color:#111827}.card{background:#fff;border:1px solid #d9d8ee;border-radius:18px;padding:14px;margin:10px 0}.soft{background:linear-gradient(135deg,#eef7ff,#fff3f8)}h1{font-size:25px}.icon{font-size:44px}textarea{width:100%;min-height:260px;font-family:Arial,sans-serif;font-size:15px;line-height:1.45;border-radius:14px;border:1px solid #bbb;padding:12px}button,a.btn{display:block;width:100%;box-sizing:border-box;text-align:center;text-decoration:none;font-size:16px;font-weight:700;padding:12px;border-radius:14px;border:2px solid #315f9f;background:#f4f9ff;color:#315f9f;margin:8px 0}.bottom{position:fixed;left:0;right:0;bottom:0;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:#fff;padding:6px;border-top:1px solid #ddd;max-width:760px;margin:auto}.bottom a{font-size:12px;padding:9px;text-align:center;text-decoration:none;color:#315f9f;border:1px solid #ddd;border-radius:12px}</style></head><body><div class="icon">🩺</div><h1>Appointment Shield</h1><div class="card soft"><b>Use when:</b> you have a GP, hospital, dental, social care, benefits, housing, or official appointment.</div><div class="card"><b>Prepare before appointment</b><p>Open ChatGPT, paste the prompt below, then fill in the appointment details.</p><button onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('prep').value)">Copy prep prompt</button><textarea id="prep">Appointment Shield v3.0
 
 Appointment type:
 Professional:
@@ -24,4 +24,51 @@ Include:
 11. Simple Mum Brief.
 12. Recovery plan.
 
-Ask only one clarification question at a time if essential information is missing. Do not invent facts.</textarea></div><nav class="bottom"><a href="workflows.html">Workflows</a><a href="start.html">Start</a><a href="../">Mellow</a></nav></body></html>
+Ask only one clarification question at a time if essential information is missing. Do not invent facts.</textarea></div><div class="card"><b>Active Meeting Tracker</b><p>Use this when you type or say <b>Active</b> during an appointment, meeting, call attempt, contractor visit, benefits contact, or professional conversation.</p><button onclick="navigator.clipboard&&navigator.clipboard.writeText(document.getElementById('active').value)">Copy Active tracker prompt</button><textarea id="active">Active Meeting Tracker / AI Advocate Mode
+
+Start tracking this appointment or professional interaction now.
+
+Your role:
+- Act as Menglu's communication assistant and AI advocate.
+- Track the conversation in a structured way while reducing cognitive load.
+- Do not ask unnecessary questions.
+- Use existing Menglu OS evidence and accessibility needs where relevant.
+- Keep confirmed facts separate from assumptions, recommendations, and missing information.
+
+Track these fields:
+1. Who is present or involved.
+2. Organisation or service.
+3. Date and approximate time.
+4. Purpose of the appointment or conversation.
+5. What Menglu said or tried to explain.
+6. What the professional, contractor, service, or other person said.
+7. Main topics discussed.
+8. Decisions made.
+9. Advice or explanations given.
+10. Actions agreed.
+11. Who is responsible for each action.
+12. Deadlines, review dates, or waiting points.
+13. Unanswered questions.
+14. Any access barriers, pressure, phone requests, rushed communication, sensory difficulty, or overload risk.
+15. Recovery impact or crash risk.
+16. What Menglu needs to do next.
+17. What needs to be explained to Mum in simple Chinese.
+18. Any email, letter, message, or follow-up draft that should be prepared.
+
+During the meeting:
+- If Menglu gives short notes, convert them into structured meeting notes.
+- If the conversation becomes unclear, make a best-effort note and mark it as Needs clarification.
+- If a professional says something important, record it under Confirmed only if it is clear.
+- If there is an agreed action, create an action line with owner and deadline if known.
+
+After the meeting, produce:
+1. Short Easy Read summary.
+2. Professional meeting summary.
+3. Action list with owner and deadline.
+4. Mum summary in simple Chinese.
+5. Emails or follow-up drafts needed.
+6. Recovery recommendation.
+7. What should be added to Current Context.
+8. What, if anything, is durable enough to consider adding to OS Evidence.
+
+Do not send anything. Draft only. Ask for approval before any external message is sent.</textarea></div><nav class="bottom"><a href="workflows.html">Workflows</a><a href="start.html">Start</a><a href="../">Mellow</a></nav></body></html>
