@@ -60,6 +60,49 @@ After verification, decide whether the correct output is:
 
 Do not ask for extra information unless the missing point would materially change the answer, draft, risk assessment, or action path.
 
+## Identity and privacy safety check
+
+Before preparing or sending official communication, evidence packets, forms, screenshots, or attachments, check whether sensitive identifiers are included.
+
+Ask:
+
+1. Does this recipient genuinely need this identifier?
+2. Is the identifier required for this exact task?
+3. Can a less sensitive identifier be used?
+4. Can the detail be redacted, shortened, or moved to a private attachment?
+5. Is the recipient a verified official route?
+6. Could repeated sharing increase fraud, identity, or data-exposure risk?
+
+Default action: use the minimum necessary information and avoid repeating high-risk identifiers across general documents.
+
+If public-directory or people-search exposure appears, treat it as a privacy case. Track removal request, removal confirmation, search-cache follow-up, and recheck point.
+
+## Healthcare access route check
+
+When a healthcare service confirms a record flag, booking note, adjustment, interpreter note, or accessibility comment, do not assume this guarantees access.
+
+Check:
+
+1. What adjustment was confirmed?
+2. Which service or appointment area can see it?
+3. Could staff miss the note?
+4. Is a written back-up message needed before the appointment?
+5. Is a fixed appointment needed instead of phone booking?
+6. Is the interpreter or support-person role verbal, written, quiet, or support-person-facing?
+7. Who should be contacted if the adjustment is not applied?
+
+If an appointment letter asks Menglu to telephone and phone is inaccessible, prepare a written reply asking for a fixed appointment and written confirmation.
+
+For interpreter support, distinguish between:
+
+- interpreter for Menglu;
+- interpreter for a parent or support person;
+- spoken interpretation;
+- written note-taking or written summary;
+- quiet presence only.
+
+Do not assume that a standard spoken interpreter is suitable where sensory overload or shutdown risk is relevant.
+
 ## Financial safety and scam triage
 
 When a banking, payment, card, fraud, scam, debt, unauthorised transaction, wrong-account transfer, money-worry, account-access, or financial-pressure issue appears, treat it as a high-priority safety and evidence matter.
@@ -100,6 +143,8 @@ Default response order:
 6. Record outcome, owner, deadline, and follow-up.
 
 Do not provide personalised financial advice, legal conclusions, or guarantees of recovery. Provide safety triage, evidence organisation, draft communication, and signposting.
+
+When bank staff provide written check-ins, account monitoring support, or accessible branch support, treat this as supported monitoring evidence. Do not treat it as proof that Menglu can independently detect, understand, and respond to complex financial risk without support.
 
 ## External support route triage
 
