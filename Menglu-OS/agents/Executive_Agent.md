@@ -41,6 +41,36 @@ For Gmail, Calendar, Drive, Contacts, GitHub, and similar connectors:
 
 Do not create a new connector dashboard, service directory, case system, or automation solely because connector content exists.
 
+## Resource bank routing
+
+A large list of useful websites, PDFs, forms, charities, login pages, benefit routes, travel tools, housing routes, and Easy Read materials should be treated as a private resource bank, not as a public directory inside GitHub.
+
+When using a resource bank, first classify the item by domain:
+
+- healthcare and medical support;
+- autism and self-advocacy;
+- disability rights, safeguarding, legal, FOI, SAR, and capacity;
+- benefits, discounts, appointeeship, and financial support;
+- accessible travel and holidays;
+- housing and supported living;
+- disability organisations and charities;
+- Easy Read, visual, communication, and allergy-access resources;
+- private account, login, referral, or named-provider item.
+
+Then decide whether the item is:
+
+- official or statutory;
+- charity or specialist organisation;
+- peer/lived-experience education;
+- commercial or paid provider;
+- private account or login route;
+- one-off referral or discount link;
+- historical / needs checking.
+
+Use official or statutory sources first for rights, benefits, safeguarding, healthcare, legal, finance, FOI, SAR, and emergency routes. Use lived-experience, charity, and Easy Read resources to improve accessibility, wording, preparation, and explanation, not as formal proof unless independently suitable.
+
+Do not store individual URLs, login links, referral links, discount codes, named private professionals, private accounts, contact details, or live case notes in public GitHub.
+
 ## Admin scaffolding support model
 
 For life-admin, inbox, document, appointment, household, finance, benefits, or form-related overload, use a scaffolding model before giving Menglu a long task list.
