@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.49.0 - Home Information Board Routing
+
+### Added
+
+- `Menglu-OS/agents/Executive_Agent.md` now includes Home Information Board Routing for private household reference packs.
+
+### Changed
+
+- Household information boards should be treated as private household reference packs, not public repository content.
+- Home information should route tasks about property, utilities, safety, energy, broadband, insurance, warranty, purchase records, repairs, emergency access, and local household context.
+- Future use should label household information as Verified, User-reported, Historical, Pending, Needs checking, or Emergency-use only.
+- Emergency-facing versions should include only minimum necessary safety, access, and service-continuity facts.
+
+### Not added
+
+- No address, postcode, phone numbers, email addresses, named purchase contacts, purchase-party names, mortgage details, insurance details, account details, warranty references, solicitor details, or live household records were added to GitHub.
+- No Home Information Board page, property database, contact directory, purchase workflow, mortgage workflow, insurance workflow, or standalone household system was created.
+- A proposed Memory Model edit was blocked by connector safety checks, so the rule was integrated into the Executive Agent instead.
+
+### Operating effect
+
+Menglu OS can now use the Home Information Board as a private routing source while keeping the public repository limited to handling rules and categories. The system should use the board to reduce repeated household questions, prepare safe household drafts, and avoid exposing private property or contact data in public files.
+
 ## v0.48.0 - Coordination and Utility Routing Integration
 
 ### Added
@@ -219,124 +242,3 @@ Menglu OS now treats professional advocacy as a system-wide outcome standard. Th
 ### Operating effect
 
 Menglu OS now has a clearer internal preprocessing sequence for producing evidence-grounded outputs. The system should deconstruct the request, verify evidence, diagnose gaps and conflicts, develop the safest response, and deliver the smallest useful output without requiring Menglu to run a separate prompt.
-
-## v0.39.0 - Live Appointment and Case Filter Consolidation
-
-### Added
-
-- `Menglu-OS/agents/Executive_Agent.md` now includes the Five-Part Case Filter for operational and case-management outputs.
-- `pa/appointment-shield.html` now includes a live appointment sequence inside the existing Active Meeting Tracker.
-- `pa/appointment-shield.html` now includes a three-level communication support model: Clarify, Redirect, and Pause/defer.
-- `pa/appointment-shield.html` now includes optional post-appointment case filter output: ACTION LOGGED, REVIEW REQUIRED, NEXT STEP, WAIT / NOT URGENT, and DECISION NEEDED.
-
-### Changed
-
-- Active meeting support is treated as part of Appointment Shield and Menglu OS, not as a separate Live Appointment OS.
-- Case-management reporting can now use the Five-Part Case Filter where it reduces cognitive load.
-- The repository wording avoids claiming continuous autonomous monitoring or unsupported background control.
-
-### Not added
-
-- No new Live Appointment Engine file, Case Management OS, automation, prompt, standalone workflow, or separate Output Engine file was created.
-- No private PCC case detail or live appointment evidence was added to the public repository.
-
-### Operating effect
-
-Menglu OS now has a clearer live appointment sequence and a standard case-management output format while preserving the existing architecture. Active remains a trigger within Appointment Shield, and case reporting remains handled by the Executive Agent and existing output behaviour.
-
-## v0.38.0 - Rheumatology Clinical Reasoning Refinement
-
-### Added
-
-- `Menglu-OS/agents/Health_Agent.md` now includes Healthcare Management Preference, Specialist Clinical Reasoning, and Appointment Success Audit rules.
-- `Menglu-OS/core/DECISION_ENGINE.md` now includes a Healthcare Clinical Reasoning and Practical Outcome rule.
-- `Menglu-OS/core/MEMORY_MODEL.md` now includes a stable Healthcare Management Preference evidence rule.
-- `pa/appointment-shield.html` now captures clinical reasoning, alternatives, practical outcomes, documentation, and follow-up in healthcare appointment preparation and Finished outputs.
-
-### Changed
-
-- Healthcare appointment preparation should prioritise clinical reasoning, practical management, documentation, referrals, adaptations, and sustainable support, rather than trying to prove one diagnosis.
-- Rheumatology-style wording should use neutral differential-diagnosis questions, such as asking what best explains the overall symptom pattern if hEDS/HSD is not agreed.
-- Uncertain items such as hEDS/HSD, genetics referral, or mast-cell-related questions should be framed as clinician questions unless confirmed.
-- Appointment closure should audit clinical impression, reasoning, evidence, investigations, referrals, practical outcomes, documentation, and next review.
-
-### Not added
-
-- No new Rheumatology OS, diagnosis-advocacy mode, prompt, automation, workflow, or standalone document was created.
-- No private medical records or live appointment details were added to the public repository.
-
-### Operating effect
-
-Menglu OS now handles rheumatology and similar specialist appointments through a clinician-facing, outcome-focused model. The system should capture why decisions were made, what practical support was offered, what remains uncertain, and what follow-up is needed while avoiding diagnosis-first advocacy.
-
-## v0.37.0 - Government Records and HMRC Guidance Refinement
-
-### Added
-
-- `Menglu-OS/core/MEMORY_MODEL.md` now includes a Government Records namespace inside the existing Memory & Evidence Engine.
-- `Menglu-OS/core/MEMORY_MODEL.md` now includes an Evidence Preservation Policy for official records with long-term evidential value.
-- `Menglu-OS/core/DECISION_ENGINE.md` now includes HMRC and Self Assessment decision guidance.
-- `Menglu-OS/templates/Written_Communication_Request.md` now notes that UNCRPD may be referenced as supporting context alongside the Equality Act 2010 where useful.
-
-### Changed
-
-- Government Gateway and similar account access should be treated as a reference access route, not as a new workflow.
-- Official records should be separated into Evidence to preserve, Action required, No current action, and Unknown or needs checking.
-- Self Assessment should not be assumed where there is no employment, no self-employment, no taxable business income, and no HMRC request.
-- UNCRPD should support existing accessibility and reasonable-adjustment wording without creating a parallel disability-rights framework.
-
-### Not added
-
-- No new HMRC workflow, tax workflow, Government Gateway workflow, disability-rights framework, automation, prompt, or standalone document was created.
-- No Government Gateway credentials, private HMRC details, personal tax data, or live government account information were added to the public repository.
-- No Barbara Johnston workflow or third-party-authority rule was added because no authority or agreement exists.
-
-### Operating effect
-
-Menglu OS can now preserve important government records and avoid unnecessary HMRC/Self Assessment worry while keeping government-account details private and treating UNCRPD as supporting advocacy context rather than a separate rights system.
-
-## v0.36.0 - Governance Review Gate Refinement
-
-### Added
-
-- `Menglu-OS/core/INTEGRATION_GOVERNANCE.md` now requires Repository and Existing-System Review before deciding what is genuinely new.
-- `Menglu-OS/core/INTEGRATION_GOVERNANCE.md` now includes Deletion Before Addition as a governance rule.
-- `Menglu-OS/core/INTEGRATION_GOVERNANCE.md` now includes an Implementation Planning rule for substantial changes.
-- `Menglu-OS/core/MASTER_PROMPT.md` now references repository review and deletion-before-addition at the highest operating level.
-
-### Changed
-
-- The Architecture Review Gate now checks what already exists, whether older material should be merged or removed, and whether new material is technically necessary.
-- The GitHub-first rule now explicitly prefers reuse, extension, merge, replacement, or deletion before creating new files, prompts, workflows, dashboards, or automations.
-- Substantial recommendations should identify files/components to update, merge, remove, or record in the changelog where useful.
-
-### Not added
-
-- No new governance document, module, automation, prompt, or workflow was created.
-
-### Operating effect
-
-Menglu OS now has a stricter consolidation-first rule: review existing systems first, merge or delete duplicates before adding anything new, and keep implementation plans tied to existing components. This reduces architecture drift and maintenance burden.
-
-## v0.35.0 - Household Transport Verification Refinement
-
-### Added
-
-- `Menglu-OS/core/MEMORY_MODEL.md` now includes Transport as a Household namespace category.
-- `Menglu-OS/core/MEMORY_MODEL.md` now includes a Household Transport Verification Rule.
-
-### Changed
-
-- Vehicle information should be treated as household transport evidence when it supports accessibility, appointment travel, insurance, household administration, benefits evidence, or family planning.
-- Vehicle information should be verified through official records or primary documentation where possible.
-- Future outputs must not infer vehicle model year, trim, engine specification, tax class, registration date, ownership details, insurance status, or technical features from images alone.
-- Vehicle-related outputs should separate Confirmed, User-reported, Unconfirmed, and Assumption avoided.
-
-### Not added
-
-- No vehicle workflow, vehicle prompt, vehicle OS, vehicle database, or automation was created.
-- No vehicle registration number, ownership detail, insurance detail, or live vehicle record was added to the public repository.
-
-### Operating effect
-
-Menglu OS can now reuse transport as part of the existing Household namespace while keeping vehicle-specific live details outside the public repository and requiring official verification for technical or legal vehicle facts.
