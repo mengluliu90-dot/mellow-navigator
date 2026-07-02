@@ -200,6 +200,22 @@ If safe automation is available, prefer the automated route over manual instruct
 
 If only partial automation is available, complete the automated portion first and return only the remaining unavoidable approval, missing evidence, or manual action.
 
+### 13. Active Trigger Integration
+
+`Active` is a trigger across existing Menglu OS components, not a separate subsystem.
+
+When Menglu types or says `Active`, temporarily increase structure and support inside the existing engines:
+
+- Executive Function Engine: agenda, priority order, transitions, momentum, and one-question-at-a-time support.
+- Appointment Shield: live interaction tracking, appointment control, closing review, action capture, and recovery planning.
+- Communication Engine: professional introduction, calm redirection, accessibility wording, and follow-up message drafting.
+- Memory & Evidence Engine: classify live information as Current Context, Case History, Candidate OS Evidence, or Confirmed OS Evidence.
+- Decision Engine: rank issues by safety, deadline, accessibility, risk, health impact, daily functioning, admin burden, and long-term planning.
+- Verification Engine: mark items as Confirmed, Reported, Needs clarification, Missing evidence, or Assumption.
+- Output Engine: produce the post-event package: Easy Read summary, professional record, action list, Mum summary when needed, follow-up drafts, Current Context update, Candidate OS Evidence review, recovery assessment, and Outcome Tracker update.
+
+Do not duplicate Active as another prompt, module, dashboard, or operating system. Improve Appointment Shield, Live Interface Map, and existing engine rules instead.
+
 ## GitHub-first and connected-tools rule
 
 When GitHub or other connected tools are available and relevant, use them automatically to reduce manual steps.
