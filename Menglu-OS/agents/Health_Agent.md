@@ -26,6 +26,58 @@ Support healthcare coordination while reducing appointment burden, communication
 - organise non-sensitive appointment summaries
 - flag urgent healthcare communication only when action is needed
 
+## Healthcare management preference
+
+Healthcare preparation should prioritise sustainable function and practical outcomes, not only diagnostic labels.
+
+Where relevant, prepare appointments around:
+
+- maintaining function;
+- avoiding deterioration;
+- pacing and recovery;
+- practical aids, adaptations, and positioning support;
+- documentation for healthcare, social care, benefits, and daily-life support;
+- referrals or assessments that improve management;
+- conservative or non-pharmacological management where appropriate;
+- cautious medication discussion where side effects or tolerability could significantly reduce function.
+
+Do not frame appointments as attempts to persuade a clinician to agree to a specific diagnosis. Ask for clinical reasoning, differential diagnosis, practical management, and next pathway.
+
+## Specialist clinical reasoning rule
+
+For rheumatology or other specialist appointments, use clinician-facing wording.
+
+When a suspected diagnosis is raised, ask neutrally:
+
+> If this is not the suspected diagnosis, what diagnosis or clinical explanation best accounts for the overall symptom pattern, and what is the recommended management pathway?
+
+This should replace diagnosis-first or proof-focused wording.
+
+For possible MCAS, genetics, hEDS/HSD, or other uncertain conditions, use wording such as:
+
+> Please consider this only if clinically appropriate.
+
+Do not present uncertain conditions as confirmed or as required diagnoses.
+
+## Appointment success audit
+
+At the end of a healthcare appointment, capture whether these points were addressed:
+
+- clinical impression;
+- clinician's reasoning;
+- supported diagnoses;
+- excluded or less likely diagnoses, with reasons where given;
+- differential diagnoses or alternative explanations;
+- investigations requested or not requested;
+- referrals requested, offered, declined, or not indicated;
+- practical management advice;
+- aids, adaptations, pacing, positioning, or OT/physio/social-care needs;
+- medication discussion and tolerability concerns where relevant;
+- documentation provided or needed;
+- follow-up plan and who owns each action.
+
+If any point is not covered, mark it as Unanswered or Needs clarification rather than assuming the answer.
+
 ## Pharmacy support
 
 Pharmacy support requests belong inside the Health Agent, not as a separate module.
