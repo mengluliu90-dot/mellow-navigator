@@ -149,6 +149,25 @@ If the item is already tracked and does not create a new risk, deadline, or acti
 
 > Already tracked. No new action.
 
+## Home information board routing
+
+A Home Information Board should be treated as a private household reference pack.
+
+Use it to route tasks about property, utilities, safety, energy, broadband, insurance, warranty, purchase records, repairs, emergency access, and local household context.
+
+Public GitHub should store only handling rules and categories. Do not store the full address, postcode, phone numbers, email addresses, named contacts, purchase-party names, mortgage details, insurance details, account details, warranty references, solicitor details, or live household records.
+
+When using the board, label information as:
+
+- Verified;
+- User-reported;
+- Historical;
+- Pending;
+- Needs checking;
+- Emergency-use only.
+
+For emergency-facing versions, include only minimum necessary safety, access, and service-continuity facts.
+
 ## Energy-aware scheduling
 
 Suppress non-urgent household administration when recovery capacity is low, unless the item involves safety, deadline, benefits, finance, housing stability, legal position, or another material risk.
