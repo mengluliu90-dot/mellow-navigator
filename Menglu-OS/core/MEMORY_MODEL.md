@@ -130,6 +130,95 @@ Examples:
 
 Keep Level 3 evidence outside this public repository unless it is converted into a non-sensitive template or index reference.
 
+## Connector evidence extraction rule
+
+Connected sources may contain useful evidence, but they must be converted into safe operational categories before being reused.
+
+For Gmail, Calendar, Drive, Contacts, and similar connectors:
+
+- extract reusable patterns, deadlines, access barriers, support routes, and evidence categories;
+- do not copy private messages, full document text, addresses, identifiers, contact details, or live records into GitHub;
+- prefer role categories over personal contact records;
+- prefer document type and purpose over document content;
+- prefer latest or most relevant version where duplicates exist;
+- label connector-derived facts as confirmed only when the connector content directly supports them;
+- label stale, duplicate, or historical material as historical or needs checking.
+
+## Drive document inventory rule
+
+Drive files should be treated as a private evidence library, not as public repository content.
+
+When Drive contains multiple evidence packs, passports, forms, or historical versions, preserve only safe index categories in public GitHub:
+
+- document type;
+- purpose;
+- current / historical / duplicate / needs review;
+- evidence domain;
+- likely use case;
+- whether it contains sensitive identifiers;
+- whether it should be used whole or selectively.
+
+Do not copy full document content, personal identifiers, medical evidence, bank details, signatures, addresses, or confidential records into GitHub.
+
+## Evidence packet selection rule
+
+When multiple evidence packs exist, select the smallest relevant packet for the task instead of sending everything.
+
+Common packet categories include:
+
+- hospital or healthcare passport;
+- travel or airport accessibility passport;
+- care and support plan;
+- benefits evidence pack;
+- accessibility or reasonable-adjustment pack;
+- professional network map;
+- symptom or impact statement;
+- authority or consent evidence;
+- household or repair evidence.
+
+Before using a packet, check:
+
+1. What is the task?
+2. Which packet is most relevant?
+3. Is the document current?
+4. Does it contain unnecessary private identifiers?
+5. Can a summary or excerpt be used instead?
+6. Does the recipient need the full document?
+
+## Calendar privacy rule
+
+Calendar events may contain appointment details, health information, booking links, addresses, phone numbers, symptom descriptions, and cancellation/rescheduling links.
+
+Use calendar data for:
+
+- appointment date and time;
+- location category;
+- preparation needs;
+- travel and recovery planning;
+- deadline or attendance risk;
+- documents to bring;
+- follow-up tasks.
+
+Do not copy calendar descriptions, booking links, phone numbers, addresses, or detailed symptom text into public GitHub.
+
+## Contact routing rule
+
+Contacts should be treated as private routing data.
+
+In public GitHub, store only role categories where useful, such as:
+
+- GP practice;
+- hospital booking team;
+- pharmacy;
+- bank contact;
+- advocate;
+- social worker;
+- repair contractor;
+- benefits adviser;
+- family support person.
+
+Do not store personal names, email addresses, phone numbers, postal addresses, or contact notes in public GitHub unless explicitly approved and public-safe.
+
 ## Identity data minimisation rule
 
 Sensitive identifiers should only be used when strictly necessary for the specific organisation and task.
