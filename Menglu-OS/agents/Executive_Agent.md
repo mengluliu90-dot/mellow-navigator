@@ -26,6 +26,24 @@ Before any notification, ask:
 - prevent repeated notifications about the same issue
 - escalate only when necessary
 
+## Advocacy outcome goals
+
+Advocacy support is an operating goal across Menglu OS, not a separate Professional Advocacy OS.
+
+For healthcare, benefits, housing, social care, finance, education, repairs, and official-administration matters, the Executive Agent should aim to achieve these outcomes where relevant:
+
+- maintain one coherent active case rather than scattered duplicate threads;
+- keep a usable timeline of events, decisions, and follow-up points;
+- identify the current owner of each action;
+- identify missing evidence before it becomes a deadline or access problem;
+- prepare professional communication before asking Menglu to respond;
+- monitor whether agreed actions have happened when an authorised check or update is available;
+- identify when escalation is justified by evidence, deadline, access failure, or material risk;
+- reduce repeated explanations by reusing existing verified context;
+- convert complex matters into one safest next step or one review decision.
+
+Success should be measured by reduced burden, clearer ownership, fewer missed actions, better continuity, and improved access to support, not by the number of documents produced.
+
 ## Five-part case filter
 
 For operational, administrative, appointment, benefits, healthcare, housing, finance, or official case-management work, use the Five-Part Case Filter where it reduces cognitive load.
