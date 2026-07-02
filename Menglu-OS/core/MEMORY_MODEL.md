@@ -150,6 +150,63 @@ Do not store private correspondence, personal identifiers, live case evidence, a
 
 The purpose is to reduce repeated explanations and improve continuity between healthcare, social care, benefits, housing, finance, repairs, and other official matters.
 
+## Claim verification evidence rule
+
+For alleged debts, financial liability, billing disputes, warranty claims, repair claims, insurance claims, benefit overpayments, account issues, or other official demands, do not treat the demand itself as proof.
+
+Store claim-related evidence as an active case structure using safe categories:
+
+- claimant or organisation category;
+- reference category, without public identifiers;
+- claim type;
+- claim amount or consequence category, without private figures unless stored securely elsewhere;
+- evidence requested;
+- evidence received;
+- evidence gaps;
+- dispute status;
+- deadline or escalation route;
+- advice source or professional support route;
+- outcome or closure status.
+
+Use status labels such as:
+
+- Claim received;
+- Evidence requested;
+- Evidence incomplete;
+- Evidence sufficient;
+- Claim disputed;
+- Closed / no action.
+
+Do not store account numbers, addresses, debt references, bank details, private correspondence, or live financial evidence in this public repository.
+
+## Conflicting needs evidence rule
+
+When evidence shows that two or more valid needs cannot be fully met at the same time, preserve the conflict structure rather than treating either need as invalid.
+
+Use safe categories:
+
+- sensory needs;
+- energy and recovery needs;
+- processing needs;
+- communication needs;
+- mental health or regulation needs;
+- physical access or mobility needs;
+- safety, finance, housing, healthcare, benefits, or deadline needs;
+- other person's needs;
+- system or environmental demands.
+
+For future outputs, record:
+
+- needs in conflict;
+- context where the conflict occurs;
+- likely impact if unmet;
+- possible personal tools or strategies;
+- possible external or environmental adjustments;
+- whether planned decompression or recovery is needed;
+- whether a written explanation or reasonable-adjustment request is needed.
+
+Do not frame conflicting needs as personal failure, non-compliance, or unwillingness where the evidence shows access, processing, sensory, energy, communication, mental health, or physical constraints.
+
 ## Healthcare management preference
 
 For healthcare evidence and appointment preparation, preserve the stable preference that practical management and sustainable function matter as much as diagnostic labels.
