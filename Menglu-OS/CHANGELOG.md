@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.44.0 - Sensitive Evidence Handling Refinement
+
+### Added
+
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes rules for handling authority/consent evidence and accessibility-document evidence as sensitive case material.
+- `Menglu-OS/templates/GENERAL_OFFICIAL_EMAIL.md` now includes consent-scope and accessibility-evidence wording patterns.
+
+### Changed
+
+- Future outputs should extract the functional meaning of sensitive records instead of copying private document content into public files.
+- Consent, authority, and support evidence should be verified as current and accepted by the relevant organisation before being relied on.
+
+### Not added
+
+- No private identifiers, scans, signatures, reference numbers, contact details, prescriptions, membership details, medical-letter content, or live case records were added to GitHub.
+- No new authority, consent, optician, credit, OT, or membership workflow was created.
+
+### Operating effect
+
+Menglu OS can now use uploaded private documents as private evidence sources while retaining only public-safe reusable rules in GitHub.
+
 ## v0.43.0 - Financial Safety and Support Route Tools
 
 ### Added
