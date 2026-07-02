@@ -1,5 +1,32 @@
 # Changelog
 
+## v0.46.0 - All Connector Extraction Audit
+
+### Added
+
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes Connector Evidence Extraction, Drive Document Inventory, Evidence Packet Selection, Calendar Privacy, and Contact Routing rules.
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes Connector Evidence Decision, Evidence Packet Selection, and Support Deadlock checks.
+- `Menglu-OS/agents/Executive_Agent.md` now includes Connector Audit Coordination.
+- `Menglu-OS/templates/GENERAL_OFFICIAL_EMAIL.md` now includes Evidence Packet Selection and Support Deadlock wording patterns.
+
+### Changed
+
+- Connected sources should be used to extract public-safe rules, categories, action triggers, and evidence patterns, not copied into GitHub.
+- Drive files should be treated as a private evidence library with current, historical, duplicate, and needs-review categories.
+- Calendar events should be used for appointment date, preparation, travel, recovery, and follow-up planning, not copied as full descriptions.
+- Contacts should be treated as private routing data; public documentation should store only role categories.
+- When multiple documents exist, Menglu OS should select the smallest relevant evidence packet rather than sending a full binder or duplicate pack.
+- Support deadlock should be recognised where the route to support requires the same communication, coordination, or executive-function ability that Menglu needs support with.
+
+### Not added
+
+- No private Gmail content, Drive document contents, Calendar descriptions, contact details, addresses, identifiers, medical records, financial records, appointment links, or live case evidence was added to GitHub.
+- No new connector dashboard, document database, contact directory, calendar workflow, Drive workflow, support-deadlock workflow, or automation was created.
+
+### Operating effect
+
+Menglu OS can now use all available connectors as private evidence sources while converting useful material into safe operating rules. The system should deduplicate evidence, choose the smallest relevant packet, avoid copying private records, use role-based routing, recognise support deadlocks, and notify only when a real action, risk, deadline, or completed integration needs review.
+
 ## v0.45.0 - Saved History and Gmail Integration Audit
 
 ### Added
@@ -263,110 +290,3 @@ Menglu OS now has a stricter consolidation-first rule: review existing systems f
 ### Operating effect
 
 Menglu OS can now reuse transport as part of the existing Household namespace while keeping vehicle-specific live details outside the public repository and requiring official verification for technical or legal vehicle facts.
-
-## v0.34.0 - Household Namespace Integration
-
-### Added
-
-- `Menglu-OS/core/MEMORY_MODEL.md` now includes a Household namespace inside the existing Memory & Evidence Engine.
-- Household namespace categories are: Property, Utilities, Contacts, Warranties, Repair History, and Contractors.
-- `Menglu-OS/core/MEMORY_MODEL.md` now includes a household property evidence hierarchy for property and utility claims.
-- `Menglu-OS/core/DECISION_ENGINE.md` now includes a Household Decision and Cross-linking Rule.
-- `Menglu-OS/agents/Executive_Agent.md` now includes a Household Operations Check.
-
-### Changed
-
-- Household documents should be classified and cross-linked instead of treated as isolated records.
-- Household information should be separated as Verified, Historical, Pending, or Unknown in future outputs.
-- The Executive Agent should classify household items as Menglu only, Yu Liu, Kun Shi, Dr Needles Ltd where relevant, or Household/shared.
-- If a household item is already tracked and creates no new risk, deadline, or action, the default outcome is: Already tracked. No new action.
-- Non-urgent household administration should be suppressed when recovery capacity is low unless safety, deadline, finance, housing stability, legal position, or another material risk requires attention.
-
-### Not added
-
-- No Home OS, Property OS, Utilities OS, House Dashboard, new workflow, new automation, or standalone household document was created.
-- No private property records, live utility records, exact contact details, active repair correspondence, financial details, or confidential household documents were added to the public repository.
-
-### Operating effect
-
-Menglu OS can now reuse household property, utility, warranty, contact, contractor, and repair-history categories through the existing Memory, Decision, and Executive layers. This reduces repeated questions and duplicate records while keeping changing operational items in Current Context, Open Loop Register, or active case records.
-
-## v0.33.0 - Final Operating Directive Refinement
-
-### Added
-
-- `Menglu-OS/core/MASTER_PROMPT.md` now includes Health Protection and Energy Expenditure, Apparent Coping and Supported Performance, Reality Check and Stability First, and Prevention and Escalation as stable operating refinements.
-- `Menglu-OS/core/MASTER_PROMPT.md` now includes a Recommended Response Format for important communications.
-- `Menglu-OS/templates/GENERAL_OFFICIAL_EMAIL.md` now includes the recommended reply structure: Recommended Reply, Why This Reply Is Recommended, and Additional Matters Worth Raising.
-
-### Changed
-
-- Administrative work, communication, appointments, planning, and decision-making are now explicitly treated as exertion when assessing burden.
-- Future recommendations should distinguish what should happen, what usually happens, what evidence supports, and what is realistically achievable.
-- Stable public rules remain separate from private profile data and live case details.
-
-### Not added
-
-- No private profile data or live case data was committed to the repository.
-- No new Mira prompt, subsystem, automation, dashboard, or standalone document was created.
-- An attempted detailed privacy-boundary edit was blocked by the connector safety check, so the existing `PRIVACY_BOUNDARY.md` remains unchanged.
-
-### Operating effect
-
-Menglu OS now applies the final operating directive refinements through existing governance. The system should protect energy, avoid inferring independence from supported performance, use practical reality checks, prefer stability, and provide recommended replies with reasons while preserving autonomy and public-repository privacy boundaries.
-
-## v0.32.0 - Coordination Evidence Pattern
-
-### Added
-
-- `Menglu-OS/core/MEMORY_MODEL.md` now includes a Coordination Evidence Pattern under the existing real-world evidence model.
-- `Menglu-OS/core/DECISION_ENGINE.md` now includes a Coordination Evidence Decision Check for healthcare, social care, benefits, housing, advocacy, and official support material.
-- `Menglu-OS/core/MASTER_PROMPT.md` now includes Coordination Evidence Interpretation as a high-level operating principle.
-- `Menglu-OS/core/INTEGRATION_GOVERNANCE.md` now includes an evidence interpretation guideline distinguishing historical events from reusable evidence patterns.
-
-### Changed
-
-- Future advocacy outputs should treat documented independent coordination that produces repeated or significant measurable progress as evidence of coordination and service-navigation support needs.
-- Outputs should distinguish understanding, communication, initiating action, organising steps, coordinating across services, monitoring replies/referrals/deadlines, following up, and sustaining processes over time.
-- The PCC/Deirdre-type pattern is integrated as a reusable evidence interpretation rule, not as a new workflow, automation, prompt, or standalone document.
-
-### Operating effect
-
-Menglu OS can now reuse documented coordination-success patterns as functional evidence without reconstructing the argument each time. This strengthens advocacy outputs while preserving the public repository boundary: private evidence remains outside GitHub.
-
-## v0.31.0 - Appointment Shield Lifecycle Cleanup
-
-### Changed
-
-- `pa/appointment-shield.html` now uses one canonical three-stage Appointment Shield lifecycle: Pre-appointment, During appointment/live interaction, and Post-appointment.
-- Appointment notes now use the standard classification labels: Confirmed, Reported, Recommendation, and Needs clarification.
-- The Active trigger prompt now explicitly routes through existing Menglu OS components and states that it is not a new subsystem.
-- Timeline handling is stricter: only confirmed, durable, clinically or administratively significant information should be added to the long-term timeline. Other information stays in the appointment record or Current Context.
-- The prep prompt now includes Current Mode as optional context without duplicating recovery logic.
-
-### Removed
-
-- Deleted legacy `auto-appointment.html` because it duplicated appointment/emergency communication purpose and exposed sensitive personal/health contact details in the public repository.
-
-### Operating effect
-
-Appointment Shield is now the single active appointment route. It covers preparation, live advocacy tracking, post-appointment summaries, follow-up drafts, Current Context updates, evidence candidate review, and Outcome Tracker updates without maintaining a second appointment page or duplicate protocol.
-
-## v0.30.0 - Active Trigger Consolidation
-
-### Changed
-
-- `Menglu-OS/core/MASTER_PROMPT.md` now defines `Active` as a cross-engine trigger rather than a separate subsystem.
-- `Menglu-OS/docs/BACKGROUND_AUTOMATION_SPEC.md` now absorbs Active Meeting Tracker under the existing Appointment Shield automation.
-- Active behaviour is routed through existing engines: Executive Function, Appointment Shield, Communication, Memory & Evidence, Decision, Verification, and Output.
-- The detailed reusable prompt remains in `pa/appointment-shield.html` as the live UI layer.
-
-### Deduplicated
-
-- No standalone duplicate Active-mode prompt file was found to delete.
-- The previous draft-style Active protocol is not stored as a separate module.
-- Future Active changes should update Appointment Shield, Live Interface Map, Master Prompt, or Background Automation Spec instead of creating a new file.
-
-### Operating effect
-
-`Active` now increases structure and advocacy support inside the existing Menglu OS architecture. It supports live meeting tracking, agenda control, priority management, professional redirection, structured closure, Mum summaries, follow-up drafts, recovery review, and Outcome Tracker updates without adding another operating mode or duplicate automation.
