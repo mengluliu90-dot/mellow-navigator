@@ -1,5 +1,30 @@
 # Changelog
 
+## v0.45.0 - Saved History and Gmail Integration Audit
+
+### Added
+
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes Identity Data Minimisation, Public Data Removal Evidence, and Healthcare Access Adjustment Verification rules.
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes Identity and Privacy Safety, Healthcare Access Route, fixed appointment, interpreter-role, and supported financial-monitoring checks.
+- `Menglu-OS/agents/Health_Agent.md` now includes Healthcare Access Verification for record flags, booking notes, interpreter support, and written fallback planning.
+- `Menglu-OS/templates/GENERAL_OFFICIAL_EMAIL.md` now includes Identifier Minimisation, Public Data Removal Follow-up, Healthcare Fixed Appointment, and Interpreter or Support-Person Role wording patterns.
+
+### Changed
+
+- Sensitive identifiers should be included only when genuinely required for the specific organisation and task.
+- Healthcare record flags and booking notes should be treated as useful but not foolproof; written backup and fixed-appointment requests may still be needed.
+- Interpreter support should distinguish Menglu's needs from support-person needs and should not assume spoken interpretation is always the correct format.
+- Bank written check-ins and account-monitoring support should be treated as supported monitoring evidence, not proof of independent financial self-management.
+
+### Not added
+
+- No private Gmail content, addresses, identifiers, hospital numbers, account details, contact details, case references, or live case evidence was added to GitHub.
+- No new privacy workflow, healthcare-access workflow, interpreter workflow, banking workflow, or data-removal workflow was created.
+
+### Operating effect
+
+Menglu OS now better converts saved-history and Gmail evidence into public-safe rules. The system should minimise identifier exposure, track public-data removal as a privacy case, verify healthcare adjustment scope, use written fallback routes when phone booking is inaccessible, clarify interpreter/support-person roles, and treat bank check-ins as supported monitoring evidence.
+
 ## v0.44.0 - Sensitive Evidence Handling Refinement
 
 ### Added
