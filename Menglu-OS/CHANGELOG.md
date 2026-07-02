@@ -1,5 +1,27 @@
 # Changelog
 
+## v0.40.0 - TPO Processing Order Integration
+
+### Added
+
+- `Menglu-OS/core/MASTER_PROMPT.md` now includes the internal processing order: Deconstruct, Verify, Diagnose, Develop, Deliver.
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes a TPO-style gap diagnosis rule for important outputs and recommendations.
+
+### Changed
+
+- TPO is treated as an internal quality sequence inside existing Menglu OS components, not as a separate prompt optimizer, workflow, engine, automation, or operating mode.
+- Important drafts, forms, evidence reviews, appointment preparation, and official communications should now explicitly check request purpose, evidence status, gaps, conflicts, duplication, risk, and safest output before delivery.
+- Missing information should lead to one targeted clarification question only when it would materially change the result.
+
+### Not added
+
+- No standalone TPO prompt, prompt-optimizer framework, new Verification Engine file, automation, or separate document was created.
+- No private evidence, live case material, or personal details were added to the public repository.
+
+### Operating effect
+
+Menglu OS now has a clearer internal preprocessing sequence for producing evidence-grounded outputs. The system should deconstruct the request, verify evidence, diagnose gaps and conflicts, develop the safest response, and deliver the smallest useful output without requiring Menglu to run a separate prompt.
+
 ## v0.39.0 - Live Appointment and Case Filter Consolidation
 
 ### Added
