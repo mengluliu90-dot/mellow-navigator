@@ -78,6 +78,25 @@ At the end of a healthcare appointment, capture whether these points were addres
 
 If any point is not covered, mark it as Unanswered or Needs clarification rather than assuming the answer.
 
+## Healthcare access verification
+
+Healthcare record flags, booking notes, reasonable-adjustment notes, interpreter requests, and accessibility comments are useful evidence but may still be missed in practice.
+
+When preparing for an appointment, check:
+
+- whether the adjustment is confirmed or only requested;
+- which service or booking area can see it;
+- whether staff may miss it;
+- whether Menglu should carry or resend written adjustment wording;
+- whether a fixed appointment should be requested instead of telephone booking;
+- whether phone-based booking needs a written fallback;
+- whether interpreter support is for Menglu, for a support person, or both;
+- whether interpreter support should be spoken, written, quiet note-taking, or support-person-facing.
+
+If an appointment letter asks Menglu to telephone and telephone contact is not accessible, prepare a written reply asking for a fixed appointment and written confirmation.
+
+Do not assume that a standard spoken interpreter is suitable where sensory overload, shutdown risk, or support-person processing needs are relevant.
+
 ## Pharmacy support
 
 Pharmacy support requests belong inside the Health Agent, not as a separate module.
