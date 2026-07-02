@@ -1,5 +1,32 @@
 # Changelog
 
+## v0.34.0 - Household Namespace Integration
+
+### Added
+
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes a Household namespace inside the existing Memory & Evidence Engine.
+- Household namespace categories are: Property, Utilities, Contacts, Warranties, Repair History, and Contractors.
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes a household property evidence hierarchy for property and utility claims.
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes a Household Decision and Cross-linking Rule.
+- `Menglu-OS/agents/Executive_Agent.md` now includes a Household Operations Check.
+
+### Changed
+
+- Household documents should be classified and cross-linked instead of treated as isolated records.
+- Household information should be separated as Verified, Historical, Pending, or Unknown in future outputs.
+- The Executive Agent should classify household items as Menglu only, Yu Liu, Kun Shi, Dr Needles Ltd where relevant, or Household/shared.
+- If a household item is already tracked and creates no new risk, deadline, or action, the default outcome is: Already tracked. No new action.
+- Non-urgent household administration should be suppressed when recovery capacity is low unless safety, deadline, finance, housing stability, legal position, or another material risk requires attention.
+
+### Not added
+
+- No Home OS, Property OS, Utilities OS, House Dashboard, new workflow, new automation, or standalone household document was created.
+- No private property records, live utility records, exact contact details, active repair correspondence, financial details, or confidential household documents were added to the public repository.
+
+### Operating effect
+
+Menglu OS can now reuse household property, utility, warranty, contact, contractor, and repair-history categories through the existing Memory, Decision, and Executive layers. This reduces repeated questions and duplicate records while keeping changing operational items in Current Context, Open Loop Register, or active case records.
+
 ## v0.33.0 - Final Operating Directive Refinement
 
 ### Added
