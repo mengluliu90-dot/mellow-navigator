@@ -10,17 +10,75 @@ Menglu OS should remain one coherent operating system. New ideas should be treat
 
 Before creating, accepting, or documenting any new framework, workflow, prompt, automation, operating system, dashboard, or module, Menglu OS must first run an architecture review gate.
 
+The review gate now begins with repository and existing-system review before deciding what is new.
+
 The review gate asks:
 
-1. What is genuinely new?
-2. Where does it belong inside the existing Menglu OS architecture?
-3. Why should it be integrated there instead of becoming another separate prompt, chat, workflow, or document?
-4. What conflicts, duplication, overlap, contradictions, or unnecessary complexity does it create?
-5. Should the final recommendation be to integrate, replace, merge, or keep separate?
+1. What already exists in the repository, current Menglu OS components, templates, automations, or workflows?
+2. What is genuinely new?
+3. Where does it belong inside the existing Menglu OS architecture?
+4. Why should it be integrated there instead of becoming another separate prompt, chat, workflow, or document?
+5. What conflicts, duplication, overlap, contradictions, or unnecessary complexity does it create?
+6. Should anything be merged, replaced, archived, or deleted before adding new material?
+7. Should the final recommendation be to integrate, replace, merge, delete, or keep separate?
 
-The default goal is to integrate, merge, or refine existing components, not to create another independent system.
+The default goal is to integrate, merge, remove duplication, or refine existing components, not to create another independent system.
 
 A separate module should be used only when there is a clear technical or operational reason, such as a distinct data-processing pipeline that cannot safely fit an existing component.
+
+## Repository and existing-system review rule
+
+For substantial Menglu OS work, first review the relevant existing system before proposing changes.
+
+Check:
+
+- existing GitHub documentation;
+- existing engines;
+- existing agents;
+- existing automations;
+- existing templates;
+- existing interface pages;
+- existing open-loop, case, and evidence structures where available.
+
+The purpose is to identify whether the request is:
+
+- already covered;
+- a refinement of an existing capability;
+- a duplicate of an existing workflow;
+- an obsolete item that should be removed;
+- genuinely new and therefore needs placement.
+
+Do not ask Menglu to decide file placement, compare versions, or identify duplicate architecture when connected tools can perform that review.
+
+## Deletion before addition rule
+
+When a stable improvement replaces, overlaps with, or consolidates existing material, prefer deletion, merge, or replacement before adding new content.
+
+Preference order:
+
+1. Reuse existing.
+2. Extend existing.
+3. Merge duplicates.
+4. Remove obsolete content.
+5. Create new only if technically necessary.
+
+New files, prompts, dashboards, workflows, or automations should be created only when no existing component can safely absorb the function.
+
+## Implementation planning rule
+
+For substantial changes, the final recommendation should include an implementation plan where useful.
+
+The plan should identify:
+
+- files or components to update;
+- files or components to merge;
+- files or components to remove or archive;
+- changelog impact;
+- automation impact;
+- public/private boundary checks;
+- any evidence still missing or uncertain.
+
+Do not turn the implementation plan into a new workflow. It is a review step used to keep Menglu OS smaller and easier to maintain.
 
 ## GitHub-first connected-tools rule
 
@@ -35,8 +93,9 @@ Before creating or accepting a new rule, prompt, workflow, template, automation 
 1. Search the repository for related existing documentation.
 2. Decide whether the change belongs in an existing file.
 3. Prefer updating existing files over creating new ones.
-4. Update the changelog when the change is stable and reusable.
-5. Do not store private evidence, live case details, identifiers, bank details, health records, confidential correspondence, or other sensitive personal information in public repository files.
+4. Check whether old or duplicate material should be merged, removed, or replaced before adding new content.
+5. Update the changelog when the change is stable and reusable.
+6. Do not store private evidence, live case details, identifiers, bank details, health records, confidential correspondence, or other sensitive personal information in public repository files.
 
 ### Connected-tools rule
 
@@ -71,10 +130,12 @@ For routine Menglu OS maintenance that Menglu explicitly requests, the assistant
 Before creating any new framework, prompt, workflow, automation, operating module, dashboard, or GitHub document:
 
 1. Review existing Menglu OS context and documentation.
-2. Identify what is genuinely new.
-3. Check for duplication or overlap.
-4. Prefer integrating new capability into an existing component.
-5. Create a separate module only when there is a clear technical or operational reason.
+2. Search or inspect relevant repository files where available.
+3. Identify what is genuinely new.
+4. Check for duplication or overlap.
+5. Prefer integrating new capability into an existing component.
+6. Merge or remove duplicate/obsolete material before adding new content.
+7. Create a separate module only when there is a clear technical or operational reason.
 
 ## Conversation extension rule
 
@@ -88,6 +149,7 @@ Before accepting a proposed system, the assistant should ask internally:
 - Is the proposal a new capability or only a new description of an existing capability?
 - Can it be merged into the Executive Function Engine, Communication Engine, Memory & Evidence Engine, Decision Engine, Verification Engine, Output Engine, or existing automations?
 - Does it reduce cognitive load, or does it create another thing to maintain?
+- Is there older material that should be removed or consolidated first?
 
 The default answer should be integration, not expansion.
 
@@ -112,6 +174,10 @@ Do not create a new engine or standalone prompt if the capability fits one of th
 
 For every significant proposed change, provide:
 
+### 0. Repository and existing-system review
+
+Identify what already exists in Menglu OS, relevant repository files, existing automations, templates, workflows, or interface pages.
+
 ### 1. What is new
 
 State only the genuinely new capability or rule.
@@ -135,7 +201,7 @@ Explain why it belongs there instead of becoming a separate prompt, chat, or wor
 
 ### 4. Conflicts
 
-Identify duplication, overlap, contradiction, or unnecessary complexity.
+Identify duplication, overlap, contradiction, unnecessary complexity, or obsolete material.
 
 ### 5. Recommendation
 
@@ -144,9 +210,14 @@ Choose one:
 - Integrate into Menglu OS
 - Replace an older workflow
 - Merge with an existing workflow
+- Remove obsolete material
 - Keep as a separate module
 
 Use "keep as a separate module" only when there is a clear technical reason.
+
+### 6. Implementation plan
+
+When useful, specify what should be updated, merged, removed, or recorded in the changelog, and confirm that the public/private boundary is protected.
 
 ## Verification requirements
 
@@ -312,6 +383,7 @@ If a conversation produces a permanent Menglu OS improvement:
 
 - Update existing documentation where possible.
 - Create a new document only when the concept does not fit existing files.
+- Prefer merge, replacement, or deletion of obsolete material before adding new files.
 - Record only stable, reusable, non-sensitive system improvements.
 - Do not store private evidence, live case details, identifiers, bank details, or confidential communications.
 
