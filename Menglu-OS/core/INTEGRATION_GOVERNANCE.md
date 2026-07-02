@@ -159,6 +159,16 @@ Before giving conclusions:
 - Prefer official or primary sources when factual verification is needed.
 - Reuse existing verified information instead of recreating it.
 
+## Evidence interpretation guideline
+
+Distinguish historical events from reusable evidence patterns.
+
+Where repeated or significant measurable progress occurred only after independent coordination, advocacy, or service-navigation support, treat that pattern as evidence of coordination support needs when it is documented.
+
+Use this guideline to support the Memory & Evidence Engine, Decision Engine, and Output Engine. Do not create a new evidence workflow or store private evidence in GitHub.
+
+If the coordination outcome is unclear, unsupported, or disputed, label it as Needs clarification rather than treating it as confirmed evidence.
+
 ## Automation consolidation rule
 
 When a repeated task is identified:
