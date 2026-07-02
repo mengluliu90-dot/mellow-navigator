@@ -1,5 +1,30 @@
 # Changelog
 
+## v0.47.0 - Neuroinclusive Support Resource Integration
+
+### Added
+
+- `Menglu-OS/agents/Health_Agent.md` now includes a Connected-Systems Healthcare Rule, Healthcare Appointment Toolkit Rule, and AAC and Communication Access Rule.
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes a Neurodivergent Admin Support Suitability Check and Resource Safety Triage.
+- `Menglu-OS/agents/Executive_Agent.md` now includes an Admin Scaffolding Support Model.
+
+### Changed
+
+- Public resource indexes should be treated as starting points only, with safety, legality, privacy, reliability, and primary-source checks before use.
+- Admin and virtual-assistant support should be evaluated by support model, privacy, consent, cost, communication fit, and practical access before being treated as suitable.
+- Healthcare preparation should use a compact appointment packet with scheduling facts, access needs, key issues, functional impact, supporter role, follow-up questions, and communication tools.
+- Healthcare questions should consider whether one recommendation could affect another area of function, access, recovery, or daily living.
+
+### Not added
+
+- No VA system, paid-support workflow, FMHY directory, resource database, healthcare toolkit copy, All Brains Belong module, automation, or standalone file was created.
+- No website text, private service enquiry, medical record, personal identifiers, or live case details were added to GitHub.
+- A proposed general template update for paid-support enquiries was blocked by the connector safety check, so `GENERAL_OFFICIAL_EMAIL.md` was not changed for that item.
+
+### Operating effect
+
+Menglu OS can now extract reusable support patterns from neuroinclusive admin-support services, public resource indexes, healthcare toolkits, and connected-systems healthcare models while keeping the architecture consolidated. The system should scaffold tasks in small visible steps, verify public resources before use, prepare appointments through compact packets, support AAC and written communication, and avoid treating body systems or access needs as isolated when the evidence suggests interaction.
+
 ## v0.46.0 - All Connector Extraction Audit
 
 ### Added
