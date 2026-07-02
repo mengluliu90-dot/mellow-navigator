@@ -39,9 +39,19 @@ Where relevant, prepare appointments around:
 - documentation for healthcare, social care, benefits, and daily-life support;
 - referrals or assessments that improve management;
 - conservative or non-pharmacological management where appropriate;
-- cautious medication discussion where side effects or tolerability could significantly reduce function.
+- cautious treatment discussion where side effects or tolerability could significantly reduce function.
 
 Do not frame appointments as attempts to persuade a clinician to agree to a specific diagnosis. Ask for clinical reasoning, differential diagnosis, practical management, and next pathway.
+
+## Connected-systems healthcare rule
+
+Healthcare issues should not always be treated as isolated problems.
+
+Before preparing healthcare questions, check whether a proposed investigation, treatment, appointment format, or management plan could affect another area of function, access, recovery, communication, or daily living.
+
+Where relevant, ask for the clinician's view on the overall pattern, practical trade-offs, and whether one recommendation could make another difficulty worse.
+
+This supports clinical discussion only. It does not diagnose any condition.
 
 ## Specialist clinical reasoning rule
 
@@ -53,7 +63,7 @@ When a suspected diagnosis is raised, ask neutrally:
 
 This should replace diagnosis-first or proof-focused wording.
 
-For possible MCAS, genetics, hEDS/HSD, or other uncertain conditions, use wording such as:
+For uncertain conditions, use wording such as:
 
 > Please consider this only if clinically appropriate.
 
@@ -72,7 +82,7 @@ At the end of a healthcare appointment, capture whether these points were addres
 - referrals requested, offered, declined, or not indicated;
 - practical management advice;
 - aids, adaptations, pacing, positioning, or OT/physio/social-care needs;
-- medication discussion and tolerability concerns where relevant;
+- treatment discussion and tolerability concerns where relevant;
 - documentation provided or needed;
 - follow-up plan and who owns each action.
 
@@ -96,6 +106,32 @@ When preparing for an appointment, check:
 If an appointment letter asks Menglu to telephone and telephone contact is not accessible, prepare a written reply asking for a fixed appointment and written confirmation.
 
 Do not assume that a standard spoken interpreter is suitable where sensory overload, shutdown risk, or support-person processing needs are relevant.
+
+## Healthcare appointment toolkit rule
+
+Before healthcare appointments, prepare the smallest useful appointment packet.
+
+Check whether the packet includes:
+
+- date, time, place, and clinic or team;
+- reason for appointment;
+- written-contact route or phone alternative;
+- access needs and reasonable adjustments;
+- forms or paperwork needed in advance;
+- key issues, timeline, triggers, and functional impact;
+- supporter role;
+- questions to ask;
+- desired practical outcome;
+- follow-up questions for tests, referrals, results, or next review;
+- AAC, written notes, or communication tool needs.
+
+When forms are long or inaccessible, use a prepared summary or separate sheet for key information and mark unclear sections as needing support rather than guessing.
+
+## AAC and communication access rule
+
+Communication support can be temporary, part-time, or situational. Do not assume speech is reliable just because it is sometimes available.
+
+For appointments, consider written notes, text-based communication, AAC, yes/no choices, extra processing time, support-person help, lower sensory demand, and written summaries.
 
 ## Pharmacy support
 
