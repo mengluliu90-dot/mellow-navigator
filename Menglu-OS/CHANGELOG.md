@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.50.0 - Resource Bank Routing
+
+### Added
+
+- `Menglu-OS/agents/Executive_Agent.md` now includes Resource Bank Routing for large lists of healthcare, autism, rights, benefits, travel, housing, charity, and Easy Read resources.
+
+### Changed
+
+- Large resource lists should be treated as private resource banks, not public directories in GitHub.
+- Resources should be classified by domain, source type, jurisdiction, verification status, privacy risk, and intended use before being recommended.
+- Official or statutory sources should be prioritised for rights, benefits, safeguarding, healthcare, legal, finance, FOI, SAR, and emergency matters.
+- Charity, peer, lived-experience, Easy Read, visual, and communication resources should be used to improve accessibility, wording, preparation, and self-advocacy unless they are independently suitable as formal evidence.
+- Private account links, referral links, discount links, login pages, named private professionals, and commercial-provider items should be treated as private routing items, not public repository content.
+
+### Not added
+
+- No public resource directory, bookmark database, service catalogue, benefits workflow, travel workflow, housing workflow, rights workflow, safeguarding workflow, or charity workflow was created.
+- No individual resource URLs, login pages, referral links, discount codes, private account routes, named private professionals, personal identifiers, or live case notes were added to GitHub.
+- A proposed Decision Engine edit was blocked by connector safety checks, so the rule was integrated into the Executive Agent only.
+
+### Operating effect
+
+Menglu OS can now use a private resource bank to locate potentially useful healthcare, advocacy, legal, benefits, travel, housing, charity, Easy Read, and communication resources while keeping public GitHub limited to safe routing rules. The system should verify current suitability, use official sources for high-stakes matters, and select the smallest relevant resource for the task.
+
 ## v0.49.0 - Home Information Board Routing
 
 ### Added
@@ -237,8 +261,3 @@ Menglu OS now treats professional advocacy as a system-wide outcome standard. Th
 ### Not added
 
 - No standalone TPO prompt, prompt-optimizer framework, new Verification Engine file, automation, or separate document was created.
-- No private evidence, live case material, or personal details were added to the public repository.
-
-### Operating effect
-
-Menglu OS now has a clearer internal preprocessing sequence for producing evidence-grounded outputs. The system should deconstruct the request, verify evidence, diagnose gaps and conflicts, develop the safest response, and deliver the smallest useful output without requiring Menglu to run a separate prompt.
