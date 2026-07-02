@@ -130,6 +130,26 @@ Examples:
 
 Keep Level 3 evidence outside this public repository unless it is converted into a non-sensitive template or index reference.
 
+## Advocacy evidence continuity rule
+
+Advocacy evidence should support continuity across services without copying private records into the public repository.
+
+When organising case material, preserve safe reference structures that help future advocacy outputs:
+
+- key timeline categories;
+- current owner or responsible organisation;
+- agreed actions and waiting points;
+- evidence gaps;
+- repeated access barriers;
+- coordination support that changed outcomes;
+- functional impact patterns;
+- reasonable-adjustment needs;
+- whether an item is confirmed, reported, pending, unknown, or needs clarification.
+
+Do not store private correspondence, personal identifiers, live case evidence, addresses, account details, or confidential documents in GitHub. Store only reusable rules, non-sensitive category structures, and public-safe templates.
+
+The purpose is to reduce repeated explanations and improve continuity between healthcare, social care, benefits, housing, finance, repairs, and other official matters.
+
 ## Healthcare management preference
 
 For healthcare evidence and appointment preparation, preserve the stable preference that practical management and sustainable function matter as much as diagnostic labels.
