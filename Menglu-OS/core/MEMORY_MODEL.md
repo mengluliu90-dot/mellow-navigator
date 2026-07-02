@@ -150,6 +150,43 @@ Do not store private correspondence, personal identifiers, live case evidence, a
 
 The purpose is to reduce repeated explanations and improve continuity between healthcare, social care, benefits, housing, finance, repairs, and other official matters.
 
+## Authority and consent evidence rule
+
+Authority-to-act, consent-to-share, representative access, appointeeship, advocacy authority, support-person permission, and similar documents should be treated as sensitive case evidence.
+
+Store only safe index categories in this public repository:
+
+- authority type;
+- organisation category;
+- scope of authority;
+- date category;
+- expiry or review status, if relevant;
+- whether consent is current, expired, revoked, unknown, or needs checking;
+- whether the authority allows information sharing only, action on behalf, financial discussion, or formal representation.
+
+Do not store names, addresses, national insurance numbers, signatures, contact details, client reference numbers, case references, or scans of authority forms in GitHub.
+
+Before relying on an authority document, verify that it is current and accepted by the relevant organisation.
+
+## Accessibility document evidence rule
+
+Letters, membership cards, prescriptions, professional reports, communication-support documents, and accessibility aids may be useful evidence, but they should be separated by purpose.
+
+Use safe evidence categories such as:
+
+- communication-access evidence;
+- sensory-access evidence;
+- mobility or travel-access evidence;
+- vision or reading-access evidence;
+- financial-vulnerability or money-support evidence;
+- autism or disability-support membership/reference evidence;
+- professional recommendation evidence;
+- equipment, aid, or adjustment evidence.
+
+Do not store private medical letters, membership identifiers, prescriptions, order numbers, customer numbers, addresses, phone numbers, signatures, or detailed clinical data in GitHub.
+
+When using these records, extract the functional meaning rather than the private document content. For example: written communication need, slower speech, visual aids, accessible format, support person, lighting sensitivity, reading difficulty, or money-support vulnerability.
+
 ## External support resource awareness rule
 
 External organisations and public support tools should be stored as potential support-route categories, not as guaranteed services or confirmed eligibility.
