@@ -150,6 +150,24 @@ Do not store private correspondence, personal identifiers, live case evidence, a
 
 The purpose is to reduce repeated explanations and improve continuity between healthcare, social care, benefits, housing, finance, repairs, and other official matters.
 
+## External support resource awareness rule
+
+External organisations and public support tools should be stored as potential support-route categories, not as guaranteed services or confirmed eligibility.
+
+Useful public-safe categories include:
+
+- financial advocacy, appointeeship, money checks, budgeting, and access-to-banking support;
+- banking communication cards and urgent money-safety scripts;
+- short-term mobility equipment and practical crisis or post-hospital support;
+- travel assistance cards or apps for discreet public-transport communication;
+- scam red-flag guidance, scam reporting, and independent scam support resources.
+
+When using an external resource, verify the current service area, eligibility, referral route, costs, availability, and contact method before recommending it as an action.
+
+Label unverified services as Potential support route.
+
+Do not store third-party contact details, service eligibility decisions, referral forms, private case notes, or live correspondence in this public repository.
+
 ## Claim verification evidence rule
 
 For alleged debts, financial liability, billing disputes, warranty claims, repair claims, insurance claims, benefit overpayments, account issues, or other official demands, do not treat the demand itself as proof.
