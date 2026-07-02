@@ -142,12 +142,13 @@ Use this namespace for stable, reusable household reference categories:
 - **Warranties**
 - **Repair History**
 - **Contractors**
+- **Transport**
 
 The Household namespace should support future administrative tasks by allowing the system to reuse known categories and evidence references without repeatedly asking for the same background information.
 
-Do not store private identifiers, live case records, exact contact details, active repair conversations, financial details, or confidential documents in this public repository. Store only the namespace rule and safe category structure here.
+Do not store private identifiers, live case records, exact contact details, active repair conversations, financial details, vehicle registration numbers, insurance details, or confidential documents in this public repository. Store only the namespace rule and safe category structure here.
 
-Changing operational items such as active repairs, current utility problems, appointment dates, live claims, and waiting responses belong in Current Context, Open Loop Register, or the relevant active case record rather than the stable Household namespace.
+Changing operational items such as active repairs, current utility problems, appointment dates, live claims, vehicle tax or MOT status, insurance status, and waiting responses belong in Current Context, Open Loop Register, or the relevant active case record rather than the stable Household namespace.
 
 ## Household property evidence hierarchy
 
@@ -166,6 +167,21 @@ Future household outputs should separate:
 - Historical
 - Pending
 - Unknown
+
+## Household transport verification rule
+
+Transport information belongs under the Household namespace when it supports accessibility, appointment travel, insurance, household administration, benefits evidence, or family planning.
+
+For vehicle information, prefer official records or primary documentation before relying on recollection or photographs.
+
+Do not infer model year, trim, engine specification, tax class, registration date, ownership details, insurance status, or technical features from images alone.
+
+When vehicle information is used, separate:
+
+- Confirmed
+- User-reported
+- Unconfirmed
+- Assumption avoided
 
 ## Travel evidence reuse rule
 
