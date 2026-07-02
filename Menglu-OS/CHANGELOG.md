@@ -1,5 +1,31 @@
 # Changelog
 
+## v0.42.0 - Claim Verification and Conflicting Needs Tools
+
+### Added
+
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes a Claim Verification Gate for alleged debts, liability claims, billing disputes, account issues, warranty claims, official demands, and similar assertions.
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes a Conflicting Needs Resolver for situations where two or more valid access, health, communication, sensory, energy, environmental, safety, or administrative needs cannot be fully met at the same time.
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes Claim Verification Evidence and Conflicting Needs Evidence rules.
+- `Menglu-OS/templates/GENERAL_OFFICIAL_EMAIL.md` now includes reusable Evidence Request and Conflicting Needs Explanation patterns.
+
+### Changed
+
+- Demands, alleged debts, billing claims, and liability assertions should be treated as unverified claims until evidence and responsibility have been checked.
+- Important claim-related outputs should avoid admitting liability, making payment, offering settlement, or confirming account responsibility unless evidence is sufficient and Menglu has approved the response.
+- Conflicting needs should be analysed as competing valid needs, not as refusal, non-compliance, or one person being wrong.
+- Future planning should consider personal tools, environmental adjustments, external accommodations, support-person involvement, sequencing, written explanation, and planned decompression.
+
+### Not added
+
+- No Debt OS, debt-specific automation, legal-advice module, Autism OS, new appointment system, or separate accessibility framework was created.
+- No private debt details, account references, correspondence, financial evidence, personal identifiers, or live case records were added to the public repository.
+- No copyrighted template text from external sources was copied into the repository.
+
+### Operating effect
+
+Menglu OS can now handle unverified claims and conflicting access needs through existing verification, decision, memory, communication, and output behaviour. The system should request evidence in writing, preserve the evidence trail, avoid assumptions of liability, identify competing needs, and propose practical compromises or adjustments while keeping private records outside GitHub.
+
 ## v0.41.0 - Advocacy Outcome Goals Integration
 
 ### Added
