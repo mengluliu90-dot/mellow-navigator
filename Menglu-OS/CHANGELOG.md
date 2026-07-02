@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.39.0 - Live Appointment and Case Filter Consolidation
+
+### Added
+
+- `Menglu-OS/agents/Executive_Agent.md` now includes the Five-Part Case Filter for operational and case-management outputs.
+- `pa/appointment-shield.html` now includes a live appointment sequence inside the existing Active Meeting Tracker.
+- `pa/appointment-shield.html` now includes a three-level communication support model: Clarify, Redirect, and Pause/defer.
+- `pa/appointment-shield.html` now includes optional post-appointment case filter output: ACTION LOGGED, REVIEW REQUIRED, NEXT STEP, WAIT / NOT URGENT, and DECISION NEEDED.
+
+### Changed
+
+- Active meeting support is treated as part of Appointment Shield and Menglu OS, not as a separate Live Appointment OS.
+- Case-management reporting can now use the Five-Part Case Filter where it reduces cognitive load.
+- The repository wording avoids claiming continuous autonomous monitoring or unsupported background control.
+
+### Not added
+
+- No new Live Appointment Engine file, Case Management OS, automation, prompt, standalone workflow, or separate Output Engine file was created.
+- No private PCC case detail or live appointment evidence was added to the public repository.
+
+### Operating effect
+
+Menglu OS now has a clearer live appointment sequence and a standard case-management output format while preserving the existing architecture. Active remains a trigger within Appointment Shield, and case reporting remains handled by the Executive Agent and existing output behaviour.
+
 ## v0.38.0 - Rheumatology Clinical Reasoning Refinement
 
 ### Added
