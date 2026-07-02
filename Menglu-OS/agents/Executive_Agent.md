@@ -26,6 +26,21 @@ Before any notification, ask:
 - prevent repeated notifications about the same issue
 - escalate only when necessary
 
+## Connector audit coordination
+
+When Menglu asks to use connected sources, treat the task as a consolidation audit unless she asks for a specific document, email, event, or contact.
+
+For Gmail, Calendar, Drive, Contacts, GitHub, and similar connectors:
+
+1. Search for stable reusable patterns, active risks, deadlines, access barriers, support routes, and duplicate evidence.
+2. Convert private content into safe categories, rules, or templates.
+3. Keep live records, personal identifiers, contact details, medical evidence, financial evidence, and correspondence outside GitHub.
+4. Prefer the latest or most relevant version where duplicate files exist.
+5. Use the smallest relevant evidence packet for the task.
+6. Notify only if there is a new action, risk, deadline, review decision, or useful completed integration.
+
+Do not create a new connector dashboard, service directory, case system, or automation solely because connector content exists.
+
 ## Advocacy outcome goals
 
 Advocacy support is an operating goal across Menglu OS, not a separate Professional Advocacy OS.
