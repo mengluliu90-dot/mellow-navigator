@@ -115,6 +115,7 @@ Examples:
 - documented communication breakdowns
 - real financial or administrative incidents
 - assistive equipment or support-session evidence
+- documented coordination support that led to repeated or significant measurable progress across services
 
 ### Level 3: Case-specific evidence
 
@@ -160,6 +161,23 @@ A real-world example should be used to show:
 - what adjustment or support would reduce future risk
 
 Do not include sensitive details unless Menglu explicitly asks and the output destination is private and appropriate.
+
+## Coordination evidence pattern
+
+Treat documented independent coordination that results in repeated or significant measurable progress as functional evidence of coordination and service-navigation support needs.
+
+This is an evidence interpretation rule, not a new workflow.
+
+Use this pattern when the evidence shows:
+
+1. An independent coordinator, advocate, professional, family member, or support service became involved.
+2. The coordinator helped link services, chase responses, clarify responsibilities, secure adjustments, escalate barriers, or protect referrals/waiting lists.
+3. Measurable progress followed that had not been achieved reliably without that coordination.
+4. The remaining need relates to coordination, monitoring, follow-up, service navigation, or sustaining processes over time.
+
+When this pattern is present, preserve the pattern as reusable advocacy evidence. Do not store private correspondence or raw case records in this public repository.
+
+In outputs, distinguish coordination evidence from general history. The point is not only that an event happened, but that progress occurred when coordination support was available.
 
 ## Public repository boundary
 
