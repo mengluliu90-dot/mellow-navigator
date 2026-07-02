@@ -1,5 +1,30 @@
 # Changelog
 
+## v0.38.0 - Rheumatology Clinical Reasoning Refinement
+
+### Added
+
+- `Menglu-OS/agents/Health_Agent.md` now includes Healthcare Management Preference, Specialist Clinical Reasoning, and Appointment Success Audit rules.
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes a Healthcare Clinical Reasoning and Practical Outcome rule.
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes a stable Healthcare Management Preference evidence rule.
+- `pa/appointment-shield.html` now captures clinical reasoning, alternatives, practical outcomes, documentation, and follow-up in healthcare appointment preparation and Finished outputs.
+
+### Changed
+
+- Healthcare appointment preparation should prioritise clinical reasoning, practical management, documentation, referrals, adaptations, and sustainable support, rather than trying to prove one diagnosis.
+- Rheumatology-style wording should use neutral differential-diagnosis questions, such as asking what best explains the overall symptom pattern if hEDS/HSD is not agreed.
+- Uncertain items such as hEDS/HSD, genetics referral, or mast-cell-related questions should be framed as clinician questions unless confirmed.
+- Appointment closure should audit clinical impression, reasoning, evidence, investigations, referrals, practical outcomes, documentation, and next review.
+
+### Not added
+
+- No new Rheumatology OS, diagnosis-advocacy mode, prompt, automation, workflow, or standalone document was created.
+- No private medical records or live appointment details were added to the public repository.
+
+### Operating effect
+
+Menglu OS now handles rheumatology and similar specialist appointments through a clinician-facing, outcome-focused model. The system should capture why decisions were made, what practical support was offered, what remains uncertain, and what follow-up is needed while avoiding diagnosis-first advocacy.
+
 ## v0.37.0 - Government Records and HMRC Guidance Refinement
 
 ### Added
