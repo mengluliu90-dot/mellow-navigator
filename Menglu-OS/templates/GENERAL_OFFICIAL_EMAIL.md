@@ -46,6 +46,26 @@ Use this for urgent banking or scam contact.
 
 Do not include login details, security codes, PINs, or passwords in any draft.
 
+## Consent and authority scope pattern
+
+Use this when an organisation needs to know whether a support person, advocate, appointee, adviser, or service has authority to speak, receive information, or act.
+
+> Please confirm whether the authority or consent you hold allows [information sharing only / discussion with my support person / action on my behalf / financial discussion / formal representation].
+>
+> If the current authority is not enough, please explain exactly what form, wording, identification, or consent you require, and whether this can be completed in writing.
+
+Do not include signatures, identity numbers, national insurance numbers, account numbers, or full authority forms in reusable templates.
+
+## Accessibility evidence pattern
+
+Use this when referring to professional evidence or support documents without exposing private details.
+
+> I have supporting evidence that explains my communication and accessibility needs. The relevant points are that I need [written communication / extra processing time / simple wording / visual aids / support person involvement / reduced sensory load / accessible format].
+>
+> Please record these needs and confirm how they will be applied in this process.
+
+Use the functional meaning of the evidence. Do not copy full medical letters, prescriptions, membership details, customer numbers, or private identifiers into ordinary emails unless specifically necessary and approved.
+
 ## Evidence request pattern
 
 Use this when an organisation makes an unverified claim, demand, alleged debt, billing claim, liability claim, account claim, or other factual assertion that affects Menglu or the household.
