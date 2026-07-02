@@ -130,6 +130,43 @@ Examples:
 
 Keep Level 3 evidence outside this public repository unless it is converted into a non-sensitive template or index reference.
 
+## Household namespace
+
+Household information should be treated as an evidence namespace inside the Memory & Evidence Engine, not as a separate Home OS, Property OS, dashboard, or workflow.
+
+Use this namespace for stable, reusable household reference categories:
+
+- **Property**
+- **Utilities**
+- **Contacts**
+- **Warranties**
+- **Repair History**
+- **Contractors**
+
+The Household namespace should support future administrative tasks by allowing the system to reuse known categories and evidence references without repeatedly asking for the same background information.
+
+Do not store private identifiers, live case records, exact contact details, active repair conversations, financial details, or confidential documents in this public repository. Store only the namespace rule and safe category structure here.
+
+Changing operational items such as active repairs, current utility problems, appointment dates, live claims, and waiting responses belong in Current Context, Open Loop Register, or the relevant active case record rather than the stable Household namespace.
+
+## Household property evidence hierarchy
+
+For property and utility claims, prefer evidence in this order:
+
+1. Developer documentation.
+2. Solicitor or purchase documents.
+3. Warranty documents.
+4. Utility or service contracts.
+5. Contractor records or repair reports.
+6. User recollection, clearly labelled as reported or unconfirmed.
+
+Future household outputs should separate:
+
+- Verified
+- Historical
+- Pending
+- Unknown
+
 ## Travel evidence reuse rule
 
 When travel is being planned, reuse existing stable information before asking for it again.
