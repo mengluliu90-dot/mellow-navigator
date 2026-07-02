@@ -11,6 +11,7 @@ This note records how the live pages and device entry points fit together as one
 - Mira: Evidence Engine for PA objects, stable evidence, timeline, waiting items, draft layers, contradiction checks, and case history.
 - Profile Passport: reusable one-button summary for conditions, access needs, and reasonable adjustments.
 - EOS Dashboard: daily capacity, recovery, case review, evidence watch, and one-action workload view.
+- Appointment Shield: appointment preparation and Active Meeting Tracker for live advocacy, meeting notes, outcomes, actions, Mum summaries, and follow-up drafts.
 - Device Shortcuts: quick actions for reusable communication, advocacy, navigation, translation, home, finance, benefits, health, and summary scripts.
 
 ## Entry points
@@ -21,6 +22,7 @@ This note records how the live pages and device entry points fit together as one
 - `/mira-next/` — Mira Evidence Engine view.
 - `/pa/profile.html` — profile passport.
 - `/pa/eos.html` — EOS dashboard.
+- `/pa/appointment-shield.html` — Appointment Shield and Active Meeting Tracker.
 - iPhone Shortcuts app and Home Screen widgets — low-friction access to reusable Menglu OS scripts and support actions.
 
 ## Active processing protocol
@@ -60,6 +62,52 @@ For task material, default to this structure unless another format is clearly mo
 • 风险点:
 • 下一周期:
 ```
+
+## Active Meeting Tracker protocol
+
+When Menglu types or says `Active` during an appointment, meeting, call attempt, contractor visit, benefits contact, healthcare contact, social-care contact, repair visit, or professional conversation, switch into Active Meeting Tracker inside AI Advocate Mode.
+
+### Purpose
+
+Track the interaction while it is happening, reduce real-time processing burden, and produce a usable post-event record without requiring Menglu to reconstruct the conversation later.
+
+### During the interaction, track
+
+- who is present or involved
+- organisation or service
+- date and approximate time
+- purpose of the interaction
+- what Menglu said or tried to explain
+- what the other person said
+- topics discussed
+- decisions made
+- advice or explanations given
+- actions agreed
+- owner or responsible person for each action
+- deadlines, review dates, waiting points, or next contact points
+- unanswered questions
+- access barriers, pressure, phone requests, rushed communication, sensory difficulty, overload, shutdown risk, or recovery risk
+- what needs to be explained to Mum
+- any email, letter, message, or follow-up draft that should be prepared
+
+### After the interaction, output
+
+- short Easy Read summary
+- professional meeting summary
+- action list with owner and deadline where known
+- simple Chinese summary for Mum
+- email, letter, message, or follow-up drafts needed
+- recovery recommendation
+- Current Context update
+- OS Evidence candidate only if information is confirmed, durable, reusable, and appropriate for stable evidence
+
+### Evidence boundary
+
+Meeting notes are Current Context by default. They should not become OS Evidence unless the information is confirmed, durable, and useful beyond the immediate event.
+
+### Sending boundary
+
+The tracker drafts follow-up messages only. It must not send, escalate, complain, or commit to actions without explicit approval.
 
 ## Central orchestration rule
 
