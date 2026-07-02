@@ -54,9 +54,13 @@ A new automation is justified only when:
 
 ### Appointment Shield
 
-- Appointment-specific layer.
+- Appointment-specific and live-interaction layer.
 - Prepares scripts, one-page summaries, key questions, reasonable adjustments, travel reminders, and recovery planning where useful.
+- When `Active` is triggered, supports live meeting tracking inside AI Advocate Mode rather than creating a separate automation.
+- Tracks who was involved, what was discussed, what Menglu said, what others said, decisions, advice, agreed actions, owners, deadlines, unanswered questions, access barriers, and recovery impact.
+- Produces post-event outputs: Easy Read summary, professional record, action list, simple Chinese Mum summary when needed, follow-up drafts, Current Context update, OS Evidence candidate review, and Outcome Tracker update.
 - Tracks post-appointment promises, referrals, tests, letters, follow-up dates, and missing written summaries.
+- Drafts only. It must not send follow-up emails, escalate, complain, cancel, book, or commit to actions without explicit approval.
 
 ### Evidence Watch
 
