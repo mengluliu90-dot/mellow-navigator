@@ -1,5 +1,31 @@
 # Changelog
 
+## v0.43.0 - Financial Safety and Support Route Tools
+
+### Added
+
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes Financial Safety and Scam Triage for card loss, suspected scams, wrong-account payments, unrecognised transactions, money-safety concerns, card problems, and related banking issues.
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes External Support Route Triage for potential financial advocacy, appointeeship, banking access, mobility, crisis, travel-assistance, and scam-support resources.
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes an External Support Resource Awareness Rule.
+- `Menglu-OS/templates/GENERAL_OFFICIAL_EMAIL.md` now includes a Communication Card Pattern and Financial Safety Message Pattern.
+
+### Changed
+
+- Financial-risk situations should now be classified first by urgency and risk of further loss before ordinary administration.
+- Scam and banking outputs should prioritise stopping further loss, preserving evidence, contacting the bank through official routes, using accessible communication supports, and recording outcome/owner/follow-up.
+- External support resources should be treated as Potential support routes until service area, eligibility, availability, cost, referral route, and contact method are verified.
+- Communication-card style outputs should be short, showable, and usable without explaining the whole background.
+
+### Not added
+
+- No Banking OS, Scam OS, Red Cross workflow, Dosh workflow, Thistle workflow, service directory, financial-advice module, legal-advice module, or automation was created.
+- No private banking information, account details, security details, passwords, PINs, card details, correspondence, referral forms, or live case records were added to the public repository.
+- No copyrighted card set, external template, or full webpage text was copied into the repository.
+
+### Operating effect
+
+Menglu OS can now convert public support resources into reusable internal tools: accessible banking cards, urgent financial-safety scripts, potential financial-advocacy routes, potential mobility or crisis-support routes, travel-assistance communication patterns, and scam red-flag triage. The system must still verify service availability and suitability before recommending any external route as an action.
+
 ## v0.42.0 - Claim Verification and Conflicting Needs Tools
 
 ### Added
