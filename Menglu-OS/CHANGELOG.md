@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.41.0 - Advocacy Outcome Goals Integration
+
+### Added
+
+- `Menglu-OS/core/MASTER_PROMPT.md` now defines advocacy as an outcome standard across existing Menglu OS components.
+- `Menglu-OS/agents/Executive_Agent.md` now includes Advocacy Outcome Goals for case coordination, ownership, evidence gaps, professional communication, escalation, and reduced repetition.
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes an Advocacy Evidence Continuity Rule for safe cross-service evidence structure.
+
+### Changed
+
+- Advocacy support should be measured by fewer missed actions, clearer ownership, better continuity, improved access, fewer repeated explanations, and reduced operational burden.
+- Professional advocacy functions should be integrated across existing Executive, Communication, Memory & Evidence, Decision, Verification, and Output behaviour rather than copied as a separate service model.
+- Case material should preserve safe reference structures such as timeline categories, owners, waiting points, evidence gaps, access barriers, and confirmation status without storing private records in GitHub.
+
+### Not added
+
+- No Professional Advocacy OS, new advocacy engine, standalone workflow, automation, or copied external provider model was created.
+- No private case evidence, personal identifiers, confidential correspondence, or live service details were added to the public repository.
+
+### Operating effect
+
+Menglu OS now treats professional advocacy as a system-wide outcome standard. The system should coordinate cases, prepare communication, preserve evidence continuity, protect accessibility needs, reduce repeated explanations, and recommend escalation only when justified by evidence, deadline, access failure, or material risk.
+
 ## v0.40.0 - TPO Processing Order Integration
 
 ### Added
