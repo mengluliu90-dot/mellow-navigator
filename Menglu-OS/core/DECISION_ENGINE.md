@@ -213,6 +213,28 @@ If the item is already tracked and no new risk, deadline, or action exists, the 
 
 Do not create a new dashboard, workflow, or duplicate case solely because a household document exists.
 
+## HMRC and Self Assessment decision guidance
+
+When HMRC, Government Gateway, tax records, National Insurance, or State Pension information appears, first decide whether it is:
+
+- evidence to preserve;
+- information to understand;
+- action required;
+- no current action;
+- unknown or needs checking.
+
+For a person who is not employed, not self-employed, has no taxable business income, and has not been asked by HMRC to complete a tax return, do not assume Self Assessment is required.
+
+Reassess only if:
+
+- employment starts;
+- self-employment starts;
+- taxable income appears;
+- HMRC issues a notice or request;
+- circumstances otherwise change.
+
+Government Gateway access is normally reference access unless it creates a specific message, deadline, verification request, or action.
+
 ## Rule
 
 Do not notify Menglu simply because something exists.
