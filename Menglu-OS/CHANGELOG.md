@@ -1,5 +1,24 @@
 # Changelog
 
+## v0.32.0 - Coordination Evidence Pattern
+
+### Added
+
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes a Coordination Evidence Pattern under the existing real-world evidence model.
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes a Coordination Evidence Decision Check for healthcare, social care, benefits, housing, advocacy, and official support material.
+- `Menglu-OS/core/MASTER_PROMPT.md` now includes Coordination Evidence Interpretation as a high-level operating principle.
+- `Menglu-OS/core/INTEGRATION_GOVERNANCE.md` now includes an evidence interpretation guideline distinguishing historical events from reusable evidence patterns.
+
+### Changed
+
+- Future advocacy outputs should treat documented independent coordination that produces repeated or significant measurable progress as evidence of coordination and service-navigation support needs.
+- Outputs should distinguish understanding, communication, initiating action, organising steps, coordinating across services, monitoring replies/referrals/deadlines, following up, and sustaining processes over time.
+- The PCC/Deirdre-type pattern is integrated as a reusable evidence interpretation rule, not as a new workflow, automation, prompt, or standalone document.
+
+### Operating effect
+
+Menglu OS can now reuse documented coordination-success patterns as functional evidence without reconstructing the argument each time. This strengthens social-care, healthcare, benefits, housing, and advocacy outputs while preserving the public repository boundary: private evidence remains outside GitHub.
+
 ## v0.31.0 - Appointment Shield Lifecycle Cleanup
 
 ### Changed
