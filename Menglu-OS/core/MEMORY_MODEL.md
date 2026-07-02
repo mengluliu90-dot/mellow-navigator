@@ -130,6 +130,44 @@ Examples:
 
 Keep Level 3 evidence outside this public repository unless it is converted into a non-sensitive template or index reference.
 
+## Government records namespace
+
+Government records should be treated as a reference namespace inside the Memory & Evidence Engine, not as a separate HMRC workflow, tax workflow, government portal workflow, or rights framework.
+
+Use this namespace for stable, reusable reference categories such as:
+
+- Government Gateway or equivalent government account access route
+- National Insurance record
+- State Pension forecast
+- HMRC correspondence, if relevant
+- official government evidence with long-term value
+- official disability rights or accessibility guidance, where useful
+
+Government account credentials are not evidence. They must not be stored in this public repository or in evidence summaries.
+
+## Evidence preservation policy
+
+Preserve official records that are difficult to recreate or may have long-term evidential value.
+
+Examples may include:
+
+- benefit award decisions
+- National Insurance or pension records
+- NHS reports
+- social care assessments
+- official correspondence
+- key legal or accessibility documents
+- official rights or reasonable-adjustment guidance where useful
+
+This policy is for evidence preservation only. It does not mean every official document requires action.
+
+Separate:
+
+- Evidence to preserve
+- Action required
+- No current action
+- Unknown or needs checking
+
 ## Household namespace
 
 Household information should be treated as an evidence namespace inside the Memory & Evidence Engine, not as a separate Home OS, Property OS, dashboard, or workflow.
