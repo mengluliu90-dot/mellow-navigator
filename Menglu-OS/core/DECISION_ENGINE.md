@@ -164,6 +164,29 @@ Check whether the plan includes:
 
 A plan with no recovery allowance should be treated as incomplete.
 
+## Coordination evidence decision check
+
+When preparing social care, healthcare, benefits, housing, advocacy, or official support material, check whether the available evidence shows a coordination evidence pattern.
+
+Ask internally:
+
+> Did independent coordination, advocacy, or third-party service navigation produce repeated or significant measurable progress that was not achieved reliably without that support?
+
+If yes, include the pattern where relevant and distinguish:
+
+- understanding information;
+- communicating information;
+- initiating action;
+- organising steps;
+- coordinating across services;
+- monitoring replies, referrals, deadlines, or waiting lists;
+- following up until completion;
+- sustaining the process over time.
+
+Use the evidence to support coordination and service-navigation needs. Do not treat the coordinator's involvement as merely historical background if it demonstrates a functional support need.
+
+If the pattern is not documented or the outcome is unclear, mark it as Needs clarification rather than asserting it.
+
 ## Rule
 
 Do not notify Menglu simply because something exists.
