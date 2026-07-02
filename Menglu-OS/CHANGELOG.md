@@ -1,5 +1,30 @@
 # Changelog
 
+## v0.48.0 - Coordination and Utility Routing Integration
+
+### Added
+
+- `Menglu-OS/agents/Executive_Agent.md` now includes Coordination Support Routing for named worker, key worker, coordinator, or single-point-of-contact requests.
+- `Menglu-OS/agents/Executive_Agent.md` now includes Utility Outage Routing for electricity and other household service interruptions.
+
+### Changed
+
+- Autistic lived-experience educational resources should be used as explanatory context only, not as diagnostic, legal, or formal evidence.
+- NICE care-coordination guidance has been converted into a neutral coordination-support request pattern inside the Executive Agent.
+- Electricity outage handling should distinguish active outage, planned outage, hazard, uncertain status, follow-up, and priority-register or accessibility issues.
+- If an outage is not displayed on an official map, the system should not assume there is no outage.
+
+### Not added
+
+- No Autisticality content library, Cobia app integration, NICE module, Powercheck dashboard, utility automation, new service directory, or standalone workflow was created.
+- The Cobia app content was not integrated because the public URL could not be verified.
+- No postcode, address, account details, outage references, personal identifiers, or live household records were added to GitHub.
+- Attempts to place the coordination rule into the Health Agent were blocked by connector safety checks, so the rule was integrated into the Executive Agent instead.
+
+### Operating effect
+
+Menglu OS can now route coordination requests and utility-outage checks through existing executive and household operations. The system should ask for a named coordinator where multi-service follow-up needs it, verify official outage routes before treating a power issue as a household repair, and avoid copying private utility or household data into GitHub.
+
 ## v0.47.0 - Neuroinclusive Support Resource Integration
 
 ### Added
