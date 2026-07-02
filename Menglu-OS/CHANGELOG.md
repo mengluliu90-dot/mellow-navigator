@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.36.0 - Governance Review Gate Refinement
+
+### Added
+
+- `Menglu-OS/core/INTEGRATION_GOVERNANCE.md` now requires Repository and Existing-System Review before deciding what is genuinely new.
+- `Menglu-OS/core/INTEGRATION_GOVERNANCE.md` now includes Deletion Before Addition as a governance rule.
+- `Menglu-OS/core/INTEGRATION_GOVERNANCE.md` now includes an Implementation Planning rule for substantial changes.
+- `Menglu-OS/core/MASTER_PROMPT.md` now references repository review and deletion-before-addition at the highest operating level.
+
+### Changed
+
+- The Architecture Review Gate now checks what already exists, whether older material should be merged or removed, and whether new material is technically necessary.
+- The GitHub-first rule now explicitly prefers reuse, extension, merge, replacement, or deletion before creating new files, prompts, workflows, dashboards, or automations.
+- Substantial recommendations should identify files/components to update, merge, remove, or record in the changelog where useful.
+
+### Not added
+
+- No new governance document, module, automation, prompt, or workflow was created.
+
+### Operating effect
+
+Menglu OS now has a stricter consolidation-first rule: review existing systems first, merge or delete duplicates before adding anything new, and keep implementation plans tied to existing components. This reduces architecture drift and maintenance burden.
+
 ## v0.35.0 - Household Transport Verification Refinement
 
 ### Added
