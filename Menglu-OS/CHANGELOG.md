@@ -1,5 +1,31 @@
 # Changelog
 
+## v0.37.0 - Government Records and HMRC Guidance Refinement
+
+### Added
+
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes a Government Records namespace inside the existing Memory & Evidence Engine.
+- `Menglu-OS/core/MEMORY_MODEL.md` now includes an Evidence Preservation Policy for official records with long-term evidential value.
+- `Menglu-OS/core/DECISION_ENGINE.md` now includes HMRC and Self Assessment decision guidance.
+- `Menglu-OS/templates/Written_Communication_Request.md` now notes that UNCRPD may be referenced as supporting context alongside the Equality Act 2010 where useful.
+
+### Changed
+
+- Government Gateway and similar account access should be treated as a reference access route, not as a new workflow.
+- Official records should be separated into Evidence to preserve, Action required, No current action, and Unknown or needs checking.
+- Self Assessment should not be assumed where there is no employment, no self-employment, no taxable business income, and no HMRC request.
+- UNCRPD should support existing accessibility and reasonable-adjustment wording without creating a parallel disability-rights framework.
+
+### Not added
+
+- No new HMRC workflow, tax workflow, Government Gateway workflow, disability-rights framework, automation, prompt, or standalone document was created.
+- No Government Gateway credentials, private HMRC details, personal tax data, or live government account information were added to the public repository.
+- No Barbara Johnston workflow or third-party-authority rule was added because no authority or agreement exists.
+
+### Operating effect
+
+Menglu OS can now preserve important government records and avoid unnecessary HMRC/Self Assessment worry while keeping government-account details private and treating UNCRPD as supporting advocacy context rather than a separate rights system.
+
 ## v0.36.0 - Governance Review Gate Refinement
 
 ### Added
