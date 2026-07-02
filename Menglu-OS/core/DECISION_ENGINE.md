@@ -37,6 +37,29 @@ For every new item, ask:
 6. evidence gaps
 7. routine organisation
 
+## TPO-style gap diagnosis rule
+
+Before recommending an action or drafting an important output, apply the internal processing order:
+
+1. Deconstruct the request.
+2. Verify available evidence.
+3. Diagnose gaps, conflicts, duplication, risk, and uncertainty.
+4. Develop the safest response or action path.
+5. Deliver the smallest useful output.
+
+This is not a separate prompt or workflow. It is the Decision Engine's internal quality check before choosing a next step.
+
+After verification, decide whether the correct output is:
+
+- a completed draft;
+- one targeted clarification question;
+- a missing-evidence list;
+- a safest next step;
+- no current action;
+- escalation because of risk, deadline, or material consequence.
+
+Do not ask for extra information unless the missing point would materially change the answer, draft, risk assessment, or action path.
+
 ## State modifier rule
 
 Before recommending workload, travel, appointments, communication tasks, form completion, advocacy work, or administrative actions, check whether any current state modifier is likely to reduce functional capacity.
