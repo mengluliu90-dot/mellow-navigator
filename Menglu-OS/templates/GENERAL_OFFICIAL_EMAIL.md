@@ -36,6 +36,20 @@ Example categories:
 
 Do not include private account details, addresses, medical details, passwords, security codes, or full case history on a communication card.
 
+## Identifier minimisation pattern
+
+Use this before sending forms, evidence packets, or official correspondence.
+
+> I have included only the information needed for this request. If you require another identifier or document, please explain exactly what is needed, why it is required, and whether a redacted copy would be accepted.
+
+Avoid including high-risk identifiers unless they are necessary for that specific organisation and task.
+
+## Public data removal follow-up pattern
+
+Use this after a directory, people-search site, or public database confirms removal.
+
+> Thank you for confirming removal from your database. Please confirm whether any further action is needed from me. If search engines or cached snippets may still show limited information, please confirm whether I need to submit a separate cache-removal request or wait for search results to update.
+
 ## Financial safety message pattern
 
 Use this for urgent banking or scam contact.
@@ -55,6 +69,22 @@ Use this when an organisation needs to know whether a support person, advocate, 
 > If the current authority is not enough, please explain exactly what form, wording, identification, or consent you require, and whether this can be completed in writing.
 
 Do not include signatures, identity numbers, national insurance numbers, account numbers, or full authority forms in reusable templates.
+
+## Healthcare fixed appointment pattern
+
+Use this when a healthcare or booking letter asks Menglu to phone, but phone contact is inaccessible.
+
+> I wish to remain on the waiting list / proceed with this appointment. Telephone booking is not accessible for me because of my communication and processing difficulties. Please arrange a fixed appointment and confirm the date, time, location, and any preparation needed in writing.
+>
+> Please also record that future appointment arrangements should be made by written communication where possible.
+
+## Interpreter or support-person role pattern
+
+Use this when interpreter support is needed for a support person or when standard spoken interpretation may not be suitable.
+
+> Please clarify the interpreter/support role. The support needed is [for me / for my support person / both]. The most suitable format is [written summary / quiet note-taking / simple written key points / spoken interpretation only if needed].
+>
+> This is requested to reduce communication overload and help the appointment proceed safely and effectively.
 
 ## Accessibility evidence pattern
 
