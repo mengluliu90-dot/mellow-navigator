@@ -1,5 +1,24 @@
 # Changelog
 
+## v0.30.0 - Active Trigger Consolidation
+
+### Changed
+
+- `Menglu-OS/core/MASTER_PROMPT.md` now defines `Active` as a cross-engine trigger rather than a separate subsystem.
+- `Menglu-OS/docs/BACKGROUND_AUTOMATION_SPEC.md` now absorbs Active Meeting Tracker under the existing Appointment Shield automation.
+- Active behaviour is routed through existing engines: Executive Function, Appointment Shield, Communication, Memory & Evidence, Decision, Verification, and Output.
+- The detailed reusable prompt remains in `pa/appointment-shield.html` as the live UI layer.
+
+### Deduplicated
+
+- No standalone duplicate Active-mode prompt file was found to delete.
+- The previous draft-style Active protocol is not stored as a separate module.
+- Future Active changes should update Appointment Shield, Live Interface Map, Master Prompt, or Background Automation Spec instead of creating a new file.
+
+### Operating effect
+
+`Active` now increases structure and advocacy support inside the existing Menglu OS architecture. It supports live meeting tracking, agenda control, priority management, professional redirection, structured closure, Mum summaries, follow-up drafts, recovery review, and Outcome Tracker updates without adding another operating mode or duplicate automation.
+
 ## v0.29.0 - Active Meeting Tracker
 
 ### Added
