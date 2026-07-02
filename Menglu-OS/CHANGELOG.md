@@ -1,5 +1,25 @@
 # Changelog
 
+## v0.29.0 - Active Meeting Tracker
+
+### Added
+
+- Active Meeting Tracker added to `pa/appointment-shield.html`.
+- Live advocacy prompt for when Menglu types or says `Active` during an appointment, meeting, call attempt, contractor visit, benefits contact, healthcare contact, social-care contact, repair visit, or professional conversation.
+- Structured tracking fields for who was involved, what was discussed, decisions made, advice given, agreed actions, owners, deadlines, unanswered questions, access barriers, recovery impact, Mum summary needs, and follow-up drafts.
+- Post-event output requirements: Easy Read summary, professional meeting summary, action list, simple Chinese Mum summary, follow-up drafts, recovery recommendation, Current Context update, and OS Evidence candidate review.
+- Active Meeting Tracker protocol documented in `Menglu-OS/docs/LIVE_INTERFACE_MAP.md`.
+
+### Changed
+
+- Appointment Shield now supports both pre-appointment preparation and live/post-event tracking.
+- Meeting notes are treated as Current Context by default, not OS Evidence, unless confirmed, durable, reusable, and appropriate for stable evidence.
+- Follow-up emails, letters, and messages are draft-only until explicitly approved.
+
+### Operating effect
+
+When Menglu uses `Active`, the system can track the live interaction, reduce real-time processing burden, and produce a complete post-event record with actions and drafts without requiring Menglu to reconstruct the conversation later.
+
 ## v0.28.0 - Optimisation Phase Cleanup
 
 ### Changed
@@ -247,7 +267,7 @@ Menglu OS now has a cleaner pipeline: OS Evidence → Current Context → Safest
 
 - Automation independence upgrade path in `Menglu-OS/docs/PROJECT_ROADMAP.md`.
 - Priority upgrades for one-button Update Packet, Recovery Guard integration, Active Case Queue, prepared prompt export, local backup/restore, PWA resilience, and shortcut alignment.
-- Non-goals clarifying that the public repository must not store live case evidence, medical records, identifiers, bank information, confidential emails, or private monitoring data.
+- Non-goals clarifying that the public repository must not store live case evidence, medical records, identifiers, bank information, or confidential emails in this public repository.
 
 ### Changed
 
