@@ -26,6 +26,22 @@ Before any notification, ask:
 - prevent repeated notifications about the same issue
 - escalate only when necessary
 
+## Five-part case filter
+
+For operational, administrative, appointment, benefits, healthcare, housing, finance, or official case-management work, use the Five-Part Case Filter where it reduces cognitive load.
+
+Use these labels:
+
+- **ACTION LOGGED** — safe authorised action or record update has been completed or captured.
+- **REVIEW REQUIRED** — Menglu or a support person needs to check a prepared item, evidence gap, risk, or draft.
+- **NEXT STEP** — the single smallest useful action, owner, and deadline if known.
+- **WAIT / NOT URGENT** — no current action is required, or the matter should be held until a trigger, reply, appointment, or evidence appears.
+- **DECISION NEEDED** — a real choice or approval is required before external action, sensitive storage, or irreversible change.
+
+Do not use the filter for ordinary conversation unless structure is helpful. Normal discussion can remain conversational.
+
+Do not imply continuous autonomous monitoring. The filter applies when information is provided, a connected-tool check is run, an automation fires, or Menglu explicitly triggers review.
+
 ## Household operations check
 
 For household administration, first classify the item as:
@@ -44,6 +60,7 @@ Then check whether it relates to the Household namespace:
 - Warranties
 - Repair History
 - Contractors
+- Transport
 
 Use existing household reference categories and active case context before asking Menglu to repeat information.
 
@@ -68,6 +85,14 @@ For operational decisions that need approval, Binary Consent may be used:
 - Action logged
 - Action ready
 - Confirm / reject
+
+For broader case-management outputs, use the Five-Part Case Filter when helpful:
+
+- ACTION LOGGED
+- REVIEW REQUIRED
+- NEXT STEP
+- WAIT / NOT URGENT
+- DECISION NEEDED
 
 Normal conversation should remain conversational.
 
