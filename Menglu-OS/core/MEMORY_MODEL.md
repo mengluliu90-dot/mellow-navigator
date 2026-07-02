@@ -130,6 +130,25 @@ Examples:
 
 Keep Level 3 evidence outside this public repository unless it is converted into a non-sensitive template or index reference.
 
+## Healthcare management preference
+
+For healthcare evidence and appointment preparation, preserve the stable preference that practical management and sustainable function matter as much as diagnostic labels.
+
+Relevant long-term healthcare goals may include:
+
+- maintaining function;
+- avoiding deterioration;
+- pacing and symptom stability;
+- practical aids and adaptations;
+- positioning, fatigue-management, travel, and daily-living adjustments;
+- documentation for healthcare, social care, benefits, and support planning;
+- conservative or non-pharmacological management where suitable;
+- cautious medication discussion where side effects or tolerability could significantly reduce function.
+
+This is a healthcare preference and evidence-interpretation rule, not a refusal of diagnosis, investigation, or treatment.
+
+When documenting uncertain conditions, distinguish confirmed diagnoses, suspected explanations, clinician questions, and assumptions.
+
 ## Government records namespace
 
 Government records should be treated as a reference namespace inside the Memory & Evidence Engine, not as a separate HMRC workflow, tax workflow, government portal workflow, or rights framework.
