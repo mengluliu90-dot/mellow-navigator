@@ -187,6 +187,32 @@ Use the evidence to support coordination and service-navigation needs. Do not tr
 
 If the pattern is not documented or the outcome is unclear, mark it as Needs clarification rather than asserting it.
 
+## Household decision and cross-linking rule
+
+When a task involves property, utilities, warranties, repairs, contractors, household contacts, broadband, energy, mortgage, insurance, or other household administration, first check whether it belongs in the Household namespace.
+
+For household items, distinguish:
+
+- Verified
+- Historical
+- Pending
+- Unknown
+
+Cross-link household evidence where relevant instead of treating each document as isolated.
+
+Example cross-links may include:
+
+- utilities linked to household finances and affordability evidence;
+- repairs linked to warranty, developer history, safety, and housing evidence;
+- broadband linked to accessibility, communication continuity, and household administration;
+- property records linked to warranties, contractors, repairs, and future insurance or affordability discussions.
+
+If the item is already tracked and no new risk, deadline, or action exists, the default outcome is:
+
+> Already tracked. No new action.
+
+Do not create a new dashboard, workflow, or duplicate case solely because a household document exists.
+
 ## Rule
 
 Do not notify Menglu simply because something exists.
