@@ -130,6 +130,45 @@ Examples:
 
 Keep Level 3 evidence outside this public repository unless it is converted into a non-sensitive template or index reference.
 
+## Identity data minimisation rule
+
+Sensitive identifiers should only be used when strictly necessary for the specific organisation and task.
+
+Before including identifiers in any draft, form, evidence packet, or attachment, check whether the recipient genuinely needs that information.
+
+Examples of identifiers that require caution include:
+
+- national insurance numbers;
+- health and care numbers;
+- hospital numbers;
+- account numbers;
+- customer numbers;
+- order numbers;
+- reference numbers;
+- signatures;
+- dates of birth;
+- addresses;
+- phone numbers;
+- security, banking, or identity-verification details.
+
+Do not stamp or repeat sensitive identifiers across general evidence documents. Use the minimum necessary identifier for the specific recipient and redact or omit the rest where safe.
+
+## Public data removal evidence rule
+
+Personal-data removal from public directories, people-search sites, marketing databases, or search-result snippets should be tracked as a privacy case when relevant.
+
+Store only safe categories:
+
+- organisation or platform category;
+- removal request submitted;
+- record found or not found;
+- removal confirmed;
+- search-engine cache or snippet follow-up needed;
+- review date or recheck point;
+- outcome.
+
+Do not store addresses, dates of birth, forms, ID documents, or private removal correspondence in the public repository.
+
 ## Advocacy evidence continuity rule
 
 Advocacy evidence should support continuity across services without copying private records into the public repository.
@@ -186,6 +225,22 @@ Use safe evidence categories such as:
 Do not store private medical letters, membership identifiers, prescriptions, order numbers, customer numbers, addresses, phone numbers, signatures, or detailed clinical data in GitHub.
 
 When using these records, extract the functional meaning rather than the private document content. For example: written communication need, slower speech, visual aids, accessible format, support person, lighting sensitivity, reading difficulty, or money-support vulnerability.
+
+## Healthcare access adjustment verification rule
+
+Healthcare-access flags, booking notes, communication adjustments, interpreter requests, and record comments should be treated as useful but not foolproof.
+
+When an adjustment is confirmed as added to a record, preserve the public-safe evidence category and the practical limitation:
+
+- adjustment confirmed;
+- scope of adjustment;
+- organisation or service area;
+- risk that it may be missed;
+- written backup needed;
+- contact route for correction or fixed appointment request;
+- whether the adjustment must be re-requested for a specific appointment.
+
+Do not assume that a record flag guarantees the adjustment will be seen or applied. Carry or resend written adjustment wording where important.
 
 ## External support resource awareness rule
 
