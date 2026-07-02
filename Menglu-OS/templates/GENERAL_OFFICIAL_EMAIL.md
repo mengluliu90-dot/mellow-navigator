@@ -44,6 +44,24 @@ Use this before sending forms, evidence packets, or official correspondence.
 
 Avoid including high-risk identifiers unless they are necessary for that specific organisation and task.
 
+## Evidence packet selection pattern
+
+Use this when sending supporting documents.
+
+> I have selected the most relevant document or summary for this issue, rather than sending my full evidence file. If you need a specific additional document, please explain exactly what you require and why.
+
+Use the smallest relevant evidence packet. Avoid sending full binders, duplicate packs, or historical documents unless the recipient genuinely needs them.
+
+## Support deadlock pattern
+
+Use this when the suggested route requires the same communication, coordination, phone, form, or executive-function ability that Menglu needs support with.
+
+> I am currently in a support deadlock. I have been advised to access support, but the process for accessing that support requires the same communication, coordination, and administrative abilities that I am asking for help with.
+>
+> Please consider a written referral, warm handover, named contact, simplified written process, or another reasonable adjustment so the support route is practically accessible.
+
+Do not frame inability to complete the unsupported access route as refusal or lack of need.
+
 ## Public data removal follow-up pattern
 
 Use this after a directory, people-search site, or public database confirms removal.
