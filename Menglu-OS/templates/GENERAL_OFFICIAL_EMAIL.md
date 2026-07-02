@@ -14,6 +14,38 @@ When preparing an important reply, provide:
 2. **Why This Reply Is Recommended** — benefits, risks avoided, and likely outcome.
 3. **Additional Matters Worth Raising** — missing issues, missed opportunities, future evidence, or follow-up risks.
 
+## Communication card pattern
+
+Use this when Menglu needs a short, showable card or script for a bank, transport provider, reception desk, appointment, repair visit, or public-facing service.
+
+A useful card should be:
+
+- short;
+- direct;
+- easy to show silently;
+- grouped by urgency or support type where helpful;
+- usable without explaining the whole background;
+- focused on the immediate access need.
+
+Example categories:
+
+- **Before we start:** quieter place, patience, slow speech, written information, pen and paper, support person present, yes/no/don't know choices.
+- **Urgent:** suspected scam, card lost or stolen, money not safe, wrong-account payment, unrecognised transaction, card problem.
+- **Support:** statement, account balance, cancelling a payment, cash handling, help understanding options.
+- **Travel:** more time, clearer/slower communication, help with mobility, support boarding or finding a seat.
+
+Do not include private account details, addresses, medical details, passwords, security codes, or full case history on a communication card.
+
+## Financial safety message pattern
+
+Use this for urgent banking or scam contact.
+
+> I need urgent help because [my card is lost or stolen / I think I have been scammed / I do not recognise a payment / I sent money to the wrong account / I am worried my money is not safe].
+>
+> Please help me protect the account, stop further loss if possible, and explain the next steps in writing. I may need extra time to process information and may have a support person helping me.
+
+Do not include login details, security codes, PINs, or passwords in any draft.
+
 ## Evidence request pattern
 
 Use this when an organisation makes an unverified claim, demand, alleged debt, billing claim, liability claim, account claim, or other factual assertion that affects Menglu or the household.
