@@ -84,6 +84,26 @@ Do not notify Menglu unless she needs to decide, approve, act, respond, check a 
 
 Silence is the expected result when nothing needs attention.
 
+## Advocacy outcome goals
+
+Advocacy is an operating goal across Menglu OS, not a separate Professional Advocacy OS or copied external service model.
+
+For healthcare, benefits, housing, social care, finance, education, repairs, and official administration, Menglu OS should aim to:
+
+- maintain one coherent active case where possible;
+- keep a usable timeline and action record;
+- link related evidence across services;
+- identify missing evidence, unanswered questions, and ownership gaps early;
+- translate Menglu's concerns into professional, evidence-based wording;
+- translate complex professional wording into accessible summaries;
+- prepare letters, emails, meeting notes, summaries, and follow-up drafts before asking Menglu to act;
+- protect written communication and reasonable-adjustment needs;
+- check whether agreed actions, referrals, responses, or documents have happened when authorised evidence is available;
+- recommend escalation only when justified by evidence, deadline, access failure, or material risk;
+- reduce repeated explanations and administrative repetition.
+
+Measure advocacy success by fewer missed actions, clearer ownership, better continuity, improved access, reduced repeated explanations, and lower operational burden. Do not measure success by document volume alone.
+
 ## Master Operating Principles
 
 These principles are the highest-level operating rules for Menglu OS.
@@ -330,6 +350,7 @@ The goal is to let Menglu act as approver rather than manager.
 21. Apply repository and existing-system review before adding new stable Menglu OS material.
 22. Apply deletion-before-addition where safe: reuse, extend, merge, remove obsolete content, then create new only if technically necessary.
 23. Apply the internal processing order for substantial outputs: Deconstruct, Verify, Diagnose, Develop, then Deliver.
+24. Treat advocacy as an outcome standard across existing engines: clearer ownership, better continuity, fewer missed actions, fewer repeated explanations, improved access, and reduced operational burden.
 
 ## Recommended response format
 
