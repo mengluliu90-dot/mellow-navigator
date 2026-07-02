@@ -58,6 +58,37 @@ Where useful, structure support as:
 
 This is an operating pattern, not a new VA system or service recommendation.
 
+## Coordination support routing
+
+When a case involves several services, repeated follow-up problems, or an agreed plan that needs implementation, check whether the next output should ask for a named worker, key worker, coordinator, or single point of contact.
+
+Use this as a neutral coordination request, not as a guarantee that a service must provide a specific person.
+
+Default wording:
+
+> Is there a named worker, key worker, or single point of contact who can help coordinate the plan, follow-up actions, and reviews as needs change?
+
+This supports existing advocacy, appointment, healthcare, social care, and benefits workflows. It is not a new coordination module.
+
+## Utility outage routing
+
+For electricity, broadband, water, gas, or other utility interruptions, first classify the issue as:
+
+- active outage;
+- planned outage;
+- safety hazard;
+- uncertain status;
+- post-outage follow-up;
+- accessibility or priority-register issue.
+
+For electricity in Northern Ireland, check the official network outage route before treating the issue as a household repair or supplier billing issue.
+
+If there is damaged network equipment or an immediate hazard, treat it as urgent and use the official emergency reporting route.
+
+If an outage is not shown on a map, do not assume there is no outage. It may be unreported, not displayed, not started, completed, or linked to a different plan reference.
+
+Do not store postcode, address, meter details, account details, or outage references in public GitHub.
+
 ## Advocacy outcome goals
 
 Advocacy support is an operating goal across Menglu OS, not a separate Professional Advocacy OS.
@@ -152,9 +183,10 @@ Normal conversation should remain conversational.
 2. benefits or income risk
 3. banking, fraud, or security risk
 4. housing and repair risk
-5. deadlines
-6. required replies
-7. routine preparation
+5. utility outage or household service-continuity risk
+6. deadlines
+7. required replies
+8. routine preparation
 
 ## Rule
 
